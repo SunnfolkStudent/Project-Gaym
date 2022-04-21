@@ -8,19 +8,23 @@ namespace System
     public class DialogueManager : MonoBehaviour
     {
         public string[] script;
-        public GameObject dialogueGameObject;
+        //public GameObject dialogueGameObject;
         public GameObject logGameObject;
-        private TMP_Text _dialogueText;
+        public TMP_Text dialogueText;
+        public TMP_Text namePlate;
         private InputManager _inputManager;
         private int _currentDialogue;
         private TMP_Text _logText;
+        private string[] _names;
 
         private void Start()
         {
             _logText = logGameObject.GetComponentInChildren<TMP_Text>();
             _inputManager = GetComponent<InputManager>();
-            _dialogueText = dialogueGameObject.GetComponent<TMP_Text>();
-            _dialogueText.text = script[_currentDialogue];
+            //_dialogueText = dialogueGameObject.GetComponent<TMP_Text>();
+            ExtractNames();
+            dialogueText.text = script[_currentDialogue];
+            namePlate.text = _names[_currentDialogue];
         }
 
         private void Update()
@@ -48,7 +52,8 @@ namespace System
             {
                 _currentDialogue = 0;
             }
-            _dialogueText.text = script[_currentDialogue];
+            dialogueText.text = script[_currentDialogue];
+            namePlate.text = _names[_currentDialogue];
         }
 
         public void Log()
@@ -58,13 +63,23 @@ namespace System
                 logGameObject.SetActive(true);
                 for (var i = 0; i < _currentDialogue+1; i++)
                 {
-                    _logText.text += "\n" + script[i];
+                    _logText.text += "\n" + _names[i] + ": " + script[i];
                 }
             }
             else
             {
                 logGameObject.SetActive(false);
                 _logText.text = "Log:";
+            }
+        }
+
+        private void ExtractNames()
+        {
+            _names = new string[script.Length];
+            for (var i = 0; i < script.Length; i++)
+            {
+                _names[i] = script[i].Split(":")[0];
+                script[i] = script[i].Remove(0, script[i].IndexOf(":", StringComparison.Ordinal)+2);
             }
         }
     }
