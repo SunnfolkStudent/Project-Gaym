@@ -57,6 +57,28 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "18efe225-81b2-4c7b-8bac-807cf2a9402f",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1782222a-39bc-4a47-a85d-a12f72fc5a26",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "WASD",
                     "id": "34254fb2-3722-4c71-8e05-0802e8c2f6b5",
                     "path": "2DVector",
@@ -192,6 +214,17 @@
                     "name": "",
                     "id": "d9acefae-c9bf-4132-9e2d-a32731f4508e",
                     "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "29d179ce-8741-4764-bdf9-3259a8b958f4",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard & Mouse",
