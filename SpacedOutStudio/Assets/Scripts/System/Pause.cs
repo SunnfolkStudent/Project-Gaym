@@ -1,31 +1,26 @@
-using System;
+using Inputs;
 using UnityEngine;
 
-public class Pause : MonoBehaviour
+namespace System
 {
-   public bool gameIsPaused;
-   private bool pauseButton;
-   public GameObject pauseCanvas;
-   private ActionInputs input;
-
-   private void Awake()
+   [RequireComponent(typeof(InputManager))]
+   public class Pause : MonoBehaviour
    {
-      input = new ActionInputs();
-   }
-
-   private void Start()
-   {
-      gameIsPaused = false;
-      pauseCanvas.SetActive(false); 
-   }
-
-   private void Update()
-   {
-      pauseButton = input.Player.Pause.triggered;
+      public bool gameIsPaused;
+      public GameObject pauseCanvas;
+      private InputManager _input;
       
-      if (pauseButton)
+
+      private void Start()
       {
-         Debug.Log("Pause is triggered");
+         _input = GetComponent<InputManager>();
+         gameIsPaused = false;
+         pauseCanvas.SetActive(false); 
+      }
+
+      private void Update()
+      {
+         if (!_input.pause) return;
          if (gameIsPaused)
          {
             ResumeGame();
@@ -35,29 +30,20 @@ public class Pause : MonoBehaviour
             PauseGame();
          }
       }
-   }
 
-   void PauseGame()
-   {
-      Time.timeScale = 0f;
-      pauseCanvas.SetActive(true);
-      gameIsPaused = true;
-   }
+      void PauseGame()
+      {
+         Time.timeScale = 0f;
+         pauseCanvas.SetActive(true);
+         gameIsPaused = true;
+      }
 
-   void ResumeGame()
-   {
-      pauseCanvas.SetActive(false);
-      gameIsPaused = false;
-      Time.timeScale = 1f;
-   }
-
-   private void OnEnable()
-   {
-      input.Enable();
-   }
-
-   private void OnDisable()
-   {
-      input.Disable();
+      void ResumeGame()
+      {
+         pauseCanvas.SetActive(false);
+         gameIsPaused = false;
+         Time.timeScale = 1f;
+      }
+      
    }
 }
