@@ -12,9 +12,11 @@ public class DialogueManager : MonoBehaviour
     private TMP_Text _dialogueText;
     private InputManager _inputManager;
     private int _currentDialogue;
+    private TMP_Text _logText;
 
     private void Start()
     {
+        _logText = logGameObject.GetComponentInChildren<TMP_Text>();
         _inputManager = GetComponent<InputManager>();
         _dialogueText = dialogueGameObject.GetComponent<TMP_Text>();
         _dialogueText.text = script[_currentDialogue];
@@ -22,14 +24,21 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (_inputManager.pause)
+        if (_inputManager.interact)
         {
             NextDialogue();
+        }
+
+        if (_inputManager.log)
+        {
+            Log();
         }
     }
 
     public void NextDialogue()
     {
+        if (logGameObject.activeSelf) return;
+        
         if (_currentDialogue < script.Length -1)
         {
             _currentDialogue++;
@@ -43,19 +52,18 @@ public class DialogueManager : MonoBehaviour
 
     public void Log()
     {
-        var logText = logGameObject.GetComponent<TMP_Text>();
         if (!logGameObject.activeSelf)
         {
             logGameObject.SetActive(true);
             for (var i = 0; i < _currentDialogue+1; i++)
             {
-                logText.text += "\n" + script[i];
+                _logText.text += "\n" + script[i];
             }
         }
         else
         {
             logGameObject.SetActive(false);
-            logText.text = "Log:";
+            _logText.text = "Log:";
         }
     }
 }

@@ -8,6 +8,7 @@ namespace Inputs
         private ActionInputs _inputs;
         public bool pause;
         public bool interact;
+        public bool log;
 
         private void Awake()
         {
@@ -18,6 +19,7 @@ namespace Inputs
         {
             pause = _inputs.Player.Pause.WasPressedThisFrame();
             interact = _inputs.Player.Interact.WasPressedThisFrame();
+            log = _inputs.Player.Log.WasPressedThisFrame();
         }
 
         private void OnEnable()
