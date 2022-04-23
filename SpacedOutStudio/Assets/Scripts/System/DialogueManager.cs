@@ -12,6 +12,8 @@ namespace System
         public GameObject logGameObject;
         public TMP_Text dialogueText;
         public TMP_Text namePlate;
+        public string replaceString;
+        public string playerName;
         private InputManager _inputManager;
         private int _currentDialogue;
         private TMP_Text _logText;
@@ -22,7 +24,7 @@ namespace System
             _logText = logGameObject.GetComponentInChildren<TMP_Text>();
             _inputManager = GetComponent<InputManager>();
             //_dialogueText = dialogueGameObject.GetComponent<TMP_Text>();
-            ExtractNames();
+            ExtractAndReplaceNames();
             dialogueText.text = script[_currentDialogue];
             namePlate.text = _names[_currentDialogue];
         }
@@ -72,12 +74,14 @@ namespace System
                 _logText.text = "Log:";
             }
         }
+//TODO inputfield.GetComponent<Text>().text
 
-        private void ExtractNames()
+        private void ExtractAndReplaceNames()
         {
             _names = new string[script.Length];
             for (var i = 0; i < script.Length; i++)
             {
+                script[i] = script[i].Replace(replaceString, playerName);
                 _names[i] = script[i].Split(":")[0];
                 script[i] = script[i].Remove(0, script[i].IndexOf(":", StringComparison.Ordinal)+2);
             }
