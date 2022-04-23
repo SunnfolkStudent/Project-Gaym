@@ -31,7 +31,7 @@ namespace System
          }
       }
 
-      public void PauseGame()
+      private void PauseGame()
       {
          Time.timeScale = 0f;
          pauseCanvas.SetActive(true);
