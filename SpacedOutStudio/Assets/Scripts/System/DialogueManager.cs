@@ -1,3 +1,4 @@
+using System.Collections;
 using Inputs;
 using TMPro;
 using UnityEngine;
@@ -23,6 +24,10 @@ namespace System
         private TMP_Text _logText;
         private string[] _names;
         private SceneController _sceneController;
+        public float textSpeed = 1;
+        public bool loop;
+        private bool _generatingDialogue;
+        private bool _stopGeneratingDialogue;
 
 
         private void Start()
@@ -32,15 +37,21 @@ namespace System
             _inputManager = GetComponent<InputManager>();
             //_dialogueText = dialogueGameObject.GetComponent<TMP_Text>();
             ExtractAndReplaceNames();
-            dialogueText.text = script[_currentDialogue];
-            namePlate.text = _names[_currentDialogue];
+            StartCoroutine(GradualText());
         }
 
         private void Update()
         {
             if (_inputManager.interact)
             {
-                NextDialogue();
+                if (!_generatingDialogue)
+                {
+                    NextDialogue();
+                }
+                else
+                {
+                    _stopGeneratingDialogue = true;
+                }
             }
 
             if (_inputManager.log)
@@ -59,16 +70,40 @@ namespace System
             }
             else
             {
-                _sceneController.LoadScene(sceneToLoad);
+                if (!loop)
+                {
+                    _sceneController.LoadWithTransition();
+                }
+                else
+                {
+                    _currentDialogue = 0;
+                }
             }
+            
+            StartCoroutine(GradualText());
+        }
+        
 
+        private IEnumerator GradualText()
+        {
+            _generatingDialogue = true;
+            namePlate.text = _names[_currentDialogue];
+            dialogueText.text = "";
             var test = script[_currentDialogue].ToCharArray();
-
             for (var i = 0; i < test.Length; i++)
             {
-                dialogueText.text.Insert(i,test[i].ToString());
+                if (_stopGeneratingDialogue) continue;
+                yield return new WaitForSeconds(textSpeed/100);
+                dialogueText.text = dialogueText.text.Insert(i,test[i].ToString());
             }
-            namePlate.text = _names[_currentDialogue];
+
+            if (_stopGeneratingDialogue)
+            {
+                dialogueText.text = script[_currentDialogue];
+            }
+            _stopGeneratingDialogue = false;
+
+            _generatingDialogue = false;
         }
 
         public void Log()
