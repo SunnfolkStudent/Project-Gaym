@@ -9,7 +9,6 @@ namespace System
       public bool gameIsPaused;
       public GameObject pauseCanvas;
       private InputManager _input;
-      
 
       private void Start()
       {
@@ -44,6 +43,5 @@ namespace System
          gameIsPaused = false;
          Time.timeScale = 1f;
       }
-      
    }
 }
