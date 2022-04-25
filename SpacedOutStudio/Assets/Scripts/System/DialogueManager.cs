@@ -1,13 +1,17 @@
 using Inputs;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace System
 {
+    [RequireComponent(typeof(SceneController))]
     [RequireComponent(typeof(InputManager))]
     public class DialogueManager : MonoBehaviour
     {
         public string[] script;
+
+        public string sceneToLoad;
         //public GameObject dialogueGameObject;
         public GameObject logGameObject;
         public TMP_Text dialogueText;
@@ -18,9 +22,12 @@ namespace System
         private int _currentDialogue;
         private TMP_Text _logText;
         private string[] _names;
+        private SceneController _sceneController;
+
 
         private void Start()
         {
+            _sceneController = GetComponent<SceneController>();
             _logText = logGameObject.GetComponentInChildren<TMP_Text>();
             _inputManager = GetComponent<InputManager>();
             //_dialogueText = dialogueGameObject.GetComponent<TMP_Text>();
@@ -52,7 +59,15 @@ namespace System
             }
             else
             {
-                _currentDialogue = 0;
+                _sceneController.LoadScene(sceneToLoad);
+            }
+
+            var test = script[_currentDialogue].ToCharArray();
+
+            for (int i = 0; i < script[_currentDialogue].Length; i++)
+            {
+                
+                dialogueText.text.Insert(i,);
             }
             dialogueText.text = script[_currentDialogue];
             namePlate.text = _names[_currentDialogue];
