@@ -4,7 +4,7 @@ using UnityEngine;
 namespace System
 {
    [RequireComponent(typeof(InputManager))]
-   public class Pause : MonoBehaviour
+   public class PauseScript : MonoBehaviour
    {
       public bool gameIsPaused;
       public GameObject pauseCanvas;
