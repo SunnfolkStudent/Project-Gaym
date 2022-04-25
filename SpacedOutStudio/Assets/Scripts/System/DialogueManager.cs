@@ -26,6 +26,8 @@ namespace System
         private SceneController _sceneController;
         public float textSpeed = 1;
         public bool loop;
+        private bool _generatingDialogue;
+        private bool _stopGeneratingDialogue;
 
 
         private void Start()
@@ -42,7 +44,14 @@ namespace System
         {
             if (_inputManager.interact)
             {
-                NextDialogue();
+                if (!_generatingDialogue)
+                {
+                    NextDialogue();
+                }
+                else
+                {
+                    _stopGeneratingDialogue = true;
+                }
             }
 
             if (_inputManager.log)
@@ -73,17 +82,28 @@ namespace System
             
             StartCoroutine(GradualText());
         }
+        
 
         private IEnumerator GradualText()
         {
+            _generatingDialogue = true;
             namePlate.text = _names[_currentDialogue];
             dialogueText.text = "";
             var test = script[_currentDialogue].ToCharArray();
             for (var i = 0; i < test.Length; i++)
             {
+                if (_stopGeneratingDialogue) continue;
                 yield return new WaitForSeconds(textSpeed/100);
                 dialogueText.text = dialogueText.text.Insert(i,test[i].ToString());
             }
+
+            if (_stopGeneratingDialogue)
+            {
+                dialogueText.text = script[_currentDialogue];
+            }
+            _stopGeneratingDialogue = false;
+
+            _generatingDialogue = false;
         }
 
         public void Log()

@@ -152,11 +152,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1795727933408474450, guid: a8077d1f975220d41b949f92aef0ef33, type: 3}
       propertyPath: script.Array.data[1]
-      value: 'yes: waaah'
+      value: 'yes: waaah i am baby waaah'
       objectReference: {fileID: 0}
     - target: {fileID: 1795727933408474450, guid: a8077d1f975220d41b949f92aef0ef33, type: 3}
       propertyPath: script.Array.data[2]
-      value: 'dook nukem: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      value: 'Dukey Nukey: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Integer lorem lorem, efficitur eget ipsum eget, aliquam commodo urna. Maecenas
         sit. '
       objectReference: {fileID: 0}
