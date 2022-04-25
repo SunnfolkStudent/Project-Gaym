@@ -64,12 +64,10 @@ namespace System
 
             var test = script[_currentDialogue].ToCharArray();
 
-            for (int i = 0; i < script[_currentDialogue].Length; i++)
+            for (var i = 0; i < test.Length; i++)
             {
-                
-                dialogueText.text.Insert(i,);
+                dialogueText.text.Insert(i,test[i].ToString());
             }
-            dialogueText.text = script[_currentDialogue];
             namePlate.text = _names[_currentDialogue];
         }
 
