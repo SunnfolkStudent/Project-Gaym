@@ -5,9 +5,9 @@ namespace Inputs
     public class InputManager : MonoBehaviour
     {
         private ActionInputs _inputs;
-        public bool pause;
-        public bool interact;
-        public bool log;
+        [HideInInspector]public bool pause;
+        [HideInInspector]public bool interact;
+        [HideInInspector]public bool log;
 
         private void Awake()
         {
