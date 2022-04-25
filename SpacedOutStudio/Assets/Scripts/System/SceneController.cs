@@ -6,10 +6,12 @@ namespace System
 {
     public class SceneController : MonoBehaviour
     {
-    
+        private PauseScript _pause;
+        
         public void LoadScene(string sceneName)
         {
             SceneManager.LoadScene(sceneName);
+            _pause.ResumeGame();
         }
 
         public void QuitGame()
