@@ -40,11 +40,5 @@ namespace System
         {
         
         }
-
-        //Delete selected save file.
-        void DeleteSave()
-        {
-        
-        }
     }
 }
