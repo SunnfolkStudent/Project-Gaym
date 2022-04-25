@@ -72,7 +72,7 @@ namespace System
             {
                 if (!loop)
                 {
-                    _sceneController.LoadScene(sceneToLoad);
+                    _sceneController.LoadWithTransition();
                 }
                 else
                 {
