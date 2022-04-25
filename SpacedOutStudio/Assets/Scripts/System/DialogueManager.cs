@@ -1,3 +1,4 @@
+using System.Collections;
 using Inputs;
 using TMPro;
 using UnityEngine;
@@ -23,6 +24,8 @@ namespace System
         private TMP_Text _logText;
         private string[] _names;
         private SceneController _sceneController;
+        public float textSpeed = 1;
+        public bool loop;
 
 
         private void Start()
@@ -32,8 +35,7 @@ namespace System
             _inputManager = GetComponent<InputManager>();
             //_dialogueText = dialogueGameObject.GetComponent<TMP_Text>();
             ExtractAndReplaceNames();
-            dialogueText.text = script[_currentDialogue];
-            namePlate.text = _names[_currentDialogue];
+            StartCoroutine(GradualText());
         }
 
         private void Update()
@@ -59,16 +61,29 @@ namespace System
             }
             else
             {
-                _sceneController.LoadScene(sceneToLoad);
+                if (!loop)
+                {
+                    _sceneController.LoadScene(sceneToLoad);
+                }
+                else
+                {
+                    _currentDialogue = 0;
+                }
             }
+            
+            StartCoroutine(GradualText());
+        }
 
+        private IEnumerator GradualText()
+        {
+            namePlate.text = _names[_currentDialogue];
+            dialogueText.text = "";
             var test = script[_currentDialogue].ToCharArray();
-
             for (var i = 0; i < test.Length; i++)
             {
-                dialogueText.text.Insert(i,test[i].ToString());
+                yield return new WaitForSeconds(textSpeed/100);
+                dialogueText.text = dialogueText.text.Insert(i,test[i].ToString());
             }
-            namePlate.text = _names[_currentDialogue];
         }
 
         public void Log()

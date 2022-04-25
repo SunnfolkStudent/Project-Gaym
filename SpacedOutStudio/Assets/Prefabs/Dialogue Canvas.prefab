@@ -262,6 +262,8 @@ MonoBehaviour:
   namePlate: {fileID: 1795727933477239906}
   replaceString: PC
   playerName: Fredrick
+  textSpeed: 1
+  loop: 0
 --- !u!114 &1795727933408474451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -538,7 +540,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -695, y: -471}
+  m_AnchoredPosition: {x: 720, y: -500}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1795727934089314880
@@ -975,7 +977,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -1053.7733, w: -263.8142}
+  m_margin: {x: 0, y: 0, z: -1707.107, w: -166.09332}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

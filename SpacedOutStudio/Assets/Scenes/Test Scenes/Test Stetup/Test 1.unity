@@ -131,20 +131,34 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1795727933408474450, guid: a8077d1f975220d41b949f92aef0ef33, type: 3}
+      propertyPath: loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795727933408474450, guid: a8077d1f975220d41b949f92aef0ef33, type: 3}
+      propertyPath: textSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795727933408474450, guid: a8077d1f975220d41b949f92aef0ef33, type: 3}
       propertyPath: sceneToLoad
       value: Test 2
       objectReference: {fileID: 0}
     - target: {fileID: 1795727933408474450, guid: a8077d1f975220d41b949f92aef0ef33, type: 3}
       propertyPath: script.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1795727933408474450, guid: a8077d1f975220d41b949f92aef0ef33, type: 3}
       propertyPath: script.Array.data[0]
-      value: 'mm: test'
+      value: 'yoshi: test'
       objectReference: {fileID: 0}
     - target: {fileID: 1795727933408474450, guid: a8077d1f975220d41b949f92aef0ef33, type: 3}
       propertyPath: script.Array.data[1]
-      value: 'yes: test1'
+      value: 'yes: waaah'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795727933408474450, guid: a8077d1f975220d41b949f92aef0ef33, type: 3}
+      propertyPath: script.Array.data[2]
+      value: 'dook nukem: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Integer lorem lorem, efficitur eget ipsum eget, aliquam commodo urna. Maecenas
+        sit. '
       objectReference: {fileID: 0}
     - target: {fileID: 1795727933408474453, guid: a8077d1f975220d41b949f92aef0ef33, type: 3}
       propertyPath: m_Pivot.x
