@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 namespace System
 {
+    [RequireComponent(typeof(ChoiceManager))]
     [RequireComponent(typeof(SceneController))]
     [RequireComponent(typeof(InputManager))]
     public class DialogueManager : MonoBehaviour
@@ -28,16 +29,19 @@ namespace System
         public bool loop;
         private bool _generatingDialogue;
         private bool _stopGeneratingDialogue;
+        private bool[] _choiceDialogues;
+        private ChoiceManager _choiceManager;
 
 
         private void Start()
         {
+            _choiceManager = GetComponent<ChoiceManager>();
             _sceneController = GetComponent<SceneController>();
             _logText = logGameObject.GetComponentInChildren<TMP_Text>();
             _inputManager = GetComponent<InputManager>();
-            //_dialogueText = dialogueGameObject.GetComponent<TMP_Text>();
             ExtractAndReplaceNames();
-            StartCoroutine(GradualText());
+            dialogueText.text = "";
+            namePlate.text = _names[_currentDialogue];
         }
 
         private void Update()
@@ -62,7 +66,7 @@ namespace System
 
         public void NextDialogue()
         {
-            if (logGameObject.activeSelf) return;
+            if (logGameObject.activeSelf || _choiceManager.showingDialogue) return;
         
             if (_currentDialogue < script.Length -1)
             {
@@ -73,18 +77,23 @@ namespace System
                 if (!loop)
                 {
                     _sceneController.LoadWithTransition();
+                    return;
                 }
-                else
-                {
-                    _currentDialogue = 0;
-                }
+                _currentDialogue = 0;
             }
-            
-            StartCoroutine(GradualText());
+
+            if (!_choiceDialogues[_currentDialogue])
+            {
+                StartCoroutine(GradualText());
+            }
+            else
+            {
+                _choiceManager.DialogueOptionsShow();
+            }
         }
         
 
-        private IEnumerator GradualText()
+        public IEnumerator GradualText()
         {
             _generatingDialogue = true;
             namePlate.text = _names[_currentDialogue];
@@ -108,6 +117,7 @@ namespace System
 
         public void Log()
         {
+            //TODO Fix log with dialogue choices
             if (!logGameObject.activeSelf)
             {
                 logGameObject.SetActive(true);
@@ -126,9 +136,15 @@ namespace System
 
         private void ExtractAndReplaceNames()
         {
+            //TODO positive and negative choices
             _names = new string[script.Length];
+            _choiceDialogues = new bool[script.Length];
             for (var i = 0; i < script.Length; i++)
             {
+                if (script[i].Contains("/choice/"))
+                {
+                    _choiceDialogues[i] = true;
+                }
                 script[i] = script[i].Replace(replaceString, playerName);
                 _names[i] = script[i].Split(":")[0];
                 script[i] = script[i].Remove(0, script[i].IndexOf(":", StringComparison.Ordinal)+2);
