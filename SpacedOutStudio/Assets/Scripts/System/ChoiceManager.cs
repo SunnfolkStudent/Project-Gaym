@@ -1,30 +1,54 @@
-using Inputs;
 using UnityEngine;
 
 namespace System
 {
-    [RequireComponent(typeof(InputManager))]
+    [RequireComponent(typeof(DialogueManager))]
     public class ChoiceManager : MonoBehaviour
     {
         public int relationScore;
-        [SerializeField] [Range(0,100)] private int critChancePercentage = 20;
-        private InputManager _inputManager;
+        [SerializeField] [Range(0, 100)] private int critChancePercentage = 20;
+        public int scoreChangeAmount = 1;
+        public GameObject dialogueAndNameplate;
+        public GameObject[] dialogueOptions;
+        private int _currentChoices;
+        public bool showingDialogue;
+        private DialogueManager _dialogueManager;
 
 
         private void Start()
         {
-            _inputManager = GetComponent<InputManager>();
+            _dialogueManager = GetComponent<DialogueManager>();
         }
 
-        private void Update()
+        public void DialogueOptionsShow()
         {
-            if (_inputManager.pause)
-            {
-                ChangeScore(1);
-            }
+            showingDialogue = true;
+            dialogueAndNameplate.SetActive(false);
+            dialogueOptions[_currentChoices].SetActive(true);
         }
 
-        public void ChangeScore(int change)
+        public void DialogueOptionsHide()
+        {
+            showingDialogue = false;
+            dialogueAndNameplate.SetActive(true);
+            dialogueOptions[_currentChoices].SetActive(false);
+            _currentChoices++;
+            _dialogueManager.NextDialogue();
+        }
+
+        public void IncreaseScore()
+        {
+            ChangeScore(scoreChangeAmount);
+            DialogueOptionsHide();
+        }
+
+        public void DecreaseScore()
+        {
+            ChangeScore(-scoreChangeAmount);
+            DialogueOptionsHide();
+        }
+
+        private void ChangeScore(int change)
         {
             var critValue = UnityEngine.Random.Range(0, 99);
             if (critValue < critChancePercentage)
@@ -38,6 +62,5 @@ namespace System
                 relationScore += change;
             }
         }
-    
     }
 }
