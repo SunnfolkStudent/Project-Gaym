@@ -10,8 +10,8 @@ namespace System
         public int scoreChangeAmount = 1;
         public GameObject dialogueAndNameplate;
         public GameObject[] dialogueOptions;
-        private int _currentChoices;
-        public bool showingDialogue;
+        [HideInInspector] public int currentChoices = 0;
+        [HideInInspector] public bool showingDialogue;
         private DialogueManager _dialogueManager;
 
 
@@ -24,28 +24,35 @@ namespace System
         {
             showingDialogue = true;
             dialogueAndNameplate.SetActive(false);
-            dialogueOptions[_currentChoices].SetActive(true);
+            dialogueOptions[currentChoices].SetActive(true);
         }
 
         public void DialogueOptionsHide()
         {
             showingDialogue = false;
             dialogueAndNameplate.SetActive(true);
-            dialogueOptions[_currentChoices].SetActive(false);
-            _currentChoices++;
-            _dialogueManager.NextDialogue();
+            dialogueOptions[currentChoices].SetActive(false);
+            currentChoices++;
         }
 
         public void IncreaseScore()
         {
             ChangeScore(scoreChangeAmount);
             DialogueOptionsHide();
+            _dialogueManager.PositiveChoice(currentChoices);
+        }
+
+        public void DontChangeScore()
+        {
+            DialogueOptionsHide();
+            _dialogueManager.NeutralChoice(currentChoices);
         }
 
         public void DecreaseScore()
         {
             ChangeScore(-scoreChangeAmount);
             DialogueOptionsHide();
+            _dialogueManager.NegativeChoice(currentChoices);
         }
 
         private void ChangeScore(int change)
