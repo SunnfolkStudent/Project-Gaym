@@ -8,7 +8,7 @@ namespace System
         public DialogueManager dialogueManager;
         public void LoadLevel()
         {
-            sceneController.LoadScene("Test 2");
+            sceneController.LoadScene(dialogueManager.sceneToLoad);
         }
 
         public void StartText()

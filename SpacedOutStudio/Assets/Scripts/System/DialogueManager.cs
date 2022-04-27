@@ -44,6 +44,8 @@ namespace System
         private bool _inChoices2;
         private bool _inChoices3;
         private int _currentOptions;
+        public bool RlvlMattering;
+        public int minRlvlForEnding;
 
 
         private void Start()

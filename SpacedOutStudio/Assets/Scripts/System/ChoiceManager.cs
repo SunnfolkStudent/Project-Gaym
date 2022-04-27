@@ -10,7 +10,7 @@ namespace System
         public int scoreChangeAmount = 1;
         public GameObject dialogueAndNameplate;
         public GameObject[] dialogueOptions;
-        [HideInInspector] public int currentChoices = 0;
+        [HideInInspector] public int currentChoices;
         [HideInInspector] public bool showingDialogue;
         private DialogueManager _dialogueManager;
 
