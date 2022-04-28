@@ -50,6 +50,10 @@ namespace System
         private bool _inChoices2;
         private bool _inChoices3;
         private int _currentOptions;
+        private int[] _lvlReq;
+        public bool _nextDialogue;
+        
+        
         /*public bool RlvlMattering;
         public int minRlvlForEnding;*/
 
@@ -88,6 +92,8 @@ namespace System
         public void NextDialogue()
         {
             if (logGameObject.activeSelf || _choiceManager.showingDialogue) return;
+            _nextDialogue = true;
+            
 
             if (_currentDialogue < script.Length -1)
             {
@@ -167,6 +173,7 @@ namespace System
 
             _generatingDialogue = false;
         }
+        
 
         public void Log()
         {
@@ -189,9 +196,8 @@ namespace System
 
         private void ExtractAndReplaceNames()
         {
-            //TODO positive and negative choices
-            //TODO Different Dialogues after choices
             _names = new string[script.Length];
+            _lvlReq = new int[script.Length];
             _choiceDialogues = new bool[script.Length];
             _choiceDialogues1 = new bool[script.Length];
             _choiceDialogues2 = new bool[script.Length];
@@ -202,6 +208,23 @@ namespace System
             _badRlvlDialogues = new bool[script.Length];
             for (var i = 0; i < script.Length; i++)
             {
+                if (script[i].Contains(goodOrBadCheckChar)) 
+                {
+                    script[i] = script[i].Remove(script[i].IndexOf(goodOrBadCheckChar, StringComparison.Ordinal), goodOrBadCheckChar.Length);
+                    _goodorbadCheck[i] = true;
+                }
+                else if (script[i].Contains(goodRlvlChar))
+                {
+                    script[i] = script[i].Remove(script[i].IndexOf(goodRlvlChar, StringComparison.Ordinal), goodRlvlChar.Length);
+                    _lvlReq[i] = int.Parse(script[i].Split(":")[0]);
+                    _goodRlvlDialogues[i] = true;
+                }
+                else if(script[i].Contains(badRlvlChar))
+                {
+                    script[i] = script[i].Remove(script[i].IndexOf(badRlvlChar, StringComparison.Ordinal), badRlvlChar.Length);
+                    _badRlvlDialogues[i] = true;
+                }
+                
                 if (script[i] == dialogueChoicesChar)
                 {
                     _choiceDialogues[i] = true;
@@ -225,21 +248,6 @@ namespace System
                 {
                     script[i] = script[i].Remove(0, returnChar.Length);
                     _returnDialogues[i] = true;
-                }
-                else if (script[i].Contains(goodOrBadCheckChar)) 
-                {
-                    script[i] = script[i].Remove(0, goodRlvlChar.Length);
-                    _goodorbadCheck[i] = true;
-                }
-                else if (script[i].Contains(goodRlvlChar))
-                {
-                    script[i] = script[i].Remove(0, goodRlvlChar.Length);
-                    _goodRlvlDialogues[i] = true;
-                }
-                else if(script[i].Contains(badRlvlChar))
-                {
-                    script[i] = script[i].Remove(0, badRlvlChar.Length);
-                    _badRlvlDialogues[i] = true;
                 }
 
                 script[i] = script[i].Replace(replaceString, playerName);
@@ -277,7 +285,6 @@ namespace System
                     if (!inStreak)
                     {
                         skipNumber--;
-                        print("test");
                     }
                     inStreak = true;
                     if (skipNumber > 0) continue;
