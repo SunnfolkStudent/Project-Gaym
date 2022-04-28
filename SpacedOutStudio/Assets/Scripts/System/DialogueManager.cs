@@ -11,10 +11,13 @@ namespace System
     public class DialogueManager : MonoBehaviour
     {
         public string dialogueChoicesChar = "/c";
-        public string choiceOneChar = "/c1";
-        public string choiceTwoChar = "/c2";
-        public string choiceThreeChar = "/c3";
+        public string responseOneChar = "/c1";
+        public string responseTwoChar = "/c2";
+        public string responseThreeChar = "/c3";
         public string returnChar = "/r";
+        public string badRlvlChar = "/gr";
+        public string goodRlvlChar = "/br";
+        public string goodOrBadCheckChar = "/rLvl";
         
         public string[] script;
 
@@ -39,13 +42,16 @@ namespace System
         private bool[] _choiceDialogues2;
         private bool[] _choiceDialogues3;
         private bool[] _returnDialogues;
+        private bool[] _goodorbadCheck;
+        private bool[] _goodRlvlDialogues;
+        private bool[] _badRlvlDialogues;
         private ChoiceManager _choiceManager;
         private bool _inChoices1;
         private bool _inChoices2;
         private bool _inChoices3;
         private int _currentOptions;
-        public bool RlvlMattering;
-        public int minRlvlForEnding;
+        /*public bool RlvlMattering;
+        public int minRlvlForEnding;*/
 
 
         private void Start()
@@ -129,6 +135,10 @@ namespace System
             {
                 _choiceManager.DialogueOptionsShow();
             }
+            else if (_goodorbadCheck[_currentDialogue])
+            {
+                
+            }
             else
             {
                 StartCoroutine(GradualText());
@@ -187,25 +197,28 @@ namespace System
             _choiceDialogues2 = new bool[script.Length];
             _choiceDialogues3 = new bool[script.Length];
             _returnDialogues = new bool[script.Length];
+            _goodorbadCheck = new bool[script.Length];
+            _goodRlvlDialogues = new bool[script.Length];
+            _badRlvlDialogues = new bool[script.Length];
             for (var i = 0; i < script.Length; i++)
             {
                 if (script[i] == dialogueChoicesChar)
                 {
                     _choiceDialogues[i] = true;
                 }
-                else if (script[i].Contains(choiceOneChar))
+                else if (script[i].Contains(responseOneChar))
                 {
-                    script[i] = script[i].Remove(0, choiceOneChar.Length);
+                    script[i] = script[i].Remove(0, responseOneChar.Length);
                     _choiceDialogues1[i] = true;
                 }
-                else if (script[i].Contains(choiceTwoChar))
+                else if (script[i].Contains(responseTwoChar))
                 {
-                    script[i] = script[i].Remove(0, choiceTwoChar.Length);
+                    script[i] = script[i].Remove(0, responseTwoChar.Length);
                     _choiceDialogues2[i] = true;
                 }
-                else if (script[i].Contains(choiceThreeChar))
+                else if (script[i].Contains(responseThreeChar))
                 {
-                    script[i] = script[i].Remove(0, choiceThreeChar.Length);
+                    script[i] = script[i].Remove(0, responseThreeChar.Length);
                     _choiceDialogues3[i] = true;
                 }
                 else if (script[i].Contains(returnChar))
@@ -213,7 +226,22 @@ namespace System
                     script[i] = script[i].Remove(0, returnChar.Length);
                     _returnDialogues[i] = true;
                 }
-                
+                else if (script[i].Contains(goodRlvlChar)) 
+                {
+                    script[i] = script[i].Remove(0, goodRlvlChar.Length);
+                    _goodorbadCheck[i] = true;
+                }
+                else if (script[i].Contains(goodRlvlChar))
+                {
+                    script[i] = script[i].Remove(0, goodRlvlChar.Length);
+                    _goodRlvlDialogues[i] = true;
+                }
+                else if(script[i].Contains(badRlvlChar))
+                {
+                    script[i] = script[i].Remove(0, badRlvlChar.Length);
+                    _badRlvlDialogues[i] = true;
+                }
+
                 script[i] = script[i].Replace(replaceString, playerName);
                 _names[i] = script[i].Split(":")[0];
                 script[i] = script[i].Remove(0, script[i].IndexOf(":", StringComparison.Ordinal)+2);
