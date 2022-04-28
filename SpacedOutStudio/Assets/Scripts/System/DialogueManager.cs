@@ -114,7 +114,7 @@ namespace System
             }
             else if (_inChoices2)
             {
-                if (!_choiceDialogues1[_currentDialogue])
+                if (!_choiceDialogues2[_currentDialogue])
                 {
                     _inChoices2 = false;
                     GotoCorrectDialogue(_choiceManager.currentChoices,_returnDialogues);
@@ -123,7 +123,7 @@ namespace System
             }
             else if (_inChoices3)
             {
-                if (!_choiceDialogues1[_currentDialogue])
+                if (!_choiceDialogues3[_currentDialogue])
                 {
                     _inChoices3 = false;
                     GotoCorrectDialogue(_choiceManager.currentChoices,_returnDialogues);
@@ -226,7 +226,7 @@ namespace System
                     script[i] = script[i].Remove(0, returnChar.Length);
                     _returnDialogues[i] = true;
                 }
-                else if (script[i].Contains(goodRlvlChar)) 
+                else if (script[i].Contains(goodOrBadCheckChar)) 
                 {
                     script[i] = script[i].Remove(0, goodRlvlChar.Length);
                     _goodorbadCheck[i] = true;
@@ -277,6 +277,7 @@ namespace System
                     if (!inStreak)
                     {
                         skipNumber--;
+                        print("test");
                     }
                     inStreak = true;
                     if (skipNumber > 0) continue;
