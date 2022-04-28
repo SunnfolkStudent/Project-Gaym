@@ -207,24 +207,108 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1960545067
+--- !u!1001 &412475100
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5002994486055288483, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: dialogueOptions.Array.size
-      value: 1
+    - target: {fileID: 2271899975484111128, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_text
+      value: 'I have two conjured lights in my brain, and one just flickered out
+        and died.
+
+'
       objectReference: {fileID: 0}
-    - target: {fileID: 5002994486055288483, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: dialogueOptions.Array.data[1]
-      value: 
+    - target: {fileID: 2578177674658302932, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_text
+      value: If you wanted to end me, digging my grave would have sufficed.
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.size
-      value: 1
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[0]
+      value: 'PC: I did not understand anything of what that man said. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[1]
+      value: 'PC: What is this even for? When in my life will I ever use this knowledge?
+        Ugh I have a headache. Let me never step another...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[2]
+      value: 'Rageheart: HAHAHAHAH!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[3]
+      value: 'PC: Why are they laughing? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[4]
+      value: 'Rageheart: I apologize, sweet PC, but your exhaustion is quite clear
+        on your face. I take it this day of yours has taken a bit out of you. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[5]
+      value: /c
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[6]
+      value: "/c1 Rageheart: And have you leave me? I\u2019m afraid you will have
+        to get used to the drivel called education. It\u2019s to make you smarter,
+        you know. It will only improve you. This is for your own good."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[7]
+      value: "/c2 Rageheart: Hahahaha. I understand the sentiment, but I assure you
+        this is only done to make you smarter. It\u2019s for your own good."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[8]
+      value: '/c3 Rageheart: My intent was never to end you. I believed that these
+        subjects would be to your liking, but I suppose I never considered the fact
+        that you may never have received an education like this before. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[9]
+      value: '/c3 Rageheart: But do not worry, this is for your own good.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[10]
+      value: "/r PC: How could you possibly know what\u2019s good for me? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[11]
+      value: "PC: \u2026 "
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[12]
+      value: "Rageheart: Anyways, it is fantastic to see you. I know school can be
+        a bit jarring but I believe you will do wonderful as always. I\u2019m afraid
+        I will have to head home to \u2026prepare some things. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[13]
+      value: "Rageheart: Have a good day, PC. I can\u2019t wait to see you tomorrow! "
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[14]
+      value: 'PC: Uh...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[15]
+      value: 'PC: Where do I sleep?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[16]
+      value: 'PC: Where do I sleep?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009146185891727520, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DontChangeScore
       objectReference: {fileID: 0}
     - target: {fileID: 7715627315812711199, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_Name
@@ -313,6 +397,12 @@ PrefabInstance:
     - target: {fileID: 7715627315812711395, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7890131532053223715, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_text
+      value: 'Bring me back!
+
+'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
