@@ -1033,7 +1033,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.size
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: dialogueChoicesChar
@@ -1105,15 +1105,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[16]
-      value: '/r PC: go off king'
+      value: '/c3 what: waht'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[17]
-      value: 'PC: bruh'
+      value: '/r PC: go off king'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[18]
       value: 'PC: bruh'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490013146321703341, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490013146321703341, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490013146321703341, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490013146321703341, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490013146321703341, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490013146321703341, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490013146321703341, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_enableVertexGradient
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7009146185891727520, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
