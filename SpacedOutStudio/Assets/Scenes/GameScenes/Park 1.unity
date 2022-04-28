@@ -214,10 +214,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1316737490, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: m_Name
-      value: DialogueBoxSprite
-      objectReference: {fileID: 0}
     - target: {fileID: 793478786174971159, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_Name
       value: Choice3
@@ -244,7 +240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.size
-      value: 13
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[0]
@@ -284,18 +280,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[9]
-      value: ' '
+      value: "/r Rageheart: You didn\u2019t answer my question, but that is to be
+        expected."
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[10]
-      value: ' '
+      value: ' PC: Why would I answer to you, you cur!'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[11]
-      value: ' '
+      value: ' PC: Reveal your foul plot before I take your life! '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[12]
+      value: 'Rageheart: Ah ah ah, hero. You cannot do that here. Not unless you
+        wish to become the villain.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[13]
+      value: 'Rageheart: By the laws of this land, ending the life of another will
+        put you in confinement.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[14]
+      value: 'PC: You think I care? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[15]
+      value: 'Rageheart: No. But it would be quite a shame to be rid of me when I
+        have the only key.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[16]
+      value: "PC: \u2026 "
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[17]
+      value: 'Rageheart: But now is not the time for fancy frolicking, we have a
+        class to attend. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[18]
+      value: 'PC: What? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[19]
       value: ' '
       objectReference: {fileID: 0}
     - target: {fileID: 7715627315812711199, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
@@ -391,18 +420,6 @@ PrefabInstance:
       value: 'What does that matter to you?
 
 '
-      objectReference: {fileID: 0}
-    - target: {fileID: 8232444236973738268, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1504.7251
-      objectReference: {fileID: 0}
-    - target: {fileID: 8232444236973738268, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 198
-      objectReference: {fileID: 0}
-    - target: {fileID: 8232444236973738268, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.1126
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
