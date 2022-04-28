@@ -15,9 +15,10 @@ namespace System
         public string responseTwoChar = "/c2";
         public string responseThreeChar = "/c3";
         public string returnChar = "/r";
-        public string badRlvlChar = "/gr";
-        public string goodRlvlChar = "/br";
-        public string goodOrBadCheckChar = "/rLvl";
+        public string goodRlvlChar = "/gr";
+        public string badRlvlChar = "/br";
+        public string goodOrBadCheckChar = "/lvl";
+        public string goodOrBadCheckReturn = "/rr";
         
         public string[] script;
 
@@ -35,6 +36,7 @@ namespace System
         private SceneController _sceneController;
         public float textSpeed = 1;
         public bool loop;
+        public int rScoreMinP;
         private bool _generatingDialogue;
         private bool _stopGeneratingDialogue;
         private bool[] _choiceDialogues;
@@ -45,15 +47,21 @@ namespace System
         private bool[] _goodorbadCheck;
         private bool[] _goodRlvlDialogues;
         private bool[] _badRlvlDialogues;
+        private bool[] _returnLvlDialogues;
         private ChoiceManager _choiceManager;
         private bool _inChoices1;
         private bool _inChoices2;
         private bool _inChoices3;
         private int _currentOptions;
-        private int[] _lvlReq;
-        public bool _nextDialogue;
-        
-        
+        [HideInInspector]public bool nextDialogue;
+        private bool _inGoodR;
+        private bool _inBadR;
+        public bool loadFinalScene;
+        public string finalSceneToLoadP;
+        public string finalSceneToLoadN;
+        public int scoreForFinalScene = 5;
+
+
         /*public bool RlvlMattering;
         public int minRlvlForEnding;*/
 
@@ -92,7 +100,7 @@ namespace System
         public void NextDialogue()
         {
             if (logGameObject.activeSelf || _choiceManager.showingDialogue) return;
-            _nextDialogue = true;
+            nextDialogue = true;
             
 
             if (_currentDialogue < script.Length -1)
@@ -114,6 +122,8 @@ namespace System
                 if (!_choiceDialogues1[_currentDialogue])
                 {
                     _inChoices1 = false;
+                    _inGoodR = false;
+                    _inBadR = false;
                     GotoCorrectDialogue(_choiceManager.currentChoices,_returnDialogues);
                     return;
                 }
@@ -123,6 +133,8 @@ namespace System
                 if (!_choiceDialogues2[_currentDialogue])
                 {
                     _inChoices2 = false;
+                    _inGoodR = false;
+                    _inBadR = false;
                     GotoCorrectDialogue(_choiceManager.currentChoices,_returnDialogues);
                     return;
                 }
@@ -132,7 +144,29 @@ namespace System
                 if (!_choiceDialogues3[_currentDialogue])
                 {
                     _inChoices3 = false;
+                    _inGoodR = false;
+                    _inBadR = false;
                     GotoCorrectDialogue(_choiceManager.currentChoices,_returnDialogues);
+                    return;
+                }
+            }
+            if (_inGoodR)
+            {
+                if (!_goodRlvlDialogues[_currentDialogue])
+                {
+                    _inGoodR = false;
+                    print("testP");
+                    GotoCorrectDialogue(1,_returnLvlDialogues);
+                    return;
+                }
+            }
+            else if (_inBadR)
+            {
+                if (!_badRlvlDialogues[_currentDialogue])
+                {
+                    _inBadR = false;
+                    print("testN");
+                    GotoCorrectDialogue(1,_returnLvlDialogues);
                     return;
                 }
             }
@@ -143,7 +177,18 @@ namespace System
             }
             else if (_goodorbadCheck[_currentDialogue])
             {
-                
+                if (_choiceManager.relationScore > rScoreMinP)
+                {
+                    _inGoodR = true;
+                    print("positive");
+                    GotoCorrectDialogue(1,_goodRlvlDialogues);
+                }
+                else
+                {
+                    _inBadR = true;
+                    print("negative");
+                    GotoCorrectDialogue(1,_badRlvlDialogues);
+                }
             }
             else
             {
@@ -197,12 +242,12 @@ namespace System
         private void ExtractAndReplaceNames()
         {
             _names = new string[script.Length];
-            _lvlReq = new int[script.Length];
             _choiceDialogues = new bool[script.Length];
             _choiceDialogues1 = new bool[script.Length];
             _choiceDialogues2 = new bool[script.Length];
             _choiceDialogues3 = new bool[script.Length];
             _returnDialogues = new bool[script.Length];
+            _returnLvlDialogues = new bool[script.Length];
             _goodorbadCheck = new bool[script.Length];
             _goodRlvlDialogues = new bool[script.Length];
             _badRlvlDialogues = new bool[script.Length];
@@ -216,13 +261,17 @@ namespace System
                 else if (script[i].Contains(goodRlvlChar))
                 {
                     script[i] = script[i].Remove(script[i].IndexOf(goodRlvlChar, StringComparison.Ordinal), goodRlvlChar.Length);
-                    _lvlReq[i] = int.Parse(script[i].Split(":")[0]);
                     _goodRlvlDialogues[i] = true;
                 }
                 else if(script[i].Contains(badRlvlChar))
                 {
                     script[i] = script[i].Remove(script[i].IndexOf(badRlvlChar, StringComparison.Ordinal), badRlvlChar.Length);
                     _badRlvlDialogues[i] = true;
+                }
+                else if(script[i].Contains(goodOrBadCheckReturn))
+                {
+                    script[i] = script[i].Remove(script[i].IndexOf(goodOrBadCheckReturn, StringComparison.Ordinal), goodOrBadCheckReturn.Length);
+                    _returnLvlDialogues[i] = true;
                 }
                 
                 if (script[i] == dialogueChoicesChar)
@@ -260,6 +309,19 @@ namespace System
         {
             _inChoices1 = true;
             GotoCorrectDialogue(currentChoice,_choiceDialogues1);
+            if (_goodorbadCheck[_currentDialogue])
+            {
+                if (_choiceManager.relationScore < rScoreMinP)
+                {
+                    _inGoodR = true;
+                    GotoCorrectDialogue(1,_goodRlvlDialogues);
+                }
+                else
+                {
+                    _inBadR = true;
+                    GotoCorrectDialogue(1,_badRlvlDialogues);
+                }
+            }
         }
 
         public void NeutralChoice(int currentChoice)
