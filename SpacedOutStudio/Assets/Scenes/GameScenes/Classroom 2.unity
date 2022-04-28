@@ -215,6 +215,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: sceneToLoad
+      value: Bedroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.size
       value: 10
       objectReference: {fileID: 0}
@@ -243,8 +247,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[5]
-      value: "PC: (Rageheart said they have to \u201Cgo home\u201D and was surprised
-        when I didn\u2019t have an abode. This must mean that they have one.)"
+      value: "PC: (At the cafe, Rageheart said they had to \u201Cgo home\u201D and
+        was surprised when I didn\u2019t have an abode. This must mean that they
+        have one.)"
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[6]

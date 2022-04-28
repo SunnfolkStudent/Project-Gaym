@@ -238,8 +238,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[3]
-      value: "PC: (Rageheart said they have to \u201Cgo home\u201D and was surprised
-        when I didn\u2019t have an abode. This must mean that they have one.)"
+      value: "PC: (In the cafe, Rageheart said they had to \u201Cgo home\u201D and
+        was surprised when I didn\u2019t have an abode. This must mean that they
+        have one.)"
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[4]
@@ -247,7 +248,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[5]
-      value: 'PC: (I have to follow them to their abode and wait until nightfall. 
+      value: 'PC: (I have to follow them to their abode and wait until nightfall.
         Then I will strike.)'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
