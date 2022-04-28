@@ -13,6 +13,7 @@ namespace System
         private int _counter;
         private bool _startCounter;
         public string scene;
+        public int numberOfSentences = 7;
 
         private void Start()
         {
@@ -29,11 +30,9 @@ namespace System
                 _counter++;
             }
 
-            if (_counter > 2)
-            {
-                _sceneController.LoadWithTransition();
-                _choiceManager.dialogueAndNameplate.SetActive(false);
-            }
+            if (_counter <= numberOfSentences) return;
+            _sceneController.LoadWithTransition();
+            _choiceManager.dialogueAndNameplate.SetActive(false);
         }
 
         public void LoadExtraScene()
