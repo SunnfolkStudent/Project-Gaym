@@ -136,8 +136,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[0]
-      value: I do not understand this facility. Why are there so many children? Perhaps
-        this is an advanced orphanage. But why am I here?
+      value: 'Rageheart: I do not understand this facility. Why are there so many
+        children? Perhaps this is an advanced orphanage. But why am I here?'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[1]
