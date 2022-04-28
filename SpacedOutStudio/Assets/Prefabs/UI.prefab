@@ -1424,7 +1424,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5002994486055288483}
         m_TargetAssemblyTypeName: System.ChoiceManager, Assembly-CSharp
-        m_MethodName: DialogueOptionsHide
+        m_MethodName: DontChangeScore
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
