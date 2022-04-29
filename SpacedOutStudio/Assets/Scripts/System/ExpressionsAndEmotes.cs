@@ -8,9 +8,8 @@ namespace System
 	{
 		private DialogueManager _dialogueManager;
 		public Image rageheart;
-		public Image emote;
 		public Sprite[] expressionsSprites;
-		public Sprite[] emoteSprite;
+		public GameObject[] emotes;
 
 		private void Start()
 		{
@@ -23,10 +22,10 @@ namespace System
 			{
 				rageheart.sprite = expressionsSprites[_dialogueManager.currentDialogue];
 			}
-
-			if (emoteSprite[_dialogueManager.currentDialogue] != null)
+			emotes[_dialogueManager.currentDialogue-1].SetActive(false);
+			if (emotes[_dialogueManager.currentDialogue] != null)
 			{
-				emote.sprite = emoteSprite[_dialogueManager.currentDialogue];
+				emotes[_dialogueManager.currentDialogue].SetActive(true);
 			}
 		}
 	}
