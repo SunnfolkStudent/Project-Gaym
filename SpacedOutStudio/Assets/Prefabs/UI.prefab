@@ -550,6 +550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneController: {fileID: 7715627315812711397}
   dialogueManager: {fileID: 5402145849172493264}
+  choiceManager: {fileID: 0}
 --- !u!1 &220696391262713957
 GameObject:
   m_ObjectHideFlags: 0
@@ -2090,9 +2091,10 @@ MonoBehaviour:
   responseTwoChar: /c2
   responseThreeChar: /c3
   returnChar: /r
-  badRlvlChar: /gr
   goodRlvlChar: /br
-  goodOrBadCheckChar: /rLvl
+  badRlvlChar: /gr
+  goodOrBadCheckChar: /lvl
+  goodOrBadCheckReturn: 0
   script: []
   sceneToLoad: Test 2
   logGameObject: {fileID: 2136486445801522527}
@@ -2102,6 +2104,12 @@ MonoBehaviour:
   playerName: Fredrick
   textSpeed: 5
   loop: 0
+  rScoreMinP: 0
+  nextDialogue: 0
+  loadFinalScene: 0
+  finalSceneToLoadP: 
+  finalSceneToLoadN: 
+  scoreForFinalScene: 5
 --- !u!114 &5002994486055288483
 MonoBehaviour:
   m_ObjectHideFlags: 0

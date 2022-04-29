@@ -365,7 +365,7 @@ namespace System
             if (_goodorbadCheck[_currentDialogue])
             {
                 _currentScoreCheck++;
-                if (_choiceManager.relationScore >= rScoreMinP)
+                if (_choiceManager.relationScore <= rScoreMinP)
                 {
                     _inGoodR = true;
                     GotoCorrectDialogue(_currentScoreCheck, _goodRlvlDialogues);
