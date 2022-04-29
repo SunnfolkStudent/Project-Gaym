@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace System
 {
+    [RequireComponent(typeof(ExpressionsAndEmotes))]
     [RequireComponent(typeof(ChoiceManager))]
     [RequireComponent(typeof(SceneController))]
     [RequireComponent(typeof(InputManager))]
@@ -31,7 +32,7 @@ namespace System
         public string replaceString;
         public string playerName;
         private InputManager _inputManager;
-        private int _currentDialogue;
+        [HideInInspector] public int currentDialogue;
         private TMP_Text _logText;
         private string[] _names;
         private SceneController _sceneController;
@@ -62,6 +63,7 @@ namespace System
         public string finalSceneToLoadN;
         public int scoreForFinalScene = 5;
         private int _currentScoreCheck;
+        private ExpressionsAndEmotes _expressionsAndEmotes;
 
 
         /*public bool RlvlMattering;
@@ -70,13 +72,14 @@ namespace System
 
         private void Start()
         {
+            _expressionsAndEmotes = GetComponent<ExpressionsAndEmotes>();
             _choiceManager = GetComponent<ChoiceManager>();
             _sceneController = GetComponent<SceneController>();
             _logText = logGameObject.GetComponentInChildren<TMP_Text>();
             _inputManager = GetComponent<InputManager>();
             ExtractAndReplaceNames();
             dialogueText.text = "";
-            namePlate.text = _names[_currentDialogue];
+            namePlate.text = _names[currentDialogue];
         }
 
         private void Update()
@@ -103,11 +106,12 @@ namespace System
         {
             if (logGameObject.activeSelf || _choiceManager.showingDialogue) return;
             nextDialogue = true;
+            _expressionsAndEmotes.UpdateSprite();
 
 
-            if (_currentDialogue < script.Length - 1)
+            if (currentDialogue < script.Length - 1)
             {
-                _currentDialogue++;
+                currentDialogue++;
             }
             else
             {
@@ -117,12 +121,12 @@ namespace System
                     return;
                 }
 
-                _currentDialogue = 0;
+                currentDialogue = 0;
             }
 
             if (_inChoices1)
             {
-                if (!_choiceDialogues1[_currentDialogue])
+                if (!_choiceDialogues1[currentDialogue])
                 {
                     _inChoices1 = false;
                     _inGoodR = false;
@@ -133,7 +137,7 @@ namespace System
             }
             else if (_inChoices2)
             {
-                if (!_choiceDialogues2[_currentDialogue])
+                if (!_choiceDialogues2[currentDialogue])
                 {
                     _inChoices2 = false;
                     _inGoodR = false;
@@ -144,7 +148,7 @@ namespace System
             }
             else if (_inChoices3)
             {
-                if (!_choiceDialogues3[_currentDialogue])
+                if (!_choiceDialogues3[currentDialogue])
                 {
                     _inChoices3 = false;
                     _inGoodR = false;
@@ -156,7 +160,7 @@ namespace System
 
             if (_inGoodR)
             {
-                if (!_goodRlvlDialogues[_currentDialogue])
+                if (!_goodRlvlDialogues[currentDialogue])
                 {
                     _inGoodR = false;
                     print("testP");
@@ -166,7 +170,7 @@ namespace System
             }
             else if (_inBadR)
             {
-                if (!_badRlvlDialogues[_currentDialogue])
+                if (!_badRlvlDialogues[currentDialogue])
                 {
                     _inBadR = false;
                     print("testN");
@@ -175,11 +179,11 @@ namespace System
                 }
             }
 
-            if (_choiceDialogues[_currentDialogue])
+            if (_choiceDialogues[currentDialogue])
             {
                 _choiceManager.DialogueOptionsShow();
             }
-            else if (_goodorbadCheck[_currentDialogue])
+            else if (_goodorbadCheck[currentDialogue])
             {
                 _currentScoreCheck++;
                 if (_choiceManager.relationScore > rScoreMinP)
@@ -205,9 +209,9 @@ namespace System
         public IEnumerator GradualText()
         {
             _generatingDialogue = true;
-            namePlate.text = _names[_currentDialogue];
+            namePlate.text = _names[currentDialogue];
             dialogueText.text = "";
-            var charArray = script[_currentDialogue].ToCharArray();
+            var charArray = script[currentDialogue].ToCharArray();
             for (var i = 0; i < charArray.Length; i++)
             {
                 if (_stopGeneratingDialogue) continue;
@@ -217,7 +221,7 @@ namespace System
 
             if (_stopGeneratingDialogue)
             {
-                dialogueText.text = script[_currentDialogue];
+                dialogueText.text = script[currentDialogue];
             }
 
             _stopGeneratingDialogue = false;
@@ -232,7 +236,7 @@ namespace System
             if (!logGameObject.activeSelf)
             {
                 logGameObject.SetActive(true);
-                for (var i = 0; i < _currentDialogue + 1; i++)
+                for (var i = 0; i < currentDialogue + 1; i++)
                 {
                     _logText.text += "\n" + _names[i] + ": " + script[i];
                 }
@@ -355,7 +359,7 @@ namespace System
 
                     inStreak = true;
                     if (skipNumber > 0) continue;
-                    _currentDialogue = i;
+                    currentDialogue = i;
                     StartCoroutine(GradualText());
                     return;
                 }
@@ -366,7 +370,7 @@ namespace System
 
         private void CheckScore()
         {
-            if (_goodorbadCheck[_currentDialogue])
+            if (_goodorbadCheck[currentDialogue])
             {
                 _currentScoreCheck++;
                 if (_choiceManager.relationScore <= rScoreMinP)
