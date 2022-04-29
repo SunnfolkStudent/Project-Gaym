@@ -19,10 +19,11 @@ namespace System
         public string badRlvlChar = "/br";
         public string goodOrBadCheckChar = "/lvl";
         public string goodOrBadCheckReturn = "/rr";
-        
+
         public string[] script;
 
         public string sceneToLoad;
+
         //public GameObject dialogueGameObject;
         public GameObject logGameObject;
         public TMP_Text dialogueText;
@@ -53,13 +54,14 @@ namespace System
         private bool _inChoices2;
         private bool _inChoices3;
         private int _currentOptions;
-        [HideInInspector]public bool nextDialogue;
+        [HideInInspector] public bool nextDialogue;
         private bool _inGoodR;
         private bool _inBadR;
         public bool loadFinalScene;
         public string finalSceneToLoadP;
         public string finalSceneToLoadN;
         public int scoreForFinalScene = 5;
+        private int _currentScoreCheck;
 
 
         /*public bool RlvlMattering;
@@ -101,9 +103,9 @@ namespace System
         {
             if (logGameObject.activeSelf || _choiceManager.showingDialogue) return;
             nextDialogue = true;
-            
 
-            if (_currentDialogue < script.Length -1)
+
+            if (_currentDialogue < script.Length - 1)
             {
                 _currentDialogue++;
             }
@@ -114,9 +116,10 @@ namespace System
                     _sceneController.LoadWithTransition();
                     return;
                 }
+
                 _currentDialogue = 0;
             }
-            
+
             if (_inChoices1)
             {
                 if (!_choiceDialogues1[_currentDialogue])
@@ -124,7 +127,7 @@ namespace System
                     _inChoices1 = false;
                     _inGoodR = false;
                     _inBadR = false;
-                    GotoCorrectDialogue(_choiceManager.currentChoices,_returnDialogues);
+                    GotoCorrectDialogue(_choiceManager.currentChoices, _returnDialogues);
                     return;
                 }
             }
@@ -135,7 +138,7 @@ namespace System
                     _inChoices2 = false;
                     _inGoodR = false;
                     _inBadR = false;
-                    GotoCorrectDialogue(_choiceManager.currentChoices,_returnDialogues);
+                    GotoCorrectDialogue(_choiceManager.currentChoices, _returnDialogues);
                     return;
                 }
             }
@@ -146,17 +149,18 @@ namespace System
                     _inChoices3 = false;
                     _inGoodR = false;
                     _inBadR = false;
-                    GotoCorrectDialogue(_choiceManager.currentChoices,_returnDialogues);
+                    GotoCorrectDialogue(_choiceManager.currentChoices, _returnDialogues);
                     return;
                 }
             }
+
             if (_inGoodR)
             {
                 if (!_goodRlvlDialogues[_currentDialogue])
                 {
                     _inGoodR = false;
                     print("testP");
-                    GotoCorrectDialogue(1,_returnLvlDialogues);
+                    GotoCorrectDialogue(1, _returnLvlDialogues);
                     return;
                 }
             }
@@ -166,7 +170,7 @@ namespace System
                 {
                     _inBadR = false;
                     print("testN");
-                    GotoCorrectDialogue(1,_returnLvlDialogues);
+                    GotoCorrectDialogue(1, _returnLvlDialogues);
                     return;
                 }
             }
@@ -177,17 +181,18 @@ namespace System
             }
             else if (_goodorbadCheck[_currentDialogue])
             {
+                _currentScoreCheck++;
                 if (_choiceManager.relationScore > rScoreMinP)
                 {
                     _inGoodR = true;
                     print("positive");
-                    GotoCorrectDialogue(1,_goodRlvlDialogues);
+                    GotoCorrectDialogue(_currentScoreCheck, _goodRlvlDialogues);
                 }
                 else
                 {
                     _inBadR = true;
                     print("negative");
-                    GotoCorrectDialogue(1,_badRlvlDialogues);
+                    GotoCorrectDialogue(_currentScoreCheck, _badRlvlDialogues);
                 }
             }
             else
@@ -195,7 +200,7 @@ namespace System
                 StartCoroutine(GradualText());
             }
         }
-        
+
 
         public IEnumerator GradualText()
         {
@@ -206,19 +211,20 @@ namespace System
             for (var i = 0; i < charArray.Length; i++)
             {
                 if (_stopGeneratingDialogue) continue;
-                yield return new WaitForSeconds(textSpeed/100);
-                dialogueText.text = dialogueText.text.Insert(i,charArray[i].ToString());
+                yield return new WaitForSeconds(textSpeed / 100);
+                dialogueText.text = dialogueText.text.Insert(i, charArray[i].ToString());
             }
 
             if (_stopGeneratingDialogue)
             {
                 dialogueText.text = script[_currentDialogue];
             }
+
             _stopGeneratingDialogue = false;
 
             _generatingDialogue = false;
         }
-        
+
 
         public void Log()
         {
@@ -226,7 +232,7 @@ namespace System
             if (!logGameObject.activeSelf)
             {
                 logGameObject.SetActive(true);
-                for (var i = 0; i < _currentDialogue+1; i++)
+                for (var i = 0; i < _currentDialogue + 1; i++)
                 {
                     _logText.text += "\n" + _names[i] + ": " + script[i];
                 }
@@ -253,27 +259,31 @@ namespace System
             _badRlvlDialogues = new bool[script.Length];
             for (var i = 0; i < script.Length; i++)
             {
-                if (script[i].Contains(goodOrBadCheckChar)) 
+                if (script[i].Contains(goodOrBadCheckChar))
                 {
-                    script[i] = script[i].Remove(script[i].IndexOf(goodOrBadCheckChar, StringComparison.Ordinal), goodOrBadCheckChar.Length);
+                    script[i] = script[i].Remove(script[i].IndexOf(goodOrBadCheckChar, StringComparison.Ordinal),
+                        goodOrBadCheckChar.Length);
                     _goodorbadCheck[i] = true;
                 }
                 else if (script[i].Contains(goodRlvlChar))
                 {
-                    script[i] = script[i].Remove(script[i].IndexOf(goodRlvlChar, StringComparison.Ordinal), goodRlvlChar.Length);
+                    script[i] = script[i].Remove(script[i].IndexOf(goodRlvlChar, StringComparison.Ordinal),
+                        goodRlvlChar.Length);
                     _goodRlvlDialogues[i] = true;
                 }
-                else if(script[i].Contains(badRlvlChar))
+                else if (script[i].Contains(badRlvlChar))
                 {
-                    script[i] = script[i].Remove(script[i].IndexOf(badRlvlChar, StringComparison.Ordinal), badRlvlChar.Length);
+                    script[i] = script[i].Remove(script[i].IndexOf(badRlvlChar, StringComparison.Ordinal),
+                        badRlvlChar.Length);
                     _badRlvlDialogues[i] = true;
                 }
-                else if(script[i].Contains(goodOrBadCheckReturn))
+                else if (script[i].Contains(goodOrBadCheckReturn))
                 {
-                    script[i] = script[i].Remove(script[i].IndexOf(goodOrBadCheckReturn, StringComparison.Ordinal), goodOrBadCheckReturn.Length);
+                    script[i] = script[i].Remove(script[i].IndexOf(goodOrBadCheckReturn, StringComparison.Ordinal),
+                        goodOrBadCheckReturn.Length);
                     _returnLvlDialogues[i] = true;
                 }
-                
+
                 if (script[i] == dialogueChoicesChar)
                 {
                     _choiceDialogues[i] = true;
@@ -301,39 +311,33 @@ namespace System
 
                 script[i] = script[i].Replace(replaceString, playerName);
                 _names[i] = script[i].Split(":")[0];
-                script[i] = script[i].Remove(0, script[i].IndexOf(":", StringComparison.Ordinal)+2);
+                script[i] = script[i].Remove(0, script[i].IndexOf(":", StringComparison.Ordinal) + 2);
             }
         }
 
         public void PositiveChoice(int currentChoice)
         {
             _inChoices1 = true;
-            GotoCorrectDialogue(currentChoice,_choiceDialogues1);
-            if (_goodorbadCheck[_currentDialogue])
-            {
-                if (_choiceManager.relationScore < rScoreMinP)
-                {
-                    _inGoodR = true;
-                    GotoCorrectDialogue(1,_goodRlvlDialogues);
-                }
-                else
-                {
-                    _inBadR = true;
-                    GotoCorrectDialogue(1,_badRlvlDialogues);
-                }
-            }
+            GotoCorrectDialogue(currentChoice, _choiceDialogues1);
+            CheckScore();
         }
 
         public void NeutralChoice(int currentChoice)
         {
             _inChoices2 = true;
-            GotoCorrectDialogue(currentChoice,_choiceDialogues2);
+            GotoCorrectDialogue(currentChoice, _choiceDialogues2);
+            CheckScore();
         }
 
         public void NegativeChoice(int currentChoice)
         {
             _inChoices3 = true;
-            GotoCorrectDialogue(currentChoice,_choiceDialogues3);
+            if (loadFinalScene)
+            {
+                _currentScoreCheck++;
+            }
+            GotoCorrectDialogue(currentChoice, _choiceDialogues3);
+            CheckScore();
         }
 
         public void GotoCorrectDialogue(int currentChoice, bool[] boolArray)
@@ -348,13 +352,33 @@ namespace System
                     {
                         skipNumber--;
                     }
+
                     inStreak = true;
                     if (skipNumber > 0) continue;
                     _currentDialogue = i;
                     StartCoroutine(GradualText());
                     return;
                 }
+
                 inStreak = false;
+            }
+        }
+
+        private void CheckScore()
+        {
+            if (_goodorbadCheck[_currentDialogue])
+            {
+                _currentScoreCheck++;
+                if (_choiceManager.relationScore <= rScoreMinP)
+                {
+                    _inGoodR = true;
+                    GotoCorrectDialogue(_currentScoreCheck, _goodRlvlDialogues);
+                }
+                else
+                {
+                    _inBadR = true;
+                    GotoCorrectDialogue(_currentScoreCheck, _badRlvlDialogues);
+                }
             }
         }
     }
