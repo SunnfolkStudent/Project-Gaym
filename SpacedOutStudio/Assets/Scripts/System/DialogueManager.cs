@@ -163,7 +163,7 @@ namespace System
                 {
                     _inGoodR = false;
                     print("testP");
-                    GotoCorrectDialogue(1, _returnLvlDialogues);
+                    GotoCorrectDialogue(_choiceManager.currentChoices, _returnDialogues);
                     return;
                 }
             }
@@ -173,7 +173,7 @@ namespace System
                 {
                     _inBadR = false;
                     print("testN");
-                    GotoCorrectDialogue(1, _returnLvlDialogues);
+                    GotoCorrectDialogue(_choiceManager.currentChoices, _returnDialogues);
                     return;
                 }
             }
