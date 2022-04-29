@@ -206,6 +206,7 @@ namespace System
                 if (debug)
                 {
                     currentDialogue = debugDialogue;
+                    _choiceManager.currentChoices = 1;
                     debug = false;
                 }
                 StartCoroutine(GradualText());
