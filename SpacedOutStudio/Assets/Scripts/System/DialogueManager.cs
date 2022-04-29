@@ -20,6 +20,8 @@ namespace System
         public string badRlvlChar = "/br";
         public string goodOrBadCheckChar = "/lvl";
         public string goodOrBadCheckReturn = "/rr";
+        public bool debug;
+        public int debugDialogue;
 
         public string[] script;
 
@@ -64,6 +66,7 @@ namespace System
         public int scoreForFinalScene = 5;
         private int _currentScoreCheck;
         private ExpressionsAndEmotes _expressionsAndEmotes;
+        
 
 
         /*public bool RlvlMattering;
@@ -106,7 +109,7 @@ namespace System
         {
             if (logGameObject.activeSelf || _choiceManager.showingDialogue) return;
             nextDialogue = true;
-
+            
 
             if (currentDialogue < script.Length - 1)
             {
@@ -200,6 +203,11 @@ namespace System
             }
             else
             {
+                if (debug)
+                {
+                    currentDialogue = debugDialogue;
+                    debug = false;
+                }
                 StartCoroutine(GradualText());
             }
         }
