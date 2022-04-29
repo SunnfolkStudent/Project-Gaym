@@ -2298,7 +2298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f6a87c3702757c429f75ea5e1fdd039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rageheart: {fileID: 0}
+  rageheart: {fileID: 4851390701502077103}
   expressionsSprites: []
   emotes: []
 --- !u!1 &7715627316083030794
