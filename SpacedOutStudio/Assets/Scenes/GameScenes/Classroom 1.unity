@@ -144,6 +144,10 @@ PrefabInstance:
       value: What's going on!?
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: textSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: playerName
       value: You
       objectReference: {fileID: 0}
