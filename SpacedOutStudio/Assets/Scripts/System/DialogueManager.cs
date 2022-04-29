@@ -332,6 +332,10 @@ namespace System
         public void NegativeChoice(int currentChoice)
         {
             _inChoices3 = true;
+            if (loadFinalScene)
+            {
+                _currentScoreCheck++;
+            }
             GotoCorrectDialogue(currentChoice, _choiceDialogues3);
             CheckScore();
         }
