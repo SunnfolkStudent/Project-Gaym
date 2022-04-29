@@ -342,7 +342,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2076447886}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: System.ExtraScene, Assembly-CSharp
         m_MethodName: LoadExtraScene
         m_Mode: 1
@@ -831,6 +831,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5002994486055288483, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: relationScore
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002994486055288483, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: scoreChangeAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002994486055288483, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: dialogueOptions.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -872,11 +880,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.size
-      value: 20
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: goodOrBadCheckChar
-      value: /rlvl
+      value: /lvl
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: test.Array.data[0]
@@ -885,6 +893,10 @@ PrefabInstance:
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: dialogueChoicesChar
       value: /c
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: goodOrBadCheckReturn
+      value: /rr
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[0]
@@ -896,74 +908,98 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[2]
-      value: /c
+      value: '/lvl '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[3]
-      value: '/c1 bruh: maximizer maximizer'
+      value: '/gr test: yo'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[4]
-      value: '/c1 burh: aaaa'
+      value: '/br testing: no'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[5]
-      value: /c1 /rlvl
+      value: '/rr what: the hell'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[6]
-      value: '/c2 test: goo goo '
-      objectReference: {fileID: 0}
-    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[7]
-      value: '/c2 test: mm'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[8]
-      value: '/c3 Dracula: ninisani'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[9]
-      value: '/c3 dracula: wah'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[10]
-      value: '/r Dwayne: i love rocks'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[11]
-      value: 'Dwayne: so much'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[12]
       value: /c
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[7]
+      value: /c1 /lvl
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[8]
+      value: '/c1 /gr bruh: maximizer maximizer'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[9]
+      value: '/c1 /gr burh: aaaa'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[10]
+      value: '/c1 /br testing: fuck this shit'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[11]
+      value: '/c1 /br burh: realy'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[12]
+      value: '/c2 test: goo goo '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[13]
-      value: '/c1 Finana: tsunami'
+      value: '/c2 test: mm'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[14]
-      value: '/c1 Finana: is epic'
+      value: '/c3 Dracula: ninisani'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[15]
-      value: '/c2 Test: mmm'
+      value: '/c3 dracula: wah'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[16]
-      value: '/c3 yo: bababooey'
+      value: '/r Dwayne: i love rocks'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[17]
-      value: '/c3 what: waht'
+      value: 'Dwayne: so much'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[18]
-      value: '/r PC: go off king'
+      value: /c
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[19]
+      value: '/c1 Finana: tsunami'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[20]
+      value: '/c1 Finana: is epic'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[21]
+      value: '/c2 Test: mmm'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[22]
+      value: '/c3 yo: bababooey'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[23]
+      value: '/c3 what: waht'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[24]
+      value: '/r PC: go off king'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[25]
       value: 'PC: bruh'
       objectReference: {fileID: 0}
     - target: {fileID: 5490013146321703341, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
@@ -1110,7 +1146,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5002994486055288483, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
   m_PrefabInstance: {fileID: 765193370}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2076447878}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f84ac7fd2ef0c194198016a7343b17ad, type: 3}
@@ -1369,21 +1405,3 @@ Transform:
   m_Father: {fileID: 1029253640}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2076447878 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7715627315812711199, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-  m_PrefabInstance: {fileID: 765193370}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2076447886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2076447878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8756e2ade814107408e992c70f39886e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scene: ErlendTest

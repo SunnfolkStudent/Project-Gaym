@@ -24,9 +24,9 @@ namespace System
 
         private void Update()
         {
-            if (_startCounter && _dialogueManager._nextDialogue)
+            if (_startCounter && _dialogueManager.nextDialogue)
             {
-                _dialogueManager._nextDialogue = false;
+                _dialogueManager.nextDialogue = false;
                 _counter++;
             }
 
