@@ -9,7 +9,8 @@ namespace System
         public ChoiceManager choiceManager;
         public void LoadLevel()
         {
-            if (!dialogueManager.loadFinalScene)
+            sceneController.LoadScene(dialogueManager.sceneToLoad);
+            /*if (!dialogueManager.loadFinalScene)
             {
                 sceneController.LoadScene(dialogueManager.sceneToLoad);
             }
@@ -23,7 +24,7 @@ namespace System
                 {
                     sceneController.LoadScene(dialogueManager.finalSceneToLoadN);
                 }
-            }
+            }*/
         }
 
         public void StartText()

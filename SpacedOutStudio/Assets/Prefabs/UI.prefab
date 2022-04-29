@@ -2670,8 +2670,8 @@ MonoBehaviour:
   responseTwoChar: /c2
   responseThreeChar: /c3
   returnChar: /r
-  goodRlvlChar: /br
-  badRlvlChar: /gr
+  goodRlvlChar: /gr
+  badRlvlChar: /br
   goodOrBadCheckChar: /lvl
   goodOrBadCheckReturn: 0
   script: []
