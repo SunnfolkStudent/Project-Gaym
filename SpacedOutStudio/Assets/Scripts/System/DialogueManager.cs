@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace System
 {
+    [RequireComponent(typeof(ExpressionsAndEmotes))]
     [RequireComponent(typeof(ChoiceManager))]
     [RequireComponent(typeof(SceneController))]
     [RequireComponent(typeof(InputManager))]
@@ -62,6 +63,7 @@ namespace System
         public string finalSceneToLoadN;
         public int scoreForFinalScene = 5;
         private int _currentScoreCheck;
+        private ExpressionsAndEmotes _expressionsAndEmotes;
 
 
         /*public bool RlvlMattering;
@@ -70,6 +72,7 @@ namespace System
 
         private void Start()
         {
+            _expressionsAndEmotes = GetComponent<ExpressionsAndEmotes>();
             _choiceManager = GetComponent<ChoiceManager>();
             _sceneController = GetComponent<SceneController>();
             _logText = logGameObject.GetComponentInChildren<TMP_Text>();
@@ -103,6 +106,7 @@ namespace System
         {
             if (logGameObject.activeSelf || _choiceManager.showingDialogue) return;
             nextDialogue = true;
+            _expressionsAndEmotes.UpdateSprite();
 
 
             if (currentDialogue < script.Length - 1)
