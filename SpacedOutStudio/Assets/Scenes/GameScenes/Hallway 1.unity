@@ -306,10 +306,6 @@ PrefabInstance:
       propertyPath: script.Array.data[16]
       value: 'PC: Where do I sleep?'
       objectReference: {fileID: 0}
-    - target: {fileID: 7009146185891727520, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DontChangeScore
-      objectReference: {fileID: 0}
     - target: {fileID: 7715627315812711199, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_Name
       value: UI
