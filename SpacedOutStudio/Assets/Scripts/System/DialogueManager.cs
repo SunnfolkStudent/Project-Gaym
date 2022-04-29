@@ -210,6 +210,7 @@ namespace System
             _generatingDialogue = true;
             namePlate.text = _names[currentDialogue];
             dialogueText.text = "";
+            _expressionsAndEmotes.UpdateSprite();
             var charArray = script[currentDialogue].ToCharArray();
             for (var i = 0; i < charArray.Length; i++)
             {
@@ -222,7 +223,6 @@ namespace System
             {
                 dialogueText.text = script[currentDialogue];
             }
-            _expressionsAndEmotes.UpdateSprite();
             _stopGeneratingDialogue = false;
 
             _generatingDialogue = false;
