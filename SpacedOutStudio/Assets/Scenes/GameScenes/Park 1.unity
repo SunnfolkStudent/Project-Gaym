@@ -207,6 +207,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1418191871 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2047266444466163041, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+  m_PrefabInstance: {fileID: 1947354510}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1662036698 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5002994486055288483, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+  m_PrefabInstance: {fileID: 1947354510}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f84ac7fd2ef0c194198016a7343b17ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1947354510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -331,6 +347,42 @@ PrefabInstance:
       propertyPath: script.Array.data[19]
       value: ' '
       objectReference: {fileID: 0}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: choiceManager
+      value: 
+      objectReference: {fileID: 1662036698}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: emotes.Array.size
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: emotes.Array.data[9]
+      value: 
+      objectReference: {fileID: 1418191871}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: expressionsSprites.Array.size
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: expressionsSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 01a6127004951784bb010995dabffabe, type: 3}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: expressionsSprites.Array.data[9]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2def00bef49653249ab4997a9181292c, type: 3}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: expressionsSprites.Array.data[10]
+      value: 
+      objectReference: {fileID: 21300000, guid: 01a6127004951784bb010995dabffabe, type: 3}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: expressionsSprites.Array.data[15]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2def00bef49653249ab4997a9181292c, type: 3}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: expressionsSprites.Array.data[17]
+      value: 
+      objectReference: {fileID: 21300000, guid: 32012c01f4065e540802ca1d52c276d3, type: 3}
     - target: {fileID: 7715627315812711199, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_Name
       value: UI
@@ -424,6 +476,22 @@ PrefabInstance:
       value: 'What does that matter to you?
 
 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081657713207587606, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 89d93b0bbe7a49b4ea5aceb6e7452e9d, type: 3}
+    - target: {fileID: 8081657713207587606, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081657713207587606, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081657713207587606, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_Color.r
+      value: 0.05882353
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
