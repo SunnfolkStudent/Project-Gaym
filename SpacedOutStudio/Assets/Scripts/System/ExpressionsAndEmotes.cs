@@ -22,7 +22,14 @@ namespace System
 			{
 				rageheart.sprite = expressionsSprites[_dialogueManager.currentDialogue];
 			}
-			emotes[_dialogueManager.currentDialogue-1].SetActive(false);
+
+			if (_dialogueManager.currentDialogue > 1)
+			{
+				if (emotes[_dialogueManager.currentDialogue-1] != null)
+				{
+					emotes[_dialogueManager.currentDialogue-1].SetActive(false);
+				}
+			}
 			if (emotes[_dialogueManager.currentDialogue] != null)
 			{
 				emotes[_dialogueManager.currentDialogue].SetActive(true);
