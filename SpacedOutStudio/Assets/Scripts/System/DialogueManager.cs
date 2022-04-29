@@ -106,7 +106,6 @@ namespace System
         {
             if (logGameObject.activeSelf || _choiceManager.showingDialogue) return;
             nextDialogue = true;
-            _expressionsAndEmotes.UpdateSprite();
 
 
             if (currentDialogue < script.Length - 1)
@@ -223,7 +222,7 @@ namespace System
             {
                 dialogueText.text = script[currentDialogue];
             }
-
+            _expressionsAndEmotes.UpdateSprite();
             _stopGeneratingDialogue = false;
 
             _generatingDialogue = false;
