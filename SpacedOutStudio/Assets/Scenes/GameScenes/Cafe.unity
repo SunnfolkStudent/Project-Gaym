@@ -260,7 +260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.size
-      value: 119
+      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: goodOrBadCheckChar
@@ -452,322 +452,344 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[44]
-      value: '/c1 Rageheart: Is that the only thing you could come up with, dear?  '
+      value: '/c1 PC: So how''s the weather? It''s nice huh?'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[45]
-      value: '/c1 Rageheart: Well I suppose I will humor you.'
+      value: '/c1 Rageheart: Is that the only thing you could come up with, dear?  '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[46]
-      value: "/c1 Rageheart: It\u2019s always nice and sunny here, as I prefer it."
+      value: '/c1 Rageheart: Well I suppose I will humor you.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[47]
-      value: '/c1 Rageheart: Though sometimes it does rain or thunder.'
+      value: "/c1 Rageheart: It\u2019s always nice and sunny here, as I prefer it."
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[48]
-      value: "/c1 Rageheart: Makes me feel better when I have some\u2026 inner turmoil."
+      value: '/c1 Rageheart: Though sometimes it does rain or thunder.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[49]
-      value: '/c2 Rageheart: ...'
+      value: "/c1 Rageheart: Makes me feel better when I have some\u2026 inner turmoil."
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[50]
-      value: '/c2 Rageheart: Hahahaha!'
+      value: '/c2 PC: Soo... what do you look like under your armor?'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[51]
-      value: "/c2 Rageheart: Oh Darling, you\u2019re so straightforward!"
+      value: '/c2 Rageheart: ...'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[52]
+      value: '/c2 Rageheart: Hahahaha!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[53]
+      value: "/c2 Rageheart: Oh Darling, you\u2019re so straightforward!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[54]
       value: "/c2 Rageheart: If you wanted to take off my armor, you\u2019d only
         need to ask."
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[53]
+      propertyPath: script.Array.data[55]
       value: "/c2 Rageheart: But sadly I don\u2019t think I can indulge you this
         time."
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[54]
+      propertyPath: script.Array.data[56]
       value: '/c2 Rageheart: My armor is sacred to me.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[55]
+      propertyPath: script.Array.data[57]
       value: '/c2 Rageheart: But if you keep trying I may indulge your fantasies,
         if you can handle it. '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[56]
+      propertyPath: script.Array.data[58]
       value: /c3 /lvl
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[57]
+      propertyPath: script.Array.data[59]
+      value: '/c3 /br PC: Why did you become an overlord? I don''t really understand
+        your motivation here. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[60]
       value: "/c3 /br Rageheart: That\u2019s quite a straightforward question, my
         dear."
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[58]
+      propertyPath: script.Array.data[61]
       value: "/c3 /br Rageheart: \u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[59]
+      propertyPath: script.Array.data[62]
       value: "/c3 /br Rageheart: You\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[60]
+      propertyPath: script.Array.data[63]
       value: '/c3 /br Rageheart: I enjoy you, so I will indulge your curiosity.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[61]
+      propertyPath: script.Array.data[64]
       value: '/c3 /br Rageheart: I am not a villain, you see, I am merely a seeker. '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[62]
+      propertyPath: script.Array.data[65]
       value: "/c3 /br Rageheart: And I seek\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[63]
+      propertyPath: script.Array.data[66]
       value: '/c3 /br Rageheart: Well, I do not seek to destroy the world as you
         may have been told.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[64]
+      propertyPath: script.Array.data[67]
       value: '/c3 /br Rageheart: I only seek to make it a better place for the one
         who''s caught my eye.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[65]
+      propertyPath: script.Array.data[68]
       value: "/c3 /br Rageheart: This person is good at heart and fights battles
         they shouldn\u2019t, and I wish to make it so they never have to fight any
         more battles."
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[66]
+      propertyPath: script.Array.data[69]
       value: "/c3 /br Rageheart: So that they\u2019ll always be with me, and I can
         take care of them."
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[67]
+      propertyPath: script.Array.data[70]
       value: '/c3 /br Rageheart: They were always surrounded by do-gooders anyways,
         they never would have noticed another one. '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[68]
+      propertyPath: script.Array.data[71]
       value: '/c3 /br Rageheart: Sometimes you must differentiate yourself to be
         noticed.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[69]
+      propertyPath: script.Array.data[72]
+      value: '/c3 /gr PC: Why did you become an overlord? I don''t really understand
+        your motivation here. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[73]
       value: '/c3 /gr Rageheart: That is quite the question, dear.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[70]
+      propertyPath: script.Array.data[74]
       value: '/c3 /gr Rageheart: But sadly you have not earned that story.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[71]
+      propertyPath: script.Array.data[75]
       value: '/c3 /gr Rageheart: Perhaps if you try a little harder, I will tell
         you why. '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[72]
+      propertyPath: script.Array.data[76]
       value: '/c3 /gr Rageheart: But for now, be rid of your curiosity and enjoy
         your time with me. '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[73]
+      propertyPath: script.Array.data[77]
       value: '/r Rageheart: But no matter, darling.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[74]
+      propertyPath: script.Array.data[78]
       value: "Rageheart: I\u2019m quite curious to know more about you. "
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[75]
+      propertyPath: script.Array.data[79]
       value: 'Rageheart: How did you-'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[76]
+      propertyPath: script.Array.data[80]
       value: 'PC: The Key!  '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[77]
+      propertyPath: script.Array.data[81]
       value: 'PC: So Rageheart did have it!'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[78]
+      propertyPath: script.Array.data[82]
       value: 'Rageheart: Oops! '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[79]
+      propertyPath: script.Array.data[83]
       value: 'PC: I must get it! To get home! '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[80]
+      propertyPath: script.Array.data[84]
       value: 'Rageheart: Oh Lady, it would be quite a shame if I lost this. '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[81]
+      propertyPath: script.Array.data[85]
       value: "Rageheart: *mumble* I should really keep this somewhere else\u2026 "
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[82]
+      propertyPath: script.Array.data[86]
       value: 'PC: What? '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[83]
+      propertyPath: script.Array.data[87]
       value: 'Rageheart: Oh nothing, dear. '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[84]
+      propertyPath: script.Array.data[88]
       value: "Rageheart: Hmm. It seems like it\u2019s getting quite late. "
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[85]
+      propertyPath: script.Array.data[89]
       value: "PC: But it\u2019s still light out. "
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[86]
+      propertyPath: script.Array.data[90]
       value: 'Rageheart: This was a wonderful date, dear PC, but I must be going. '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[87]
+      propertyPath: script.Array.data[91]
       value: "Rageheart: \u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[88]
+      propertyPath: script.Array.data[92]
       value: 'Rageheart: Where do you reside, by the way?'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[89]
+      propertyPath: script.Array.data[93]
       value: 'PC: In the wilds as normal. '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[90]
+      propertyPath: script.Array.data[94]
       value: "Rageheart: You\u2026 stay in the park? "
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[91]
+      propertyPath: script.Array.data[95]
       value: "PC: If this \u201Cpark\u201D is the place where you first brought me,
         then yes. "
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[92]
+      propertyPath: script.Array.data[96]
       value: 'Rageheart: Why not return to your abode? '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[93]
+      propertyPath: script.Array.data[97]
       value: 'PC: I do not have an abode '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[94]
+      propertyPath: script.Array.data[98]
       value: 'Rageheart: ! '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[95]
+      propertyPath: script.Array.data[99]
       value: "Rageheart: I\u2026 did I\u2026 oh lady above. "
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[96]
+      propertyPath: script.Array.data[100]
       value: 'Rageheart: You live on Heros Street, building 4, apartment 2. '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[97]
+      propertyPath: script.Array.data[101]
       value: 'Rageheart: The key can be found in the left flowerpot with the cactus. '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[98]
+      propertyPath: script.Array.data[102]
       value: 'PC: I- '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[99]
+      propertyPath: script.Array.data[103]
       value: 'PC: What? '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[100]
+      propertyPath: script.Array.data[104]
       value: 'Rageheart: Anywho, I must get going now.  '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[101]
+      propertyPath: script.Array.data[105]
       value: 'Rageheart: Goodbye, dear PC. '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[102]
+      propertyPath: script.Array.data[106]
       value: 'Rageheart: Many assignments to complete.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[103]
+      propertyPath: script.Array.data[107]
       value: 'PC: (What just happened?) '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[104]
+      propertyPath: script.Array.data[108]
       value: 'PC: (Regardless, I suppose I should leave as well.)'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[105]
+      propertyPath: script.Array.data[109]
       value: 'PC: (But now I know Rageheart has the key.)'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[106]
+      propertyPath: script.Array.data[110]
       value: 'PC: (I must get closer to them so I can snatch it and return home.) '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[107]
+      propertyPath: script.Array.data[111]
       value: 'PC: (But where should I stay for the day?) '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[108]
+      propertyPath: script.Array.data[112]
       value: 'PC: (And for the night for that matter?)'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[109]
+      propertyPath: script.Array.data[113]
       value: /c
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[110]
+      propertyPath: script.Array.data[114]
       value: "/c1 PC: Well, I suppose having an abode of my own wouldn\u2019t be
         so bad."
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[111]
+      propertyPath: script.Array.data[115]
       value: '/c1 PC: I might as well take a peek.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[112]
+      propertyPath: script.Array.data[116]
       value: '/c1 PC: (A cabinet that is cool to the touch! ) '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[113]
+      propertyPath: script.Array.data[117]
       value: '/c1 PC: (Amazing!)'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[114]
+      propertyPath: script.Array.data[118]
       value: "/c1 PC: \u2026 "
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[115]
+      propertyPath: script.Array.data[119]
       value: '/c1 PC: (WHAT IS THAT!) '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[116]
+      propertyPath: script.Array.data[120]
       value: '/c1 PC: I suppose I need to head to class now that the sun is rising. '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[117]
+      propertyPath: script.Array.data[121]
       value: '/c3 PC: (I suppose I cannot trust Rageheart completely.)'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[118]
+      propertyPath: script.Array.data[122]
+      value: "/c3 PC: ( It is safer if I stay in this \u201Cpark\u201D area.)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[123]
       value: "/c3 PC: ( It is safer if I stay in this \u201Cpark\u201D area.)"
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: emotes.Array.size
-      value: 119
+      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: emotes.Array.data[4]
@@ -867,7 +889,7 @@ PrefabInstance:
       objectReference: {fileID: 146580747}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: expressionsSprites.Array.size
-      value: 119
+      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: expressionsSprites.Array.data[0]
@@ -2827,7 +2849,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Follow Rageheart to the Counter.
+  m_text: 'Follow Rageheart.
 
 '
   m_isRightToLeft: 0
