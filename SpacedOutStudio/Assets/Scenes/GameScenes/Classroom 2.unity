@@ -218,6 +218,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 1600
       objectReference: {fileID: 0}
+    - target: {fileID: 5103026257554774390, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: loopClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 41f4e6c8fcc15514696db33159cc32f2, type: 3}
+    - target: {fileID: 5103026257554774390, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: startClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1a32d123573a2564585988eab78cf124, type: 3}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: sceneToLoad
       value: Bedroom

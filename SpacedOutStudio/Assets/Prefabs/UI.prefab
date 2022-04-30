@@ -2513,6 +2513,8 @@ GameObject:
   - component: {fileID: 5002994486055288483}
   - component: {fileID: 7658297711867914280}
   - component: {fileID: 2373532596043721934}
+  - component: {fileID: 7425858502776773347}
+  - component: {fileID: 5103026257554774390}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -2674,7 +2676,6 @@ MonoBehaviour:
   goodRlvlChar: /gr
   badRlvlChar: /br
   goodOrBadCheckChar: /lvl
-  goodOrBadCheckReturn: 0
   debug: 0
   debugDialogue: 0
   script: []
@@ -2686,13 +2687,9 @@ MonoBehaviour:
   playerName: Fredrick
   currentDialogue: 0
   textSpeed: 3
-  loop: 0
   rScoreMinP: 0
   nextDialogue: 0
   loadFinalScene: 0
-  finalSceneToLoadP: 
-  finalSceneToLoadN: 
-  scoreForFinalScene: 5
 --- !u!114 &5002994486055288483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2824,6 +2821,32 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7425858502776773347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7715627315812711199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75bb7e98e71547d4687c47831f0d39f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5103026257554774390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7715627315812711199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275794ea53b8446438f6e4cfe7ca3fdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startClip: {fileID: 0}
+  loopClip: {fileID: 0}
 --- !u!1 &7715627316083030794
 GameObject:
   m_ObjectHideFlags: 0

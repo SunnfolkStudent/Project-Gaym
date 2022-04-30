@@ -660,6 +660,10 @@ PrefabInstance:
       propertyPath: dialogueOptions.Array.data[0]
       value: 
       objectReference: {fileID: 882747311}
+    - target: {fileID: 5103026257554774390, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: loopClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 41f4e6c8fcc15514696db33159cc32f2, type: 3}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: sceneToLoad
       value: Hallway 4
