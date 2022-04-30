@@ -848,7 +848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2443277046455747751, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4672352145410769312, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_IsActive
@@ -1212,7 +1212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 275794ea53b8446438f6e4cfe7ca3fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startClip: {fileID: 8300000, guid: 1a32d123573a2564585988eab78cf124, type: 3}
+  startClip: {fileID: 0}
   loopClip: {fileID: 8300000, guid: 41f4e6c8fcc15514696db33159cc32f2, type: 3}
 --- !u!82 &1029253652
 AudioSource:
@@ -1561,5 +1561,5 @@ Transform:
   - {fileID: 479208397}
   - {fileID: 367151889}
   m_Father: {fileID: 1029253640}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
