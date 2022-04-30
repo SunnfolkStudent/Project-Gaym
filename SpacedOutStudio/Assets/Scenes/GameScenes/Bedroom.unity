@@ -973,6 +973,10 @@ PrefabInstance:
       propertyPath: expressionsSprites.Array.data[50]
       value: 
       objectReference: {fileID: 21300000, guid: 05863838fd5c2cf42ab4c3625383de2a, type: 3}
+    - target: {fileID: 7715627315492695583, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7715627315812711199, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_Name
       value: UI
@@ -1064,6 +1068,22 @@ PrefabInstance:
     - target: {fileID: 7890131532053223715, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_text
       value: I see you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081657713207587606, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: eed87c9668922aa40b7c5533a6cad9e6, type: 3}
+    - target: {fileID: 8081657713207587606, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8100845
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081657713207587606, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_Color.g
+      value: 0.58510345
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081657713207587606, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8113208
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 362aa589869398745a2028fc1cc364d7, type: 3}

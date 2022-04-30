@@ -247,6 +247,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1956023205}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: rScoreMinP
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: sceneToLoad
       value: Park 3
       objectReference: {fileID: 0}
@@ -1142,15 +1146,15 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e048ad519552c1b48b8f2fc848ecba54, type: 3}
     - target: {fileID: 8081657713207587606, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.40090382
       objectReference: {fileID: 0}
     - target: {fileID: 8081657713207587606, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 0.49856
       objectReference: {fileID: 0}
     - target: {fileID: 8081657713207587606, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_Color.r
-      value: 0.754717
+      value: 0.6698113
       objectReference: {fileID: 0}
     - target: {fileID: 8585666249390342454, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_IsActive
