@@ -16,6 +16,12 @@ namespace System
             transitionAnimator.Play("fadeTransition_in");
         }
 
+        public void StartScene(string sceneName)
+        {
+            PlayerPrefs.DeleteKey("relScore");
+            LoadScene(sceneName);
+        }
+
         public void LoadScene(string sceneName)
         {
             SceneManager.LoadScene(sceneName);
