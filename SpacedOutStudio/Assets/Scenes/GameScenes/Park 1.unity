@@ -240,15 +240,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2271899975484111128, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_text
-      value: 'WHAT IN THE NAME OF LADY FUCKIENTA HAVE YOU DONE, VILLAIN!
+      value: 'WHAT HAVE YOU DONE!?
 
 '
       objectReference: {fileID: 0}
     - target: {fileID: 2578177674658302932, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_text
-      value: '*Glare at Rageheart*
-
-'
+      value: '*Glare at Rageheart*'
       objectReference: {fileID: 0}
     - target: {fileID: 4393623546302890757, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_Name
@@ -260,7 +258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.size
-      value: 19
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[0]
@@ -300,52 +298,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[9]
+      value: '/c1 PC: What does it matter to you?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[10]
+      value: '/c2 PC: WHAT IN THE NAME OF LADY FUCKIENTA HAVE YOU DONE, VILLAIN! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[11]
+      value: '/c3 PC: *Glare*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[12]
       value: "/r Rageheart: You didn\u2019t answer my question, but that is to be
         expected."
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[10]
+      propertyPath: script.Array.data[13]
       value: ' PC: Why would I answer to you, you cur!'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[11]
+      propertyPath: script.Array.data[14]
       value: ' PC: Reveal your foul plot before I take your life! '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[12]
+      propertyPath: script.Array.data[15]
       value: 'Rageheart: Ah ah ah, hero. You cannot do that here. Not unless you
         wish to become the villain.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[13]
+      propertyPath: script.Array.data[16]
       value: 'Rageheart: By the laws of this land, ending the life of another will
         put you in confinement.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[14]
+      propertyPath: script.Array.data[17]
       value: 'PC: You think I care? '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[15]
+      propertyPath: script.Array.data[18]
       value: 'Rageheart: No. But it would be quite a shame to be rid of me when I
         have the only key.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[16]
+      propertyPath: script.Array.data[19]
       value: "PC: \u2026 "
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[17]
+      propertyPath: script.Array.data[20]
       value: 'Rageheart: But now is not the time for fancy frolicking, we have a
         class to attend. '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[18]
+      propertyPath: script.Array.data[21]
       value: 'PC: What? '
-      objectReference: {fileID: 0}
-    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[19]
-      value: ' '
       objectReference: {fileID: 0}
     - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: choiceManager
@@ -473,7 +479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7890131532053223715, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_text
-      value: 'What does that matter to you?
+      value: 'What''s it to you?
 
 '
       objectReference: {fileID: 0}
