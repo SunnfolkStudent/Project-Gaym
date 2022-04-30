@@ -8,6 +8,7 @@ namespace System
    {
       public bool gameIsPaused;
       public GameObject pauseCanvas;
+      public GameObject mainUI;
       private InputManager _input;
 
       private void Start()
@@ -30,9 +31,10 @@ namespace System
          }
       }
 
-      private void PauseGame()
+      public void PauseGame()
       {
          Time.timeScale = 0f;
+         mainUI.SetActive(false);
          pauseCanvas.SetActive(true);
          gameIsPaused = true;
       }
@@ -40,6 +42,7 @@ namespace System
       public void ResumeGame()
       {
          pauseCanvas.SetActive(false);
+         mainUI.SetActive(true);
          gameIsPaused = false;
          Time.timeScale = 1f;
       }
