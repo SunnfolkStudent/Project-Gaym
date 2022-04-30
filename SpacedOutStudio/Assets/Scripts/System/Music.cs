@@ -11,7 +11,10 @@ namespace System
 		private void Start()
 		{
 			_audio = GetComponent<AudioSource>();
-			_audio.PlayOneShot(startClip);
+			if (startClip != null)
+			{
+				_audio.PlayOneShot(startClip);
+			}
 		}
 
 		private void Update()
