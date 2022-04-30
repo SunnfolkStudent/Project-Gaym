@@ -18,6 +18,7 @@ namespace System
         private void Start()
         {
             _dialogueManager = GetComponent<DialogueManager>();
+            relationScore = PlayerPrefs.GetInt("relScore");
         }
 
         public void DialogueOptionsShow()

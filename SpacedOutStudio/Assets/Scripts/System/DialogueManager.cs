@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace System
 {
+    [RequireComponent(typeof(SaveManager))]
     [RequireComponent(typeof(ExpressionsAndEmotes))]
     [RequireComponent(typeof(ChoiceManager))]
     [RequireComponent(typeof(SceneController))]
@@ -19,7 +20,9 @@ namespace System
         public string goodRlvlChar = "/gr";
         public string badRlvlChar = "/br";
         public string goodOrBadCheckChar = "/lvl";
-        public string goodOrBadCheckReturn = "/rr";
+        //public string goodOrBadCheckReturn = "/rr";
+        public bool debug;
+        public int debugDialogue;
 
         public string[] script;
 
@@ -37,7 +40,7 @@ namespace System
         private string[] _names;
         private SceneController _sceneController;
         public float textSpeed = 1;
-        public bool loop;
+        //public bool loop;
         public int rScoreMinP;
         private bool _generatingDialogue;
         private bool _stopGeneratingDialogue;
@@ -49,7 +52,7 @@ namespace System
         private bool[] _goodorbadCheck;
         private bool[] _goodRlvlDialogues;
         private bool[] _badRlvlDialogues;
-        private bool[] _returnLvlDialogues;
+        //private bool[] _returnLvlDialogues;
         private ChoiceManager _choiceManager;
         private bool _inChoices1;
         private bool _inChoices2;
@@ -59,11 +62,15 @@ namespace System
         private bool _inGoodR;
         private bool _inBadR;
         public bool loadFinalScene;
-        public string finalSceneToLoadP;
+        /*public string finalSceneToLoadP;
         public string finalSceneToLoadN;
-        public int scoreForFinalScene = 5;
+        public int scoreForFinalScene = 5;*/
         private int _currentScoreCheck;
         private ExpressionsAndEmotes _expressionsAndEmotes;
+        private bool skipone;
+        private int relscore;
+        private SaveManager _saveManager;
+        
 
 
         /*public bool RlvlMattering;
@@ -72,6 +79,7 @@ namespace System
 
         private void Start()
         {
+            _saveManager = GetComponent<SaveManager>();
             _expressionsAndEmotes = GetComponent<ExpressionsAndEmotes>();
             _choiceManager = GetComponent<ChoiceManager>();
             _sceneController = GetComponent<SceneController>();
@@ -106,7 +114,7 @@ namespace System
         {
             if (logGameObject.activeSelf || _choiceManager.showingDialogue) return;
             nextDialogue = true;
-
+            _saveManager.Save();
 
             if (currentDialogue < script.Length - 1)
             {
@@ -114,13 +122,8 @@ namespace System
             }
             else
             {
-                if (!loop)
-                {
-                    _sceneController.LoadWithTransition();
-                    return;
-                }
-
-                currentDialogue = 0;
+                _sceneController.LoadWithTransition();
+                return;
             }
 
             if (_inChoices1)
@@ -185,7 +188,7 @@ namespace System
             else if (_goodorbadCheck[currentDialogue])
             {
                 _currentScoreCheck++;
-                if (_choiceManager.relationScore > rScoreMinP)
+                if (_choiceManager.relationScore >= rScoreMinP)
                 {
                     _inGoodR = true;
                     print("positive");
@@ -200,6 +203,11 @@ namespace System
             }
             else
             {
+                if (debug)
+                {
+                    currentDialogue = debugDialogue;
+                    debug = false;
+                }
                 StartCoroutine(GradualText());
             }
         }
@@ -256,7 +264,7 @@ namespace System
             _choiceDialogues2 = new bool[script.Length];
             _choiceDialogues3 = new bool[script.Length];
             _returnDialogues = new bool[script.Length];
-            _returnLvlDialogues = new bool[script.Length];
+            //_returnLvlDialogues = new bool[script.Length];
             _goodorbadCheck = new bool[script.Length];
             _goodRlvlDialogues = new bool[script.Length];
             _badRlvlDialogues = new bool[script.Length];
@@ -280,12 +288,12 @@ namespace System
                         badRlvlChar.Length);
                     _badRlvlDialogues[i] = true;
                 }
-                else if (script[i].Contains(goodOrBadCheckReturn))
+                /*else if (script[i].Contains(goodOrBadCheckReturn))
                 {
                     script[i] = script[i].Remove(script[i].IndexOf(goodOrBadCheckReturn, StringComparison.Ordinal),
                         goodOrBadCheckReturn.Length);
                     _returnLvlDialogues[i] = true;
-                }
+                }*/
 
                 if (script[i] == dialogueChoicesChar)
                 {
@@ -321,6 +329,7 @@ namespace System
         public void PositiveChoice(int currentChoice)
         {
             _inChoices1 = true;
+            skipone = true;
             GotoCorrectDialogue(currentChoice, _choiceDialogues1);
             CheckScore();
         }
@@ -328,6 +337,7 @@ namespace System
         public void NeutralChoice(int currentChoice)
         {
             _inChoices2 = true;
+            skipone = true;
             GotoCorrectDialogue(currentChoice, _choiceDialogues2);
             CheckScore();
         }
@@ -335,10 +345,12 @@ namespace System
         public void NegativeChoice(int currentChoice)
         {
             _inChoices3 = true;
-            if (loadFinalScene)
+            if (skipone && loadFinalScene)
             {
                 _currentScoreCheck++;
             }
+
+            skipone = true;
             GotoCorrectDialogue(currentChoice, _choiceDialogues3);
             CheckScore();
         }

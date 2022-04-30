@@ -285,6 +285,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5002994486055288483, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: critChancePercentage
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002994486055288483, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: dialogueOptions.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -297,12 +301,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: debug
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: textSpeed
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: rScoreMinP
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: sceneToLoad
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: debugDialogue
+      value: 43
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: loadFinalScene
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.size
@@ -542,7 +562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[55]
-      value: '/c1 /grl Rageheart: I- don''t know what to say.'
+      value: '/c1 /gr Rageheart: I- don''t know what to say.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[56]
@@ -639,7 +659,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[78]
-      value: ' /c1 /gr Rageheart: Thank you for choosing me, PC. You will never regret
+      value: '/c1 /gr Rageheart: Thank you for choosing me, PC. You will never regret
         it.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
