@@ -326,8 +326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[14]
-      value: '/r Rageheart: Well now that I know what you want, darling, I will go
-        handle the order. '
+      value: '/r Rageheart: Now, I will go handle the order. '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[15]
@@ -339,11 +338,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[17]
-      value: "/c1 PC: Why can\u2019t I stand up? "
+      value: "/c1 PC: (Why can\u2019t I stand up?)"
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[18]
-      value: '/c1 PC: I want to follow them!'
+      value: '/c1 PC: (I want to follow them!)'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[19]
@@ -351,15 +350,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[20]
-      value: '/c3 PC: (I need to get out of here?)'
+      value: '/c3 PC: (I need to get out of here!)'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[21]
-      value: '/r PC: What is this?! '
+      value: '/r PC: (What is this?!)'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[22]
-      value: 'PC: Rageheart is more powerful than I could have ever imagined.'
+      value: 'PC: (Rageheart is more powerful than I could have ever imagined.)'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[23]
