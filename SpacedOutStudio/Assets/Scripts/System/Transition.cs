@@ -29,7 +29,10 @@ namespace System
 
         public void StartText()
         {
-            StartCoroutine(dialogueManager.GradualText());
+            if (dialogueManager != null)
+            {
+                StartCoroutine(dialogueManager.GradualText());
+            }
         }
     }
 }

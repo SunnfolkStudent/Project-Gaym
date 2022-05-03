@@ -4,15 +4,18 @@ using UnityEngine.SceneManagement;
 
 namespace System
 {
-    [RequireComponent(typeof(PauseScript))]
     public class SceneController : MonoBehaviour
     {
         private PauseScript _pause;
         public Animator transitionAnimator;
+        public bool isMainMenu;
 
         private void Start()
         {
-            _pause = GetComponent<PauseScript>();
+            if (!isMainMenu)
+            {
+                _pause = GetComponent<PauseScript>();
+            }
             transitionAnimator.Play("fadeTransition_in");
         }
 
@@ -25,7 +28,10 @@ namespace System
         public void LoadScene(string sceneName)
         {
             SceneManager.LoadScene(sceneName);
-            _pause.ResumeGame();
+            if (!isMainMenu)
+            {
+                _pause.ResumeGame();
+            }
         }
 
         public void LoadWithTransition()
