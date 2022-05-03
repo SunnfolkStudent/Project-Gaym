@@ -187,6 +187,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8252966099517058827, guid: bebde9caae2eb914f9cf7e29ad16dc3c, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252966099621042096, guid: bebde9caae2eb914f9cf7e29ad16dc3c, type: 3}
+      propertyPath: m_FirstSelected
+      value: 
+      objectReference: {fileID: 1009965339}
+    - target: {fileID: 8252966101112552577, guid: bebde9caae2eb914f9cf7e29ad16dc3c, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8252966101251061261, guid: bebde9caae2eb914f9cf7e29ad16dc3c, type: 3}
       propertyPath: m_Name
       value: MainMenuUI
@@ -275,6 +287,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8252966101303310569, guid: bebde9caae2eb914f9cf7e29ad16dc3c, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252966101578954455, guid: bebde9caae2eb914f9cf7e29ad16dc3c, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252966101632975750, guid: bebde9caae2eb914f9cf7e29ad16dc3c, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bebde9caae2eb914f9cf7e29ad16dc3c, type: 3}
 --- !u!1 &617164709
@@ -361,3 +385,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1009965339 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8252966099517058821, guid: bebde9caae2eb914f9cf7e29ad16dc3c, type: 3}
+  m_PrefabInstance: {fileID: 591059373}
+  m_PrefabAsset: {fileID: 0}
