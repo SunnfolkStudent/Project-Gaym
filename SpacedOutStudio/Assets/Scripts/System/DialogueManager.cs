@@ -383,6 +383,7 @@ namespace System
         {
             if (_goodorbadCheck[currentDialogue])
             {
+                print("checked score");
                 _currentScoreCheck++;
                 if (_choiceManager.relationScore >= rScoreMinP)
                 {

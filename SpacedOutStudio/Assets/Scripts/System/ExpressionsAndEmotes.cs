@@ -28,29 +28,29 @@ namespace System
 
 		public void UpdateSprite()
 		{
-			if (expressionsSprites[_dialogueManager.currentDialogue] != null)
+			var currentInt = _dialogueManager.currentDialogue;
+			if (expressionsSprites[currentInt] != null)
 			{
-				rageheart.sprite = expressionsSprites[_dialogueManager.currentDialogue];
+				rageheart.sprite = expressionsSprites[currentInt];
 			}
 
-			if (_dialogueManager.currentDialogue > 0)
+			if (currentInt > 0)
 			{
 				if (emotes[_lastDialogue] != null)
 				{
 					emotes[_lastDialogue].SetActive(false);
 				}
 			}
-			if (emotes[_dialogueManager.currentDialogue] != null)
+			if (emotes[currentInt] != null)
 			{
-				emotes[_dialogueManager.currentDialogue].SetActive(true);
+				emotes[currentInt].SetActive(true);
 			}
 
-			/*if (howMuchToMove[_dialogueManager.currentDialogue] != 0)
+			/*if (howMuchToMove[currentInt] != 0)
 			{
-				
+				StartCoroutine(_movements.Move(SpriteToMove[currentInt], howMuchToMove[currentInt], speed[currentInt]));
 			}*/
-			//print(_lastDialogue);
-			_lastDialogue = _dialogueManager.currentDialogue;
+			_lastDialogue = currentInt;
 			
 		}
 	}

@@ -11,6 +11,7 @@ namespace System
         public GameObject dialogueAndNameplate;
         public GameObject[] dialogueOptions;
         [HideInInspector] public int currentChoices;
+        [HideInInspector] public int currentNChoice;
         [HideInInspector] public bool showingDialogue;
         private DialogueManager _dialogueManager;
 
@@ -28,11 +29,15 @@ namespace System
             dialogueOptions[currentChoices].SetActive(true);
         }
 
-        public void DialogueOptionsHide()
+        private void DialogueOptionsHide()
         {
             showingDialogue = false;
             dialogueAndNameplate.SetActive(true);
             dialogueOptions[currentChoices].SetActive(false);
+            if (dialogueOptions[currentChoices].transform.GetChild(2).gameObject.name == "Choice2")
+            {
+                currentNChoice++;
+            }
             currentChoices++;
         }
 
@@ -46,7 +51,7 @@ namespace System
         public void DontChangeScore()
         {
             DialogueOptionsHide();
-            _dialogueManager.NeutralChoice(currentChoices);
+            _dialogueManager.NeutralChoice(currentNChoice);
         }
 
         public void DecreaseScore()
