@@ -19,11 +19,9 @@ namespace System
 
 		private void Update()
 		{
-			if (!_audio.isPlaying)
-			{
-				_audio.PlayOneShot(loopClip);
-				_audio.loop = true;
-			}
+			if (_audio.isPlaying) return;
+			_audio.PlayOneShot(loopClip);
+			_audio.loop = true;
 		}
 	}
 }

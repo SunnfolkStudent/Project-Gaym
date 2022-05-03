@@ -889,7 +889,6 @@ GameObject:
   - component: {fileID: 8252966101251061363}
   - component: {fileID: 8252966101251061362}
   - component: {fileID: 4387623095845128924}
-  - component: {fileID: 8476998894485746022}
   m_Layer: 5
   m_Name: MainMenuUI
   m_TagString: Untagged
@@ -998,6 +997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionAnimator: {fileID: 4986500590316547295}
+  isMainMenu: 0
 --- !u!114 &4387623095845128924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1013,21 +1013,6 @@ MonoBehaviour:
   pause: 0
   interact: 0
   log: 0
---- !u!114 &8476998894485746022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8252966101251061261}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7940dee6b0278014ba0ab81050282045, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameIsPaused: 0
-  pauseCanvas: {fileID: 0}
-  mainUI: {fileID: 0}
 --- !u!1 &8252966101303310571
 GameObject:
   m_ObjectHideFlags: 0
