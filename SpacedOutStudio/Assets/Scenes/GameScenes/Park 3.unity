@@ -357,7 +357,11 @@ PrefabInstance:
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: expressionsSprites.Array.data[6]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: 309d0945dc29b694a8f67cc71f991ad2, type: 3}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: expressionsSprites.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: 32012c01f4065e540802ca1d52c276d3, type: 3}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: expressionsSprites.Array.data[8]
       value: 
@@ -393,7 +397,7 @@ PrefabInstance:
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: expressionsSprites.Array.data[21]
       value: 
-      objectReference: {fileID: 21300000, guid: 01a6127004951784bb010995dabffabe, type: 3}
+      objectReference: {fileID: 21300000, guid: 2def00bef49653249ab4997a9181292c, type: 3}
     - target: {fileID: 7715627315812711199, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_Name
       value: UI
