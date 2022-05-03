@@ -523,86 +523,86 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[62]
-      value: '/c3 /br PC: Why did you become an overlord? I don''t really understand
+      value: '/c3 /gr PC: Why did you become an overlord? I don''t really understand
         your motivation here. '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[63]
-      value: "/c3 /br Rageheart: That\u2019s quite a straightforward question, my
+      value: "/c3 /gr Rageheart: That\u2019s quite a straightforward question, my
         dear."
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[64]
-      value: "/c3 /br Rageheart: \u2026"
+      value: "/c3 /gr Rageheart: \u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[65]
-      value: "/c3 /br Rageheart: You\u2026"
+      value: "/c3 /gr Rageheart: You\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[66]
-      value: '/c3 /br Rageheart: I enjoy you, so I will indulge your curiosity.'
+      value: '/c3 /gr Rageheart: I enjoy you, so I will indulge your curiosity.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[67]
-      value: '/c3 /br Rageheart: I am not a villain, you see, I am merely a seeker. '
+      value: '/c3 /gr Rageheart: I am not a villain, you see, I am merely a seeker. '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[68]
-      value: "/c3 /br Rageheart: And I seek\u2026"
+      value: "/c3 /gr Rageheart: And I seek\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[69]
-      value: '/c3 /br Rageheart: Well, I do not seek to destroy the world as you
+      value: '/c3 /gr Rageheart: Well, I do not seek to destroy the world as you
         may have been told.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[70]
-      value: '/c3 /br Rageheart: I only seek to make it a better place for the one
+      value: '/c3 /gr Rageheart: I only seek to make it a better place for the one
         who''s caught my eye.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[71]
-      value: "/c3 /br Rageheart: This person is good at heart and fights battles
+      value: "/c3 /gr Rageheart: This person is good at heart and fights battles
         they shouldn\u2019t, and I wish to make it so they never have to fight any
         more battles."
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[72]
-      value: "/c3 /br Rageheart: So that they\u2019ll always be with me, and I can
+      value: "/c3 /gr Rageheart: So that they\u2019ll always be with me, and I can
         take care of them."
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[73]
-      value: '/c3 /br Rageheart: They were always surrounded by do-gooders anyways,
+      value: '/c3 /gr Rageheart: They were always surrounded by do-gooders anyways,
         they never would have noticed another one. '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[74]
-      value: '/c3 /br Rageheart: Sometimes you must differentiate yourself to be
+      value: '/c3 /gr Rageheart: Sometimes you must differentiate yourself to be
         noticed.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[75]
-      value: '/c3 /gr PC: Why did you become an overlord? I don''t really understand
+      value: '/c3 /br PC: Why did you become an overlord? I don''t really understand
         your motivation here. '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[76]
-      value: '/c3 /gr Rageheart: That is quite the question, dear.'
+      value: '/c3 /br Rageheart: That is quite the question, dear.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[77]
-      value: '/c3 /gr Rageheart: But sadly you have not earned that story.'
+      value: '/c3 /br Rageheart: But sadly you have not earned that story.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[78]
-      value: '/c3 /gr Rageheart: Perhaps if you try a little harder, I will tell
+      value: '/c3 /br Rageheart: Perhaps if you try a little harder, I will tell
         you why. '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[79]
-      value: '/c3 /gr Rageheart: But for now, be rid of your curiosity and enjoy
+      value: '/c3 /br Rageheart: But for now, be rid of your curiosity and enjoy
         your time with me. '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
@@ -3208,7 +3208,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Go to your home(?)
+  m_text: Go to your home?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
