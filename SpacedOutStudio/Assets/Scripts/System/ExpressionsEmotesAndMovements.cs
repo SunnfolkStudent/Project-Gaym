@@ -5,19 +5,22 @@ namespace System
 {
 	[RequireComponent(typeof(Movements))]
 	[RequireComponent(typeof(DialogueManager))]
-	public class ExpressionsAndEmotes : MonoBehaviour
+	public class ExpressionsEmotesAndMovements : MonoBehaviour
 	{
 		private DialogueManager _dialogueManager;
 		private Movements _movements;
 		public Image rageheart;
 		[Header("Expressions and Emotes")]
+		[Space]
 		public Sprite[] expressionsSprites;
 		public GameObject[] emotes;
 		[Header("Movements")]
-		public GameObject[] SpriteToMove;
+		[Space]
+		public GameObject[] spriteToMove;
+		public bool[] bob;
 		public float[] howMuchToMove;
 		public float[] speed;
-		public bool[] bob;
+		
 		private int _lastDialogue;
 
 		private void Start()
@@ -46,10 +49,15 @@ namespace System
 				emotes[currentInt].SetActive(true);
 			}
 
-			/*if (howMuchToMove[currentInt] != 0)
+			if (howMuchToMove[currentInt] != 0)
 			{
-				StartCoroutine(_movements.Move(SpriteToMove[currentInt], howMuchToMove[currentInt], speed[currentInt]));
-			}*/
+				StartCoroutine(_movements.Move(spriteToMove[currentInt], howMuchToMove[currentInt], speed[currentInt]));
+			}
+
+			if (bob[currentInt])
+			{
+				StartCoroutine(_movements.Bob(spriteToMove[currentInt], speed[currentInt]));
+			}
 			_lastDialogue = currentInt;
 			
 		}
