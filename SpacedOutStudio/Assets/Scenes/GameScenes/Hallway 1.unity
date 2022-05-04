@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &121269928 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1666722117330102017, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+  m_PrefabInstance: {fileID: 412475100}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &257823271
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,6 +219,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1157870191266242019, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1345
+      objectReference: {fileID: 0}
     - target: {fileID: 2271899975484111128, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_text
       value: Why didn't you kill me?
@@ -358,6 +367,10 @@ PrefabInstance:
       propertyPath: script.Array.data[28]
       value: 'PC: Where do I sleep?'
       objectReference: {fileID: 0}
+    - target: {fileID: 6322277662619229674, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: bobAmount
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: bob.Array.size
       value: 29
@@ -367,8 +380,20 @@ PrefabInstance:
       value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: bob.Array.data[3]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: emotes.Array.size
       value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: speed.Array.data[2]
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: speed.Array.data[3]
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: emotes.Array.data[2]
@@ -398,6 +423,14 @@ PrefabInstance:
       propertyPath: emotes.Array.data[9]
       value: 
       objectReference: {fileID: 412475102}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: speed.Array.data[26]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: speed.Array.data[27]
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: emotes.Array.data[10]
       value: 
@@ -453,6 +486,34 @@ PrefabInstance:
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: howMuchToMove.Array.size
       value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: spriteToMove.Array.data[2]
+      value: 
+      objectReference: {fileID: 121269928}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: spriteToMove.Array.data[3]
+      value: 
+      objectReference: {fileID: 121269928}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: howMuchToMove.Array.data[2]
+      value: 1345
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: spriteToMove.Array.data[26]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: spriteToMove.Array.data[27]
+      value: 
+      objectReference: {fileID: 121269928}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: howMuchToMove.Array.data[26]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: howMuchToMove.Array.data[27]
+      value: 1350
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: expressionsSprites.Array.size

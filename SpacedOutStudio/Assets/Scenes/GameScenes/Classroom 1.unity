@@ -173,7 +173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.size
-      value: 26
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[0]
@@ -283,8 +283,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[25]
-      value: "Teacher: Okay now that class can begin, we\u2019ll start by reviewing
-        Sin, Cos, and Tan. "
+      value: 'Rageheart: *CHRASH*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[26]
+      value: 'Teacher: ...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[27]
+      value: 'Teacher: Well I suppose I can start class now...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[28]
+      value: 'Teacher: Let''s begin by reviewing Sin, Cos, and Tan...'
       objectReference: {fileID: 0}
     - target: {fileID: 5490013146321703341, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_margin.x
@@ -293,6 +304,10 @@ PrefabInstance:
     - target: {fileID: 5490013146321703341, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_margin.z
       value: 0.3909912
+      objectReference: {fileID: 0}
+    - target: {fileID: 6322277662619229674, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: bobAmount
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6959148612667538382, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_RootOrder
@@ -304,15 +319,19 @@ PrefabInstance:
       objectReference: {fileID: 1162310576}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: bob.Array.size
-      value: 26
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: speed.Array.size
-      value: 26
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: emotes.Array.size
-      value: 26
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: bob.Array.data[16]
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: emotes.Array.data[0]
@@ -322,6 +341,30 @@ PrefabInstance:
       propertyPath: emotes.Array.data[1]
       value: 
       objectReference: {fileID: 471766787}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: emotes.Array.data[9]
+      value: 
+      objectReference: {fileID: 318046246}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: speed.Array.data[15]
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: speed.Array.data[16]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: speed.Array.data[23]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: speed.Array.data[24]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: speed.Array.data[25]
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: emotes.Array.data[16]
       value: 
@@ -337,18 +380,50 @@ PrefabInstance:
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: emotes.Array.data[23]
       value: 
-      objectReference: {fileID: 1491141267}
+      objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: spriteToMove.Array.size
-      value: 26
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: howMuchToMove.Array.size
-      value: 26
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: spriteToMove.Array.data[15]
+      value: 
+      objectReference: {fileID: 1099648023}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: spriteToMove.Array.data[16]
+      value: 
+      objectReference: {fileID: 1099648023}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: spriteToMove.Array.data[24]
+      value: 
+      objectReference: {fileID: 1099648023}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: spriteToMove.Array.data[25]
+      value: 
+      objectReference: {fileID: 1099648023}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: howMuchToMove.Array.data[15]
+      value: -490
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: howMuchToMove.Array.data[16]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: howMuchToMove.Array.data[24]
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: howMuchToMove.Array.data[25]
+      value: -1500
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: expressionsSprites.Array.size
-      value: 26
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: expressionsSprites.Array.data[0]
@@ -585,6 +660,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a50df29159de395458792e5580dbabb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1099648023 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1666722117330102017, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+  m_PrefabInstance: {fileID: 371339892}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1149155841 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2047266444466163041, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
@@ -595,7 +675,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4851390701502077103, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
   m_PrefabInstance: {fileID: 371339892}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1099648023}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -685,11 +765,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1491141267 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5341410490567217451, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-  m_PrefabInstance: {fileID: 371339892}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1618936426
 PrefabInstance:
   m_ObjectHideFlags: 0
