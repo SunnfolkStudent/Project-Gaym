@@ -24,7 +24,7 @@ namespace System
 
         public void StartScene(string sceneName)
         {
-            PlayerPrefs.DeleteKey("relScore");
+            SaveManager.DeleteSave();
             LoadScene(sceneName);
         }
 

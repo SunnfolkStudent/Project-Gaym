@@ -67,19 +67,10 @@ namespace System
         public int scoreForFinalScene = 5;*/
         private int _currentScoreCheck;
         private ExpressionsEmotesAndMovements _expressionsEmotesAndMovements;
-        private bool skipone;
-        private int relscore;
-        private SaveManager _saveManager;
-        
-
-
-        /*public bool RlvlMattering;
-        public int minRlvlForEnding;*/
-
+        private bool _skipOne;
 
         private void Start()
         {
-            _saveManager = GetComponent<SaveManager>();
             _expressionsEmotesAndMovements = GetComponent<ExpressionsEmotesAndMovements>();
             _choiceManager = GetComponent<ChoiceManager>();
             _sceneController = GetComponent<SceneController>();
@@ -88,6 +79,7 @@ namespace System
             ExtractAndReplaceNames();
             dialogueText.text = "";
             namePlate.text = _names[currentDialogue];
+            playerName = PlayerPrefs.GetString("pName");
         }
 
         private void Update()
@@ -114,7 +106,7 @@ namespace System
         {
             if (logGameObject.activeSelf || _choiceManager.showingDialogue) return;
             nextDialogue = true;
-            _saveManager.Save();
+            SaveManager.Save(_choiceManager.relationScore,playerName);
 
             if (currentDialogue < script.Length - 1)
             {
@@ -122,6 +114,7 @@ namespace System
             }
             else
             {
+                
                 _sceneController.LoadWithTransition();
                 return;
             }
@@ -254,7 +247,7 @@ namespace System
                 _logText.text = "Log:";
             }
         }
-//TODO inputfield.GetComponent<Text>().text
+
 
         private void ExtractAndReplaceNames()
         {
@@ -329,7 +322,7 @@ namespace System
         public void PositiveChoice(int currentChoice)
         {
             _inChoices1 = true;
-            skipone = true;
+            _skipOne = true;
             GotoCorrectDialogue(currentChoice, _choiceDialogues1);
             CheckScore();
         }
@@ -337,7 +330,7 @@ namespace System
         public void NeutralChoice(int currentChoice)
         {
             _inChoices2 = true;
-            skipone = true;
+            _skipOne = true;
             GotoCorrectDialogue(currentChoice, _choiceDialogues2);
             CheckScore();
         }
@@ -345,12 +338,12 @@ namespace System
         public void NegativeChoice(int currentChoice)
         {
             _inChoices3 = true;
-            if (skipone && loadFinalScene)
+            if (_skipOne && loadFinalScene)
             {
                 _currentScoreCheck++;
             }
 
-            skipone = true;
+            _skipOne = true;
             GotoCorrectDialogue(currentChoice, _choiceDialogues3);
             CheckScore();
         }
