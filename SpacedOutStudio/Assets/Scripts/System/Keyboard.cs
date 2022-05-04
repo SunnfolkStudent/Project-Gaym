@@ -13,13 +13,6 @@ namespace System
         public DialogueManager dialogueManager;
         public ChoiceManager choiceManager;
 
-
-        private void Start()
-        {
-            choiceManager = GetComponent<ChoiceManager>();
-            dialogueManager = GetComponent<DialogueManager>();
-        }
-
         public void Keypress(string character)
         {
             inputField.text = inputField.text.Insert(inputField.text.Length, character);
@@ -70,9 +63,13 @@ namespace System
         {
             PlayerPrefs.SetString("pName", inputField.text);
             gameObject.SetActive(false);
+            dialogueManager.script[22] = dialogueManager.script[22].Replace(dialogueManager.playerName, inputField.text);
+            dialogueManager.names[21] = inputField.text;
             dialogueManager.playerName = inputField.text;
             choiceManager.showingDialogue = false;
             choiceManager.dialogueAndNameplate.SetActive(true);
+            dialogueManager.script[21] = dialogueManager.playerName;
+            dialogueManager.NextDialogue();
         }
     }
 }

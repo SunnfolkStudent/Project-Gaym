@@ -13,7 +13,7 @@ namespace System
         public static void DeleteSave()
         {
             PlayerPrefs.DeleteKey("relScore");
-            PlayerPrefs.DeleteKey("pName");
+            PlayerPrefs.SetString("pName", "You");
         }
     }
 }

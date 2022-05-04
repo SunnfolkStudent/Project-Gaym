@@ -37,7 +37,7 @@ namespace System
         private InputManager _inputManager;
         [HideInInspector] public int currentDialogue;
         private TMP_Text _logText;
-        private string[] _names;
+        [HideInInspector] public string[] names;
         private SceneController _sceneController;
         public float textSpeed = 1;
         //public bool loop;
@@ -76,10 +76,10 @@ namespace System
             _sceneController = GetComponent<SceneController>();
             _logText = logGameObject.GetComponentInChildren<TMP_Text>();
             _inputManager = GetComponent<InputManager>();
+            playerName = PlayerPrefs.GetString("pName");
             ExtractAndReplaceNames();
             dialogueText.text = "";
-            namePlate.text = _names[currentDialogue];
-            playerName = PlayerPrefs.GetString("pName");
+            namePlate.text = names[currentDialogue];
         }
 
         private void Update()
@@ -209,7 +209,7 @@ namespace System
         public IEnumerator GradualText()
         {
             _generatingDialogue = true;
-            namePlate.text = _names[currentDialogue];
+            namePlate.text = names[currentDialogue];
             dialogueText.text = "";
             _expressionsEmotesAndMovements.UpdateSprite();
             var charArray = script[currentDialogue].ToCharArray();
@@ -238,7 +238,7 @@ namespace System
                 logGameObject.SetActive(true);
                 for (var i = 0; i < currentDialogue + 1; i++)
                 {
-                    _logText.text += "\n" + _names[i] + ": " + script[i];
+                    _logText.text += "\n" + names[i] + ": " + script[i];
                 }
             }
             else
@@ -251,7 +251,7 @@ namespace System
 
         private void ExtractAndReplaceNames()
         {
-            _names = new string[script.Length];
+            names = new string[script.Length];
             _choiceDialogues = new bool[script.Length];
             _choiceDialogues1 = new bool[script.Length];
             _choiceDialogues2 = new bool[script.Length];
@@ -314,7 +314,7 @@ namespace System
                 }
 
                 script[i] = script[i].Replace(replaceString, playerName);
-                _names[i] = script[i].Split(":")[0];
+                names[i] = script[i].Split(":")[0];
                 script[i] = script[i].Remove(0, script[i].IndexOf(":", StringComparison.Ordinal) + 2);
             }
         }
