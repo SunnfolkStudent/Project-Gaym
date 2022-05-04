@@ -903,6 +903,10 @@ PrefabInstance:
       propertyPath: choiceManager
       value: 
       objectReference: {fileID: 1662036698}
+    - target: {fileID: 6959148612667538382, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: bob.Array.size
       value: 22
@@ -1063,18 +1067,6 @@ PrefabInstance:
       propertyPath: pauseCanvas
       value: 
       objectReference: {fileID: 1421267215}
-    - target: {fileID: 7715627317027527938, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7715627317027527938, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DoYouWantToQuit
-      objectReference: {fileID: 0}
-    - target: {fileID: 7715627317027527938, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: System.SceneController, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 7890131532053223715, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_text
       value: 'What''s it to you?
