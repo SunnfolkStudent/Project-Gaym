@@ -9,9 +9,12 @@ namespace System
         private PauseScript _pause;
         public Animator transitionAnimator;
         public bool isMainMenu;
+        public GameObject quitCanvas;
+        public GameObject pauseCanvas;
 
         private void Start()
         {
+            quitCanvas.SetActive(false);
             if (!isMainMenu)
             {
                 _pause = GetComponent<PauseScript>();
@@ -30,6 +33,7 @@ namespace System
             SceneManager.LoadScene(sceneName);
             if (!isMainMenu)
             {
+                quitCanvas.SetActive(false);
                 _pause.ResumeGame();
             }
         }
@@ -48,6 +52,18 @@ namespace System
 #endif
         }
 
+        public void DoYouWantToQuit()
+        {
+            pauseCanvas.SetActive(false);
+            quitCanvas.SetActive(true);
+        }
+        
+        public void NoQuit()
+        {
+            quitCanvas.SetActive(false);
+            pauseCanvas.SetActive(true);
+        }
+        
         //Continues your last played save file.
         void Continue()
         {
