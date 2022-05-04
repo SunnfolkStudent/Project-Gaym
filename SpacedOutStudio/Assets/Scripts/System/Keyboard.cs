@@ -9,13 +9,27 @@ namespace System
         public GameObject[] lowerCaseKeys;
         private bool _capitilized;
         public TMP_InputField inputField;
+        public GameObject characterLimitText;
         public int charachterLimit = 10;
         
 
+
         public void Keypress(string character)
         {
-            if (inputField.text.Length > charachterLimit) return;
             inputField.text = inputField.text.Insert(inputField.text.Length, character);
+        }
+
+        public void LimitCheck()
+        {
+            if (inputField.text.Length >= charachterLimit)
+            {
+                inputField.text = inputField.text.Remove(charachterLimit-1, 1);
+                characterLimitText.SetActive(true);
+            }
+            else
+            {
+                characterLimitText.SetActive(false);
+            }
         }
 
         public void Capslock()
