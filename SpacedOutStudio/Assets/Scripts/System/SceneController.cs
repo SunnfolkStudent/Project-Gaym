@@ -14,7 +14,6 @@ namespace System
 
         private void Start()
         {
-            quitCanvas.SetActive(false);
             if (!isMainMenu)
             {
                 _pause = GetComponent<PauseScript>();
