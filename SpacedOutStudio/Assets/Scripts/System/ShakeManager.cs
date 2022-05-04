@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ShakeManager : MonoBehaviour
 {
-    public void Shake;
-    
+    public void Shaking()
+    {
+        
+    }
 }
