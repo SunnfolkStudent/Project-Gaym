@@ -157,6 +157,9 @@ namespace System
                 if (!_goodRlvlDialogues[currentDialogue])
                 {
                     _inGoodR = false;
+                    _inChoices1 = false;
+                    _inChoices2 = false;
+                    _inChoices3 = false;
                     print("testP");
                     GotoCorrectDialogue(_choiceManager.currentChoices, _returnDialogues);
                     return;
@@ -167,6 +170,9 @@ namespace System
                 if (!_badRlvlDialogues[currentDialogue])
                 {
                     _inBadR = false;
+                    _inChoices1 = false;
+                    _inChoices2 = false;
+                    _inChoices3 = false;
                     print("testN");
                     GotoCorrectDialogue(_choiceManager.currentChoices, _returnDialogues);
                     return;
@@ -373,23 +379,18 @@ namespace System
 
         private void CheckScore()
         {
-            if (_goodorbadCheck[currentDialogue])
+            if (!_goodorbadCheck[currentDialogue]) return;
+            _currentScoreCheck++;
+            if (_choiceManager.relationScore >= rScoreMinP)
             {
-                print("checked score");
-                _currentScoreCheck++;
-                if (_choiceManager.relationScore >= rScoreMinP)
-                {
-                    _inGoodR = true;
-                    print("positive");
-                    print(_currentScoreCheck);
-                    GotoCorrectDialogue(_currentScoreCheck, _goodRlvlDialogues);
-                }
-                else
-                {
-                    print("negative");
-                    _inBadR = true;
-                    GotoCorrectDialogue(_currentScoreCheck, _badRlvlDialogues);
-                }
+                _inGoodR = true;
+                print(_currentScoreCheck);
+                GotoCorrectDialogue(_currentScoreCheck, _goodRlvlDialogues);
+            }
+            else
+            {
+                _inBadR = true;
+                GotoCorrectDialogue(_currentScoreCheck, _badRlvlDialogues);
             }
         }
     }
