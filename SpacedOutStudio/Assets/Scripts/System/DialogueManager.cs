@@ -37,7 +37,7 @@ namespace System
         private InputManager _inputManager;
         [HideInInspector] public int currentDialogue;
         private TMP_Text _logText;
-        private string[] _names;
+        [HideInInspector] public string[] names;
         private SceneController _sceneController;
         public float textSpeed = 1;
         //public bool loop;
@@ -67,27 +67,19 @@ namespace System
         public int scoreForFinalScene = 5;*/
         private int _currentScoreCheck;
         private ExpressionsEmotesAndMovements _expressionsEmotesAndMovements;
-        private bool skipone;
-        private int relscore;
-        private SaveManager _saveManager;
-        
-
-
-        /*public bool RlvlMattering;
-        public int minRlvlForEnding;*/
-
+        private bool _skipOne;
 
         private void Start()
         {
-            _saveManager = GetComponent<SaveManager>();
             _expressionsEmotesAndMovements = GetComponent<ExpressionsEmotesAndMovements>();
             _choiceManager = GetComponent<ChoiceManager>();
             _sceneController = GetComponent<SceneController>();
             _logText = logGameObject.GetComponentInChildren<TMP_Text>();
             _inputManager = GetComponent<InputManager>();
+            playerName = PlayerPrefs.GetString("pName");
             ExtractAndReplaceNames();
             dialogueText.text = "";
-            namePlate.text = _names[currentDialogue];
+            namePlate.text = names[currentDialogue];
         }
 
         private void Update()
@@ -114,7 +106,7 @@ namespace System
         {
             if (logGameObject.activeSelf || _choiceManager.showingDialogue) return;
             nextDialogue = true;
-            _saveManager.Save();
+            SaveManager.Save(_choiceManager.relationScore,playerName);
 
             if (currentDialogue < script.Length - 1)
             {
@@ -122,6 +114,7 @@ namespace System
             }
             else
             {
+                
                 _sceneController.LoadWithTransition();
                 return;
             }
@@ -216,7 +209,7 @@ namespace System
         public IEnumerator GradualText()
         {
             _generatingDialogue = true;
-            namePlate.text = _names[currentDialogue];
+            namePlate.text = names[currentDialogue];
             dialogueText.text = "";
             _expressionsEmotesAndMovements.UpdateSprite();
             var charArray = script[currentDialogue].ToCharArray();
@@ -245,7 +238,7 @@ namespace System
                 logGameObject.SetActive(true);
                 for (var i = 0; i < currentDialogue + 1; i++)
                 {
-                    _logText.text += "\n" + _names[i] + ": " + script[i];
+                    _logText.text += "\n" + names[i] + ": " + script[i];
                 }
             }
             else
@@ -254,11 +247,11 @@ namespace System
                 _logText.text = "Log:";
             }
         }
-//TODO inputfield.GetComponent<Text>().text
+
 
         private void ExtractAndReplaceNames()
         {
-            _names = new string[script.Length];
+            names = new string[script.Length];
             _choiceDialogues = new bool[script.Length];
             _choiceDialogues1 = new bool[script.Length];
             _choiceDialogues2 = new bool[script.Length];
@@ -321,7 +314,7 @@ namespace System
                 }
 
                 script[i] = script[i].Replace(replaceString, playerName);
-                _names[i] = script[i].Split(":")[0];
+                names[i] = script[i].Split(":")[0];
                 script[i] = script[i].Remove(0, script[i].IndexOf(":", StringComparison.Ordinal) + 2);
             }
         }
@@ -329,7 +322,7 @@ namespace System
         public void PositiveChoice(int currentChoice)
         {
             _inChoices1 = true;
-            skipone = true;
+            _skipOne = true;
             GotoCorrectDialogue(currentChoice, _choiceDialogues1);
             CheckScore();
         }
@@ -337,7 +330,7 @@ namespace System
         public void NeutralChoice(int currentChoice)
         {
             _inChoices2 = true;
-            skipone = true;
+            _skipOne = true;
             GotoCorrectDialogue(currentChoice, _choiceDialogues2);
             CheckScore();
         }
@@ -345,12 +338,12 @@ namespace System
         public void NegativeChoice(int currentChoice)
         {
             _inChoices3 = true;
-            if (skipone && loadFinalScene)
+            if (_skipOne && loadFinalScene)
             {
                 _currentScoreCheck++;
             }
 
-            skipone = true;
+            _skipOne = true;
             GotoCorrectDialogue(currentChoice, _choiceDialogues3);
             CheckScore();
         }
