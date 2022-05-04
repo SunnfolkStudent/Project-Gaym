@@ -114,7 +114,6 @@ namespace System
             }
             else
             {
-                
                 _sceneController.LoadWithTransition();
                 return;
             }

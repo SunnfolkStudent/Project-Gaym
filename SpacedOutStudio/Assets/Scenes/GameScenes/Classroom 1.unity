@@ -299,6 +299,10 @@ PrefabInstance:
       value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: test
+      value: 
+      objectReference: {fileID: 8300000, guid: f48351c2cac527f47922f38e921dbabd, type: 3}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: rageheart
       value: 
       objectReference: {fileID: 1162310576}
@@ -563,6 +567,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6278955061063112238, guid: f2bf028884f4d334fb187194a91f4453, type: 3}
   m_PrefabInstance: {fileID: 1618936426}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &587392504 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6278955061063112227, guid: f2bf028884f4d334fb187194a91f4453, type: 3}
+  m_PrefabInstance: {fileID: 1618936426}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587392503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41fca56d2e38ee649b7db4546a09dfe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &817739768 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5002994486055288483, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
@@ -697,6 +712,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 371339894}
     m_Modifications:
+    - target: {fileID: 6278955060364300224, guid: f2bf028884f4d334fb187194a91f4453, type: 3}
+      propertyPath: m_text
+      value: 'Fredrick
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 6278955061063112226, guid: f2bf028884f4d334fb187194a91f4453, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -801,6 +822,10 @@ PrefabInstance:
       propertyPath: dialogueManager
       value: 
       objectReference: {fileID: 817739769}
+    - target: {fileID: 6278955061063112227, guid: f2bf028884f4d334fb187194a91f4453, type: 3}
+      propertyPath: characterlimitCountDown
+      value: 
+      objectReference: {fileID: 1637978195}
     - target: {fileID: 6278955061063112236, guid: f2bf028884f4d334fb187194a91f4453, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0
@@ -813,5 +838,32 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6278955061298952698, guid: f2bf028884f4d334fb187194a91f4453, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 587392504}
+    - target: {fileID: 6278955061298952698, guid: f2bf028884f4d334fb187194a91f4453, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Enter
+      objectReference: {fileID: 0}
+    - target: {fileID: 6278955061298952698, guid: f2bf028884f4d334fb187194a91f4453, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: System.Keyboard, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6278955061298952698, guid: f2bf028884f4d334fb187194a91f4453, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2bf028884f4d334fb187194a91f4453, type: 3}
+--- !u!114 &1637978195 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2062929732272767103, guid: f2bf028884f4d334fb187194a91f4453, type: 3}
+  m_PrefabInstance: {fileID: 1618936426}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
