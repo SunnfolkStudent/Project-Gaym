@@ -997,7 +997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionAnimator: {fileID: 4986500590316547295}
-  isMainMenu: 0
+  isMainMenu: 1
 --- !u!114 &4387623095845128924
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ using UnityEngine;
 namespace System
 {
     [RequireComponent(typeof(SaveManager))]
-    [RequireComponent(typeof(ExpressionsAndEmotes))]
+    [RequireComponent(typeof(ExpressionsEmotesAndMovements))]
     [RequireComponent(typeof(ChoiceManager))]
     [RequireComponent(typeof(SceneController))]
     [RequireComponent(typeof(InputManager))]
@@ -66,7 +66,7 @@ namespace System
         public string finalSceneToLoadN;
         public int scoreForFinalScene = 5;*/
         private int _currentScoreCheck;
-        private ExpressionsAndEmotes _expressionsAndEmotes;
+        private ExpressionsEmotesAndMovements _expressionsEmotesAndMovements;
         private bool skipone;
         private int relscore;
         private SaveManager _saveManager;
@@ -80,7 +80,7 @@ namespace System
         private void Start()
         {
             _saveManager = GetComponent<SaveManager>();
-            _expressionsAndEmotes = GetComponent<ExpressionsAndEmotes>();
+            _expressionsEmotesAndMovements = GetComponent<ExpressionsEmotesAndMovements>();
             _choiceManager = GetComponent<ChoiceManager>();
             _sceneController = GetComponent<SceneController>();
             _logText = logGameObject.GetComponentInChildren<TMP_Text>();
@@ -218,7 +218,7 @@ namespace System
             _generatingDialogue = true;
             namePlate.text = _names[currentDialogue];
             dialogueText.text = "";
-            _expressionsAndEmotes.UpdateSprite();
+            _expressionsEmotesAndMovements.UpdateSprite();
             var charArray = script[currentDialogue].ToCharArray();
             for (var i = 0; i < charArray.Length; i++)
             {
@@ -383,6 +383,7 @@ namespace System
         {
             if (_goodorbadCheck[currentDialogue])
             {
+                print("checked score");
                 _currentScoreCheck++;
                 if (_choiceManager.relationScore >= rScoreMinP)
                 {
