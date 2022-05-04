@@ -3470,7 +3470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitionAnimator: {fileID: 2134842865}
   isMainMenu: 0
-  quitCanvas: {fileID: 0}
+  quitCanvas: {fileID: 7874068013338240182}
   pauseCanvas: {fileID: 7715627315492695580}
 --- !u!114 &7715627315812711394
 MonoBehaviour:
