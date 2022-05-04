@@ -1,9 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ShakeManager : MonoBehaviour
 {
-    public void Shake;
-    
+
+    private void Start()
+    {
+        throw new NotImplementedException();
+    }
 }
