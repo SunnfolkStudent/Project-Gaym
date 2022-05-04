@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace System
 {
@@ -11,8 +10,15 @@ namespace System
         public TMP_InputField inputField;
         public GameObject characterLimitText;
         public int charachterLimit = 10;
-        
+        public DialogueManager dialogueManager;
+        public ChoiceManager choiceManager;
 
+
+        private void Start()
+        {
+            choiceManager = GetComponent<ChoiceManager>();
+            dialogueManager = GetComponent<DialogueManager>();
+        }
 
         public void Keypress(string character)
         {
@@ -63,6 +69,10 @@ namespace System
         public void Enter()
         {
             PlayerPrefs.SetString("pName", inputField.text);
+            gameObject.SetActive(false);
+            dialogueManager.playerName = inputField.text;
+            choiceManager.showingDialogue = false;
+            choiceManager.dialogueAndNameplate.SetActive(true);
         }
     }
 }
