@@ -20,11 +20,14 @@ namespace System
 		public bool[] bob;
 		public float[] howMuchToMove;
 		public float[] speed;
+		public AudioClip[] audioClips;
+		private AudioSource _audio;
 		
 		private int _lastDialogue;
 
 		private void Start()
 		{
+			_audio = GetComponent<AudioSource>();
 			_movements = GetComponent<Movements>();
 			_dialogueManager = GetComponent<DialogueManager>();
 		}
@@ -32,19 +35,20 @@ namespace System
 		public void UpdateSprite()
 		{
 			var currentInt = _dialogueManager.currentDialogue;
-			if (expressionsSprites[currentInt] != null)
+			if (expressionsSprites[currentInt])
 			{
 				rageheart.sprite = expressionsSprites[currentInt];
 			}
 
 			if (currentInt > 0)
 			{
-				if (emotes[_lastDialogue] != null)
+				if (emotes[_lastDialogue])
 				{
 					emotes[_lastDialogue].SetActive(false);
 				}
 			}
-			if (emotes[currentInt] != null)
+			_lastDialogue = currentInt;
+			if (emotes[currentInt])
 			{
 				emotes[currentInt].SetActive(true);
 			}
@@ -58,7 +62,11 @@ namespace System
 			{
 				StartCoroutine(_movements.Bob(spriteToMove[currentInt], speed[currentInt]));
 			}
-			_lastDialogue = currentInt;
+
+			if (audioClips[currentInt])
+			{
+				_audio.PlayOneShot(audioClips[currentInt]);
+			}
 			
 		}
 	}

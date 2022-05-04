@@ -12,22 +12,27 @@ namespace System
         public int charachterLimit = 10;
         public DialogueManager dialogueManager;
         public ChoiceManager choiceManager;
+        public TMP_Text characterlimitCountDown;
+        private int _charactersLeft;
 
         public void Keypress(string character)
         {
+            if (inputField.text.Length == charachterLimit) return;
             inputField.text = inputField.text.Insert(inputField.text.Length, character);
         }
 
         public void LimitCheck()
         {
-            if (inputField.text.Length >= charachterLimit)
+            if (inputField.text.Length > charachterLimit)
             {
                 inputField.text = inputField.text.Remove(charachterLimit-1, 1);
-                characterLimitText.SetActive(true);
+                //characterLimitText.SetActive(true);
             }
             else
             {
-                characterLimitText.SetActive(false);
+                _charactersLeft = charachterLimit - inputField.text.Length;
+                characterlimitCountDown.text = "("+_charactersLeft+")";
+                //characterLimitText.SetActive(false);
             }
         }
 
