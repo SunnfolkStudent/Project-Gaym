@@ -19,7 +19,9 @@ namespace System
         public string returnChar = "/r";
         public string goodRlvlChar = "/gr";
         public string badRlvlChar = "/br";
+
         public string goodOrBadCheckChar = "/lvl";
+
         //public string goodOrBadCheckReturn = "/rr";
         public bool debug;
         public int debugDialogue;
@@ -39,7 +41,9 @@ namespace System
         private TMP_Text _logText;
         [HideInInspector] public string[] names;
         private SceneController _sceneController;
+
         public float textSpeed = 1;
+
         //public bool loop;
         public int rScoreMinP;
         private bool _generatingDialogue;
@@ -52,7 +56,9 @@ namespace System
         private bool[] _goodorbadCheck;
         private bool[] _goodRlvlDialogues;
         private bool[] _badRlvlDialogues;
+
         [HideInInspector] public string[] dialoguesChosen;
+
         //private bool[] _returnLvlDialogues;
         private ChoiceManager _choiceManager;
         private bool _inChoices1;
@@ -62,7 +68,9 @@ namespace System
         [HideInInspector] public bool nextDialogue;
         private bool _inGoodR;
         private bool _inBadR;
+
         public bool loadFinalScene;
+
         /*public string finalSceneToLoadP;
         public string finalSceneToLoadN;
         public int scoreForFinalScene = 5;*/
@@ -70,6 +78,7 @@ namespace System
         private ExpressionsEmotesAndMovements _expressionsEmotesAndMovements;
         private bool _skipOne;
         private Movements _movements;
+        private bool _hovering;
 
         private void Start()
         {
@@ -94,6 +103,7 @@ namespace System
                 {
                     _movements.stopmoving = true;
                 }
+
                 if (!_generatingDialogue)
                 {
                     NextDialogue();
@@ -112,9 +122,9 @@ namespace System
 
         public void NextDialogue()
         {
-            if (logGameObject.activeSelf || _choiceManager.showingDialogue) return;
+            if (logGameObject.activeSelf || _choiceManager.showingDialogue || _hovering) return;
             nextDialogue = true;
-            SaveManager.Save(_choiceManager.relationScore,playerName);
+            SaveManager.Save(_choiceManager.relationScore, playerName);
 
             if (currentDialogue < script.Length - 1)
             {
@@ -212,6 +222,7 @@ namespace System
                     currentDialogue = debugDialogue;
                     debug = false;
                 }
+
                 StartCoroutine(GradualText());
             }
         }
@@ -226,7 +237,7 @@ namespace System
             var charArray = script[currentDialogue].ToCharArray();
             for (var i = 0; i < charArray.Length; i++)
             {
-                if (_stopGeneratingDialogue) continue;
+                if (_stopGeneratingDialogue) break;
                 yield return new WaitForSeconds(textSpeed / 100);
                 dialogueText.text = dialogueText.text.Insert(i, charArray[i].ToString());
             }
@@ -402,6 +413,16 @@ namespace System
                 _inBadR = true;
                 GotoCorrectDialogue(_currentScoreCheck, _badRlvlDialogues);
             }
+        }
+
+        public void OnHover()
+        {
+            _hovering = true;
+        }
+
+        public void OnHoverExit()
+        {
+            _hovering = false;
         }
     }
 }

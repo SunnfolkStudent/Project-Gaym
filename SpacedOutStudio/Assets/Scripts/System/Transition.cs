@@ -1,15 +1,31 @@
+using System.Collections;
 using UnityEngine;
 
 namespace System
 {
+    [RequireComponent(typeof(AudioSource))]
     public class Transition : MonoBehaviour
     {
         public SceneController sceneController;
         public DialogueManager dialogueManager;
-        public ChoiceManager choiceManager;
+        //public ChoiceManager choiceManager;
+        private AudioSource _audioSource;
+        public float delayBefore1 = 1;
+        public AudioClip Clip1;
+        public float delayBefore2 = 1;
+        public AudioClip Clip2;
+        public float delayBefore3 = 1;
+        public AudioClip Clip3;
+        public float delayBeforeLoad = 1;
+
+        private void Start()
+        {
+            _audioSource = GetComponent<AudioSource>();
+        }
+
         public void LoadLevel()
         {
-            sceneController.LoadScene(dialogueManager.sceneToLoad);
+            StartCoroutine(LoadWithSound());
             /*if (!dialogueManager.loadFinalScene)
             {
                 sceneController.LoadScene(dialogueManager.sceneToLoad);
@@ -33,6 +49,29 @@ namespace System
             {
                 StartCoroutine(dialogueManager.GradualText());
             }
+        }
+
+        private IEnumerator LoadWithSound()
+        {
+            if (Clip1)
+            {
+                yield return new WaitForSeconds(delayBefore1);
+                _audioSource.PlayOneShot(Clip1);
+            }
+
+            if (Clip2)
+            {
+                yield return new WaitForSeconds(delayBefore2);
+                _audioSource.PlayOneShot(Clip2);
+            }
+
+            if (Clip3)
+            {
+                yield return new WaitForSeconds(delayBefore3);
+                _audioSource.PlayOneShot(Clip3);
+            }
+            yield return new WaitForSeconds(delayBeforeLoad);
+            sceneController.LoadScene(dialogueManager.sceneToLoad);
         }
     }
 }
