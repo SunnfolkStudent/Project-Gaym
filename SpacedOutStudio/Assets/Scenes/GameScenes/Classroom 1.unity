@@ -324,6 +324,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 471766787}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.size
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: emotes.Array.data[16]
       value: 
       objectReference: {fileID: 318046246}
@@ -760,9 +764,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6278955061063112236, guid: f2bf028884f4d334fb187194a91f4453, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6278955061063112238, guid: f2bf028884f4d334fb187194a91f4453, type: 3}
       propertyPath: m_Name
       value: NamingCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6278955061063112238, guid: f2bf028884f4d334fb187194a91f4453, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2bf028884f4d334fb187194a91f4453, type: 3}

@@ -291,6 +291,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1837425641}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.size
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: emotes.Array.data[10]
       value: 
       objectReference: {fileID: 1837425641}
