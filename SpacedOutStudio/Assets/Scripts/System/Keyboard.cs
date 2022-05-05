@@ -68,12 +68,12 @@ namespace System
         {
             PlayerPrefs.SetString("pName", inputField.text);
             gameObject.SetActive(false);
-            dialogueManager.script[22] = dialogueManager.script[22].Replace(dialogueManager.playerName, inputField.text);
-            dialogueManager.names[21] = inputField.text;
+            dialogueManager.script[24] = dialogueManager.script[24].Replace(dialogueManager.playerName, inputField.text);
+            dialogueManager.names[23] = inputField.text;
             dialogueManager.playerName = inputField.text;
             choiceManager.showingDialogue = false;
             choiceManager.dialogueAndNameplate.SetActive(true);
-            dialogueManager.script[21] = dialogueManager.playerName;
+            dialogueManager.script[23] = dialogueManager.playerName;
             dialogueManager.NextDialogue();
             //TODO Log Compatibility
         }
