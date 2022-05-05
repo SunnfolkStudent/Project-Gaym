@@ -3,13 +3,13 @@ using UnityEngine;
 
 namespace System
 {
-    [RequireComponent(typeof(AudioSource))]
     public class Transition : MonoBehaviour
     {
         public SceneController sceneController;
         public DialogueManager dialogueManager;
         //public ChoiceManager choiceManager;
-        private AudioSource _audioSource;
+        public AudioSource audioSource;
+        public Music music;
         public float delayBefore1 = 1;
         public AudioClip Clip1;
         public float delayBefore2 = 1;
@@ -17,11 +17,7 @@ namespace System
         public float delayBefore3 = 1;
         public AudioClip Clip3;
         public float delayBeforeLoad = 1;
-
-        private void Start()
-        {
-            _audioSource = GetComponent<AudioSource>();
-        }
+        
 
         public void LoadLevel()
         {
@@ -53,22 +49,24 @@ namespace System
 
         private IEnumerator LoadWithSound()
         {
+            music.stop = true;
+            audioSource.Stop();
             if (Clip1)
             {
                 yield return new WaitForSeconds(delayBefore1);
-                _audioSource.PlayOneShot(Clip1);
+                audioSource.PlayOneShot(Clip1);
             }
 
             if (Clip2)
             {
                 yield return new WaitForSeconds(delayBefore2);
-                _audioSource.PlayOneShot(Clip2);
+                audioSource.PlayOneShot(Clip2);
             }
 
             if (Clip3)
             {
                 yield return new WaitForSeconds(delayBefore3);
-                _audioSource.PlayOneShot(Clip3);
+                audioSource.PlayOneShot(Clip3);
             }
             yield return new WaitForSeconds(delayBeforeLoad);
             sceneController.LoadScene(dialogueManager.sceneToLoad);

@@ -7,6 +7,7 @@ namespace System
 		private AudioSource _audio;
 		public AudioClip startClip;
 		public AudioClip loopClip;
+		public bool stop;
 
 		private void Start()
 		{
@@ -19,7 +20,7 @@ namespace System
 
 		private void Update()
 		{
-			if (_audio.isPlaying) return;
+			if (_audio.isPlaying || stop) return;
 			_audio.PlayOneShot(loopClip);
 			_audio.loop = true;
 		}
