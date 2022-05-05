@@ -682,7 +682,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[79]
-      value: ' /c1 /gr Rageheart: Thank you for choosing me, PC. You will never regret
+      value: '/c1 /gr Rageheart: Thank you for choosing me, PC. You will never regret
         it.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
@@ -785,7 +785,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[103]
-      value: '/c3 /gr Rageheart:  I will not let you go now that I''ve finally got
+      value: '/c3 /gr Rageheart: I will not let you go now that I''ve finally got
         you in my grasp.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
