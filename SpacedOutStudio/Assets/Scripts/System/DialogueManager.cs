@@ -68,9 +68,11 @@ namespace System
         private int _currentScoreCheck;
         private ExpressionsEmotesAndMovements _expressionsEmotesAndMovements;
         private bool _skipOne;
+        private Movements _movements;
 
         private void Start()
         {
+            _movements = GetComponent<Movements>();
             _expressionsEmotesAndMovements = GetComponent<ExpressionsEmotesAndMovements>();
             _choiceManager = GetComponent<ChoiceManager>();
             _sceneController = GetComponent<SceneController>();
@@ -86,6 +88,11 @@ namespace System
         {
             if (_inputManager.interact)
             {
+                //TODO ask eren how to do the skip
+                if (_movements.moving)
+                {
+                    _movements.stopmoving = true;
+                }
                 if (!_generatingDialogue)
                 {
                     NextDialogue();
@@ -160,7 +167,6 @@ namespace System
                     _inChoices1 = false;
                     _inChoices2 = false;
                     _inChoices3 = false;
-                    print("testP");
                     GotoCorrectDialogue(_choiceManager.currentChoices, _returnDialogues);
                     return;
                 }
@@ -173,7 +179,6 @@ namespace System
                     _inChoices1 = false;
                     _inChoices2 = false;
                     _inChoices3 = false;
-                    print("testN");
                     GotoCorrectDialogue(_choiceManager.currentChoices, _returnDialogues);
                     return;
                 }
@@ -228,8 +233,8 @@ namespace System
             if (_stopGeneratingDialogue)
             {
                 dialogueText.text = script[currentDialogue];
+                _stopGeneratingDialogue = false;
             }
-            _stopGeneratingDialogue = false;
 
             _generatingDialogue = false;
         }
@@ -243,6 +248,10 @@ namespace System
                 logGameObject.SetActive(true);
                 for (var i = 0; i < currentDialogue + 1; i++)
                 {
+                    if (_choiceDialogues[i])
+                    {
+                        
+                    }
                     _logText.text += "\n" + names[i] + ": " + script[i];
                 }
             }
