@@ -37,7 +37,7 @@ namespace System
         private InputManager _inputManager;
         [HideInInspector] public int currentDialogue;
         private TMP_Text _logText;
-        private string[] _names;
+        [HideInInspector] public string[] names;
         private SceneController _sceneController;
         public float textSpeed = 1;
         //public bool loop;
@@ -68,24 +68,31 @@ namespace System
         private int _currentScoreCheck;
         private ExpressionsEmotesAndMovements _expressionsEmotesAndMovements;
         private bool _skipOne;
+        private Movements _movements;
 
         private void Start()
         {
+            _movements = GetComponent<Movements>();
             _expressionsEmotesAndMovements = GetComponent<ExpressionsEmotesAndMovements>();
             _choiceManager = GetComponent<ChoiceManager>();
             _sceneController = GetComponent<SceneController>();
             _logText = logGameObject.GetComponentInChildren<TMP_Text>();
             _inputManager = GetComponent<InputManager>();
+            playerName = PlayerPrefs.GetString("pName");
             ExtractAndReplaceNames();
             dialogueText.text = "";
-            namePlate.text = _names[currentDialogue];
-            playerName = PlayerPrefs.GetString("pName");
+            namePlate.text = names[currentDialogue];
         }
 
         private void Update()
         {
             if (_inputManager.interact)
             {
+                //TODO ask eren how to do the skip
+                if (_movements.moving)
+                {
+                    _movements.stopmoving = true;
+                }
                 if (!_generatingDialogue)
                 {
                     NextDialogue();
@@ -114,7 +121,6 @@ namespace System
             }
             else
             {
-                
                 _sceneController.LoadWithTransition();
                 return;
             }
@@ -158,7 +164,9 @@ namespace System
                 if (!_goodRlvlDialogues[currentDialogue])
                 {
                     _inGoodR = false;
-                    print("testP");
+                    _inChoices1 = false;
+                    _inChoices2 = false;
+                    _inChoices3 = false;
                     GotoCorrectDialogue(_choiceManager.currentChoices, _returnDialogues);
                     return;
                 }
@@ -168,7 +176,9 @@ namespace System
                 if (!_badRlvlDialogues[currentDialogue])
                 {
                     _inBadR = false;
-                    print("testN");
+                    _inChoices1 = false;
+                    _inChoices2 = false;
+                    _inChoices3 = false;
                     GotoCorrectDialogue(_choiceManager.currentChoices, _returnDialogues);
                     return;
                 }
@@ -209,7 +219,7 @@ namespace System
         public IEnumerator GradualText()
         {
             _generatingDialogue = true;
-            namePlate.text = _names[currentDialogue];
+            namePlate.text = names[currentDialogue];
             dialogueText.text = "";
             _expressionsEmotesAndMovements.UpdateSprite();
             var charArray = script[currentDialogue].ToCharArray();
@@ -223,8 +233,8 @@ namespace System
             if (_stopGeneratingDialogue)
             {
                 dialogueText.text = script[currentDialogue];
+                _stopGeneratingDialogue = false;
             }
-            _stopGeneratingDialogue = false;
 
             _generatingDialogue = false;
         }
@@ -238,7 +248,11 @@ namespace System
                 logGameObject.SetActive(true);
                 for (var i = 0; i < currentDialogue + 1; i++)
                 {
-                    _logText.text += "\n" + _names[i] + ": " + script[i];
+                    if (_choiceDialogues[i])
+                    {
+                        
+                    }
+                    _logText.text += "\n" + names[i] + ": " + script[i];
                 }
             }
             else
@@ -251,7 +265,7 @@ namespace System
 
         private void ExtractAndReplaceNames()
         {
-            _names = new string[script.Length];
+            names = new string[script.Length];
             _choiceDialogues = new bool[script.Length];
             _choiceDialogues1 = new bool[script.Length];
             _choiceDialogues2 = new bool[script.Length];
@@ -314,7 +328,7 @@ namespace System
                 }
 
                 script[i] = script[i].Replace(replaceString, playerName);
-                _names[i] = script[i].Split(":")[0];
+                names[i] = script[i].Split(":")[0];
                 script[i] = script[i].Remove(0, script[i].IndexOf(":", StringComparison.Ordinal) + 2);
             }
         }
@@ -374,23 +388,18 @@ namespace System
 
         private void CheckScore()
         {
-            if (_goodorbadCheck[currentDialogue])
+            if (!_goodorbadCheck[currentDialogue]) return;
+            _currentScoreCheck++;
+            if (_choiceManager.relationScore >= rScoreMinP)
             {
-                print("checked score");
-                _currentScoreCheck++;
-                if (_choiceManager.relationScore >= rScoreMinP)
-                {
-                    _inGoodR = true;
-                    print("positive");
-                    print(_currentScoreCheck);
-                    GotoCorrectDialogue(_currentScoreCheck, _goodRlvlDialogues);
-                }
-                else
-                {
-                    print("negative");
-                    _inBadR = true;
-                    GotoCorrectDialogue(_currentScoreCheck, _badRlvlDialogues);
-                }
+                _inGoodR = true;
+                print(_currentScoreCheck);
+                GotoCorrectDialogue(_currentScoreCheck, _goodRlvlDialogues);
+            }
+            else
+            {
+                _inBadR = true;
+                GotoCorrectDialogue(_currentScoreCheck, _badRlvlDialogues);
             }
         }
     }

@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace System
 {
@@ -11,24 +10,29 @@ namespace System
         public TMP_InputField inputField;
         public GameObject characterLimitText;
         public int charachterLimit = 10;
-        
-
+        public DialogueManager dialogueManager;
+        public ChoiceManager choiceManager;
+        public TMP_Text characterlimitCountDown;
+        private int _charactersLeft;
 
         public void Keypress(string character)
         {
+            if (inputField.text.Length == charachterLimit) return;
             inputField.text = inputField.text.Insert(inputField.text.Length, character);
         }
 
         public void LimitCheck()
         {
-            if (inputField.text.Length >= charachterLimit)
+            if (inputField.text.Length > charachterLimit)
             {
                 inputField.text = inputField.text.Remove(charachterLimit-1, 1);
-                characterLimitText.SetActive(true);
+                //characterLimitText.SetActive(true);
             }
             else
             {
-                characterLimitText.SetActive(false);
+                _charactersLeft = charachterLimit - inputField.text.Length;
+                characterlimitCountDown.text = "("+_charactersLeft+")";
+                //characterLimitText.SetActive(false);
             }
         }
 
@@ -63,6 +67,14 @@ namespace System
         public void Enter()
         {
             PlayerPrefs.SetString("pName", inputField.text);
+            gameObject.SetActive(false);
+            dialogueManager.script[22] = dialogueManager.script[22].Replace(dialogueManager.playerName, inputField.text);
+            dialogueManager.names[21] = inputField.text;
+            dialogueManager.playerName = inputField.text;
+            choiceManager.showingDialogue = false;
+            choiceManager.dialogueAndNameplate.SetActive(true);
+            dialogueManager.script[21] = dialogueManager.playerName;
+            dialogueManager.NextDialogue();
         }
     }
 }
