@@ -75,6 +75,7 @@ namespace System
             choiceManager.dialogueAndNameplate.SetActive(true);
             dialogueManager.script[21] = dialogueManager.playerName;
             dialogueManager.NextDialogue();
+            //TODO Log Compatibility
         }
     }
 }

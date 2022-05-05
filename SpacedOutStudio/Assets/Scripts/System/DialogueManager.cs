@@ -52,6 +52,7 @@ namespace System
         private bool[] _goodorbadCheck;
         private bool[] _goodRlvlDialogues;
         private bool[] _badRlvlDialogues;
+        [HideInInspector] public string[] dialoguesChosen;
         //private bool[] _returnLvlDialogues;
         private ChoiceManager _choiceManager;
         private bool _inChoices1;
@@ -250,9 +251,12 @@ namespace System
                 {
                     if (_choiceDialogues[i])
                     {
-                        
+                        _logText.text += "\n" + playerName + ": " + dialoguesChosen[i];
                     }
-                    _logText.text += "\n" + names[i] + ": " + script[i];
+                    else
+                    {
+                        _logText.text += "\n" + names[i] + ": " + script[i];
+                    }
                 }
             }
             else
@@ -271,10 +275,10 @@ namespace System
             _choiceDialogues2 = new bool[script.Length];
             _choiceDialogues3 = new bool[script.Length];
             _returnDialogues = new bool[script.Length];
-            //_returnLvlDialogues = new bool[script.Length];
             _goodorbadCheck = new bool[script.Length];
             _goodRlvlDialogues = new bool[script.Length];
             _badRlvlDialogues = new bool[script.Length];
+            dialoguesChosen = new string[script.Length];
             for (var i = 0; i < script.Length; i++)
             {
                 if (script[i].Contains(goodOrBadCheckChar))
@@ -295,12 +299,6 @@ namespace System
                         badRlvlChar.Length);
                     _badRlvlDialogues[i] = true;
                 }
-                /*else if (script[i].Contains(goodOrBadCheckReturn))
-                {
-                    script[i] = script[i].Remove(script[i].IndexOf(goodOrBadCheckReturn, StringComparison.Ordinal),
-                        goodOrBadCheckReturn.Length);
-                    _returnLvlDialogues[i] = true;
-                }*/
 
                 if (script[i] == dialogueChoicesChar)
                 {
@@ -327,6 +325,10 @@ namespace System
                     _returnDialogues[i] = true;
                 }
 
+                /*if (script[i].StartsWith(" "))
+                {
+                    script[i] = script[i].Remove(0, 1);
+                }*/
                 script[i] = script[i].Replace(replaceString, playerName);
                 names[i] = script[i].Split(":")[0];
                 script[i] = script[i].Remove(0, script[i].IndexOf(":", StringComparison.Ordinal) + 2);
@@ -393,7 +395,6 @@ namespace System
             if (_choiceManager.relationScore >= rScoreMinP)
             {
                 _inGoodR = true;
-                print(_currentScoreCheck);
                 GotoCorrectDialogue(_currentScoreCheck, _goodRlvlDialogues);
             }
             else
