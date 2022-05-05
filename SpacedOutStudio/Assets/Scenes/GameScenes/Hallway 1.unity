@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &121269928 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1666722117330102017, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+  m_PrefabInstance: {fileID: 412475100}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &257823271
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,6 +219,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1157870191266242019, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1345
+      objectReference: {fileID: 0}
     - target: {fileID: 2271899975484111128, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_text
       value: Why didn't you kill me?
@@ -232,7 +241,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.size
-      value: 29
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[0]
@@ -316,59 +325,84 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[19]
-      value: '/c2 Rageheart: I believed that these subjects would be to your liking,
+      value: '/c2 Rageheart: I believed that these subjects would be to your liking.
         but I suppose I never considered the fact that you may never have received
         an education like this before. '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[20]
-      value: '/c2 Rageheart: But do not worry, this is for your own good.'
+      value: '/c2 Rageheart: I suppose I never considered the fact that you may never
+        have received an education like this before. '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[21]
-      value: "/r PC: How could you possibly know what\u2019s good for me? "
+      value: '/c2 Rageheart: But do not worry, this is for your own good.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[22]
-      value: "PC: \u2026 "
+      value: "/r PC: How could you possibly know what\u2019s good for me? "
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[23]
-      value: 'Rageheart: Anyways, it is fantastic to see you. '
+      value: "PC: \u2026 "
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[24]
+      value: 'Rageheart: Anyways, it is fantastic to see you. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[25]
       value: 'Rageheart: I know school can be a bit jarring but I believe you will
         do wonderful as always.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[25]
+      propertyPath: script.Array.data[26]
       value: "Rageheart: I\u2019m afraid I will have to head home to \u2026prepare
         some things. "
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[26]
+      propertyPath: script.Array.data[27]
       value: "Rageheart: Have a good day, PC. I can\u2019t wait to see you tomorrow! "
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[27]
-      value: 'PC: Uh...'
+      propertyPath: script.Array.data[28]
+      value: 'PC: Uh... okay?'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: script.Array.data[28]
+      propertyPath: script.Array.data[29]
+      value: 'PC: Wait...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: script.Array.data[30]
       value: 'PC: Where do I sleep?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6322277662619229674, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: bobAmount
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: bob.Array.size
-      value: 29
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: speed.Array.size
-      value: 29
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: bob.Array.data[3]
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: emotes.Array.size
-      value: 29
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: speed.Array.data[2]
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: speed.Array.data[3]
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: emotes.Array.data[2]
@@ -398,6 +432,22 @@ PrefabInstance:
       propertyPath: emotes.Array.data[9]
       value: 
       objectReference: {fileID: 412475102}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: speed.Array.data[26]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: speed.Array.data[27]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: speed.Array.data[28]
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.size
+      value: 31
+      objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: emotes.Array.data[10]
       value: 
@@ -445,18 +495,62 @@ PrefabInstance:
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: emotes.Array.data[24]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: emotes.Array.data[25]
+      value: 
       objectReference: {fileID: 412475103}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: spriteToMove.Array.size
-      value: 29
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: howMuchToMove.Array.size
-      value: 29
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: spriteToMove.Array.data[2]
+      value: 
+      objectReference: {fileID: 121269928}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: spriteToMove.Array.data[3]
+      value: 
+      objectReference: {fileID: 121269928}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: howMuchToMove.Array.data[2]
+      value: 1345
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: spriteToMove.Array.data[26]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: spriteToMove.Array.data[27]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: spriteToMove.Array.data[28]
+      value: 
+      objectReference: {fileID: 121269928}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: howMuchToMove.Array.data[26]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: howMuchToMove.Array.data[27]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: howMuchToMove.Array.data[28]
+      value: 1350
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: howMuchToMove.Array.data[30]
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: expressionsSprites.Array.size
-      value: 29
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: expressionsSprites.Array.data[0]
@@ -533,7 +627,7 @@ PrefabInstance:
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: expressionsSprites.Array.data[20]
       value: 
-      objectReference: {fileID: 21300000, guid: 01a6127004951784bb010995dabffabe, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: expressionsSprites.Array.data[21]
       value: 
@@ -541,21 +635,25 @@ PrefabInstance:
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: expressionsSprites.Array.data[22]
       value: 
-      objectReference: {fileID: 21300000, guid: 05863838fd5c2cf42ab4c3625383de2a, type: 3}
+      objectReference: {fileID: 21300000, guid: 01a6127004951784bb010995dabffabe, type: 3}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: expressionsSprites.Array.data[23]
       value: 
-      objectReference: {fileID: 21300000, guid: 32012c01f4065e540802ca1d52c276d3, type: 3}
+      objectReference: {fileID: 21300000, guid: 05863838fd5c2cf42ab4c3625383de2a, type: 3}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: expressionsSprites.Array.data[24]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: 32012c01f4065e540802ca1d52c276d3, type: 3}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: expressionsSprites.Array.data[25]
       value: 
-      objectReference: {fileID: 21300000, guid: 01a6127004951784bb010995dabffabe, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: expressionsSprites.Array.data[26]
+      value: 
+      objectReference: {fileID: 21300000, guid: 01a6127004951784bb010995dabffabe, type: 3}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: expressionsSprites.Array.data[27]
       value: 
       objectReference: {fileID: 21300000, guid: 32012c01f4065e540802ca1d52c276d3, type: 3}
     - target: {fileID: 7715627315812711199, guid: 362aa589869398745a2028fc1cc364d7, type: 3}

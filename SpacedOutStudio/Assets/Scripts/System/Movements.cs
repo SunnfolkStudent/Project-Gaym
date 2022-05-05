@@ -13,8 +13,8 @@ namespace System
             moving = true;
             for (var i = 0; i < MathF.Abs(amount) / speed; i++)
             {
-                if (stopmoving) continue;
-                    if (amount > 0)
+                if (stopmoving) break;
+                if (amount > 0)
                 {
                     whatToMove.transform.Translate(speed, 0, 0);
                 }

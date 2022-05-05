@@ -207,6 +207,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &693708170 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1666722117330102017, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+  m_PrefabInstance: {fileID: 1947354510}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1421267215 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7715627315492695580, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
@@ -234,13 +239,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Choice3
       objectReference: {fileID: 0}
+    - target: {fileID: 1157870191266242019, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1500
+      objectReference: {fileID: 0}
     - target: {fileID: 2264851786051649554, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_Name
       value: Choice1
       objectReference: {fileID: 0}
     - target: {fileID: 2271899975484111128, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_text
-      value: 'WHAT HAVE YOU DONE!?
+      value: 'What''s it to you?
 
 '
       objectReference: {fileID: 0}
@@ -250,7 +259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2578177674658302932, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_text
-      value: '*Glare at Rageheart*'
+      value: 'WHAT HAVE YOU DONE!? '
       objectReference: {fileID: 0}
     - target: {fileID: 4393623546302890757, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_Name
@@ -306,15 +315,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[9]
-      value: '/c1 PC: What does it matter to you?'
+      value: '/c2 PC: What does it matter to you?'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[10]
-      value: '/c2 PC: WHAT IN THE NAME OF LADY FUCKIENTA HAVE YOU DONE, VILLAIN! '
+      value: '/c3 PC: WHAT IN THE NAME OF LADY FUCKIENTA HAVE YOU DONE, VILLAIN! '
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[11]
-      value: '/c3 PC: *Glare*'
+      value: '/c1 PC: *Glare*'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[12]
@@ -367,7 +376,7 @@ PrefabInstance:
       objectReference: {fileID: 1662036698}
     - target: {fileID: 6959148612667538382, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: bob.Array.size
@@ -382,8 +391,16 @@ PrefabInstance:
       value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: speed.Array.data[4]
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: emotes.Array.data[9]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.size
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: spriteToMove.Array.size
@@ -392,6 +409,14 @@ PrefabInstance:
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: howMuchToMove.Array.size
       value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: spriteToMove.Array.data[4]
+      value: 
+      objectReference: {fileID: 693708170}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: howMuchToMove.Array.data[4]
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: expressionsSprites.Array.size
@@ -531,7 +556,7 @@ PrefabInstance:
       objectReference: {fileID: 1421267215}
     - target: {fileID: 7890131532053223715, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_text
-      value: 'What''s it to you?
+      value: '*Glare at Rageheart*
 
 '
       objectReference: {fileID: 0}
