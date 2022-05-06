@@ -25,6 +25,7 @@ namespace System
         //public string goodOrBadCheckReturn = "/rr";
         public bool debug;
         public int debugDialogue;
+        public int debugChoice;
 
         public string[] script;
 
@@ -220,7 +221,10 @@ namespace System
                 if (debug)
                 {
                     currentDialogue = debugDialogue;
+                    _choiceManager.currentChoices = debugChoice;
+                    
                     debug = false;
+                    
                 }
 
                 StartCoroutine(GradualText());
