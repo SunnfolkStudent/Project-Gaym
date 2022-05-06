@@ -7,18 +7,19 @@ public class SettingsMenu : MonoBehaviour
 {
     public AudioMixer mixer;
     
-    public void SetMasterVolume(float volume)
+    public void SetMasterVolume(float sliderValue)
     {
-        mixer.SetFloat("masterVol", volume);
+        mixer.SetFloat("masterVol", Mathf.Log10(sliderValue) *20);
+    }   
+    
+        public void SetMusicVolume(float sliderValue)
+    {
+        mixer.SetFloat("musicVol", Mathf.Log10(sliderValue) *20);
+    }    
+        
+        public void SetSfxVolume(float sliderValue)
+    {
+        mixer.SetFloat("sfxVol", Mathf.Log10(sliderValue) *20);
     }    
     
-    public void SetMusicVolume(float volume)
-    {
-        mixer.SetFloat("musicVol", volume);
-    }
-    
-    public void SetSfxVolume(float volume)
-    {
-        mixer.SetFloat("sfxVol", volume);
-    }
 }
