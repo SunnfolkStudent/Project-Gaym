@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Mover : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Mover : MonoBehaviour
     private bool _stop;
     public float speed = 4f;
     public float delay = 1f;
+    [HideInInspector]public bool drawnSword;
 
     private void Awake()
     {
@@ -24,7 +26,6 @@ public class Mover : MonoBehaviour
         }
         else
         {
-            _animator.Play("State1");
             Invoke("DrawSword", delay);
         }
     }
@@ -40,6 +41,7 @@ public class Mover : MonoBehaviour
         if (transform.position.y < 21)
         {
             _animator.Play("Hero Draw Sword");
+            drawnSword = true;
         }
     }
 }
