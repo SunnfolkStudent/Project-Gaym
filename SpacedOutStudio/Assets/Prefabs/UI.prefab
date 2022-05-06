@@ -3982,8 +3982,11 @@ MonoBehaviour:
   background: {fileID: 8081657713207587606}
   changeToBackgroundOne: 0
   backgroundOne: {fileID: 0}
+  changeBackFromBgOne: 0
   changeToBackgroundTwo: 0
   backgroundTwo: {fileID: 0}
+  changeBackFromBgTwo: 0
+  isInBackground: 0
 --- !u!82 &2373532596043721934
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4121,7 +4124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bobAmount: 0
-  stopmoving: 0
+  stopMoving: 0
   moving: 0
 --- !u!1 &7715627316083030794
 GameObject:

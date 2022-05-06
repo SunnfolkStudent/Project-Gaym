@@ -302,6 +302,30 @@ PrefabInstance:
       propertyPath: script.Array.data[15]
       value: 'PC: (I have to win this. I must get home.)'
       objectReference: {fileID: 0}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: Clip1
+      value: 
+      objectReference: {fileID: 8300000, guid: a79502a4cbe7cb043a5a1d2e588a5a16, type: 3}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: Clip2
+      value: 
+      objectReference: {fileID: 8300000, guid: ef7f81c7c38e99c469ea56eee19723ab, type: 3}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: Clip3
+      value: 
+      objectReference: {fileID: 8300000, guid: b49f65a1f029ce8499ee0006cbe09274, type: 3}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: delayBefore2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: delayBefore3
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: delayBeforeLoad
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: bob.Array.size
       value: 16

@@ -887,11 +887,23 @@ PrefabInstance:
       value: "/c3 PC: (It is safer if I stay in this \u201Cpark\u201D area.)"
       objectReference: {fileID: 0}
     - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: Clip2
+      propertyPath: Clip1
       value: 
       objectReference: {fileID: 8300000, guid: 70ef03b981bd477439eb5933a65a6063, type: 3}
     - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: Clip2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: delayBefore2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: delayBefore3
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: delayBeforeLoad
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6322277662619229674, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
@@ -1174,6 +1186,10 @@ PrefabInstance:
       propertyPath: audioClips.Array.data[55]
       value: 
       objectReference: {fileID: 8300000, guid: 1b5d4d69ed26bee4eaf411ba5f265824, type: 3}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.data[56]
+      value: 
+      objectReference: {fileID: 8300000, guid: e031ae6042d828c4fa016123a299c181, type: 3}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: audioClips.Array.data[57]
       value: 

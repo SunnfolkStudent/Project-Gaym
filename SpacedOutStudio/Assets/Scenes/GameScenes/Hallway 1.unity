@@ -377,14 +377,14 @@ PrefabInstance:
     - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: Clip1
       value: 
-      objectReference: {fileID: 8300000, guid: e93a6af371a9390419c09ed03217b6cd, type: 3}
+      objectReference: {fileID: 8300000, guid: a79502a4cbe7cb043a5a1d2e588a5a16, type: 3}
     - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: Clip2
       value: 
       objectReference: {fileID: 8300000, guid: 70ef03b981bd477439eb5933a65a6063, type: 3}
     - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: delayBefore2
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: delayBefore3
