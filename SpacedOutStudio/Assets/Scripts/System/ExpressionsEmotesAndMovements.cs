@@ -39,6 +39,7 @@ namespace System
 		public int changeToBackgroundTwo;
 		public Sprite backgroundTwo;
 		public int changeBackFromBgTwo;
+		public bool isInBackground;
 		private Sprite _currentBackground;
 		
 		private int _lastDialogue;
@@ -91,12 +92,18 @@ namespace System
 			if (changeToBackgroundOne == currentInt)
 			{
 				_currentBackground = background.sprite;
-				background.transform.SetSiblingIndex(2);
+				if (!isInBackground)
+				{
+					background.transform.SetSiblingIndex(2);
+				}
 				background.sprite = backgroundOne;
 			}
 			if (changeBackFromBgOne == currentInt)
 			{
-				background.transform.SetSiblingIndex(1);
+				if (!isInBackground)
+				{
+					background.transform.SetSiblingIndex(1);
+				}
 				background.sprite = _currentBackground;
 			}
 
@@ -104,12 +111,18 @@ namespace System
 			if (changeToBackgroundTwo == currentInt)
 			{
 				_currentBackground = background.sprite;
-				background.transform.SetSiblingIndex(2);
+				if (!isInBackground)
+				{
+					background.transform.SetSiblingIndex(2);
+				}
 				background.sprite = backgroundTwo;
 			}
 			else if (changeBackFromBgTwo == currentInt)
 			{
-				background.transform.SetSiblingIndex(1);
+				if (!isInBackground)
+				{
+					background.transform.SetSiblingIndex(1);
+				}
 				background.sprite = _currentBackground;
 			}
 		}
