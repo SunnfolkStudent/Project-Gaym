@@ -5,21 +5,27 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
-    public GameObject heroEndPosition;
-    public GameObject cameraEndPosition;
+    private Animator _animator;
 
-    public Animation heroWalk;
-    public Animation heroDrawSword;
-    
     private bool _stop;
     public float speed = 4f;
+    public float delay = 1f;
 
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+    }
 
     private void Update()
     {
         if (transform.position.y < 20)
         {
             StartCoroutine(Move());
+        }
+        else
+        {
+            _animator.Play("State1");
+            Invoke("DrawSword", delay);
         }
     }
 
@@ -29,8 +35,11 @@ public class Mover : MonoBehaviour
         yield return new WaitForFixedUpdate();
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    void DrawSword()
     {
-        _stop = true;
+        if (transform.position.y < 21)
+        {
+            _animator.Play("Hero Draw Sword");
+        }
     }
 }

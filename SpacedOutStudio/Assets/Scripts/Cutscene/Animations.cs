@@ -7,7 +7,6 @@ using UnityEngine;
 public class Animations : MonoBehaviour
 {
     public bool playAnimation;
-    // Start is called before the first frame update
 
     private void Update()
     {
@@ -16,8 +15,7 @@ public class Animations : MonoBehaviour
             GetComponent<Animation>().Stop();
         }
     }
-
-    // Update is called once per frame
+    
     private void OnTriggerEnter2D(Collider2D col)
     {
         playAnimation = false;
