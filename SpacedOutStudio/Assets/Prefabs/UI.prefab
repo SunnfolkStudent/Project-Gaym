@@ -3979,6 +3979,11 @@ MonoBehaviour:
   speed: []
   audioClips: []
   sfxMixer: {fileID: 2261748254809415174, guid: d951991ee063478489b29917dd24f97b, type: 2}
+  background: {fileID: 8081657713207587606}
+  changeToBackgroundOne: 0
+  backgroundOne: {fileID: 0}
+  changeToBackgroundTwo: 0
+  backgroundTwo: {fileID: 0}
 --- !u!82 &2373532596043721934
 AudioSource:
   m_ObjectHideFlags: 0
