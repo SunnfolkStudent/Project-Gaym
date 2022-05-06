@@ -362,6 +362,7 @@ namespace System
 
         public void GotoCorrectDialogue(int currentChoice, bool[] boolArray)
         {
+            //TODO if skips all go to next scene
             var inStreak = false;
             var skipNumber = currentChoice;
             for (var i = 0; i < boolArray.Length; i++)
@@ -379,9 +380,9 @@ namespace System
                     StartCoroutine(GradualText());
                     return;
                 }
-
                 inStreak = false;
             }
+            _sceneController.LoadWithTransition();
         }
 
         private void CheckScore()

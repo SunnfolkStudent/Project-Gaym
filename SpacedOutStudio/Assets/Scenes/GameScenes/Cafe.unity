@@ -900,11 +900,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6959148612667538382, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7456809752044816231, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: backgroundOne
@@ -1528,7 +1528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7715627315492695583, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7715627315812711199, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_Name
@@ -2150,14 +2150,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4815847c3286ed542ac1084ee4e49d5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeAnimatior: {fileID: 627356959}
+  fadeAnimatior: {fileID: 1132935755}
   fadeElement: 124
   blackOutWholeScreen: 0
---- !u!95 &627356959 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2134842865, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-  m_PrefabInstance: {fileID: 146580743}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &627356960 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
