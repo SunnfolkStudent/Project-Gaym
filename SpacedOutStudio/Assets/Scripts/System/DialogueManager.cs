@@ -231,6 +231,7 @@ namespace System
         public IEnumerator GradualText()
         {
             _generatingDialogue = true;
+            _logText.text += names[currentDialogue] + ": " + script[currentDialogue] + "\n";
             namePlate.text = names[currentDialogue];
             dialogueText.text = "";
             _expressionsEmotesAndMovements.UpdateSprite();
@@ -254,27 +255,7 @@ namespace System
 
         public void Log()
         {
-            //TODO Fix log with dialogue choices
-            if (!logGameObject.activeSelf)
-            {
-                logGameObject.SetActive(true);
-                for (var i = 0; i < currentDialogue + 1; i++)
-                {
-                    if (_choiceDialogues[i])
-                    {
-                        _logText.text += "\n" + playerName + ": " + dialoguesChosen[i];
-                    }
-                    else
-                    {
-                        _logText.text += "\n" + names[i] + ": " + script[i];
-                    }
-                }
-            }
-            else
-            {
-                logGameObject.SetActive(false);
-                _logText.text = "Log:";
-            }
+            logGameObject.SetActive(!logGameObject.activeSelf);
         }
 
 

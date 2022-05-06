@@ -46,14 +46,12 @@ namespace System
         {
             ChangeScore(scoreChangeAmount);
             DialogueOptionsHide();
-            _dialogueManager.dialoguesChosen[_dialogueManager.currentDialogue] = dialogueOptions[currentChoices].transform.GetChild(1).GetComponentInChildren<TMP_Text>().text;
             _dialogueManager.PositiveChoice(currentChoices);
         }
 
         public void DontChangeScore()
         {
             DialogueOptionsHide();
-            _dialogueManager.dialoguesChosen[_dialogueManager.currentDialogue] = dialogueOptions[currentChoices].transform.GetChild(2).GetComponentInChildren<TMP_Text>().text;
             _dialogueManager.NeutralChoice(currentNChoice);
         }
 
@@ -61,15 +59,6 @@ namespace System
         {
             ChangeScore(-scoreChangeAmount);
             DialogueOptionsHide();
-            if (dialogueOptions[currentChoices].transform.childCount == 4)
-            {
-                _dialogueManager.dialoguesChosen[_dialogueManager.currentDialogue] = dialogueOptions[currentChoices].transform.GetChild(3).GetComponentInChildren<TMP_Text>().text;
-            }
-            else
-            {
-                _dialogueManager.dialoguesChosen[_dialogueManager.currentDialogue] = dialogueOptions[currentChoices].transform.GetChild(2).GetComponentInChildren<TMP_Text>().text;
-            }
-            _dialogueManager.NegativeChoice(currentChoices);
         }
 
         private void ChangeScore(int change)

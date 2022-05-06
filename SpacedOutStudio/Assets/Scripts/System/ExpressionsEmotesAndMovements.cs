@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 namespace System
@@ -22,6 +23,7 @@ namespace System
 		public float[] speed;
 		public AudioClip[] audioClips;
 		private AudioSource _audio;
+		public AudioMixerGroup sfxMixer;
 		
 		private int _lastDialogue;
 
@@ -66,6 +68,7 @@ namespace System
 			if (audioClips[currentInt])
 			{
 				_audio.PlayOneShot(audioClips[currentInt]);
+				_audio.outputAudioMixerGroup = sfxMixer;
 			}
 			
 		}
