@@ -94,16 +94,24 @@ namespace System
 				background.transform.SetSiblingIndex(2);
 				background.sprite = backgroundOne;
 			}
-			if (changeBackFromBgOne == currentInt || changeBackFromBgTwo == currentInt)
+			if (changeBackFromBgOne == currentInt)
 			{
 				background.transform.SetSiblingIndex(1);
 				background.sprite = _currentBackground;
 			}
 
-			if (changeToBackgroundTwo != currentInt || !backgroundTwo) return;
-			_currentBackground = background.sprite;
-			background.transform.SetSiblingIndex(2);
-			background.sprite = backgroundTwo;
+			if (!backgroundTwo) return;
+			if (changeToBackgroundTwo == currentInt)
+			{
+				_currentBackground = background.sprite;
+				background.transform.SetSiblingIndex(2);
+				background.sprite = backgroundTwo;
+			}
+			else if (changeBackFromBgTwo == currentInt)
+			{
+				background.transform.SetSiblingIndex(1);
+				background.sprite = _currentBackground;
+			}
 		}
 	}
 }
