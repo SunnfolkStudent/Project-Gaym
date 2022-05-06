@@ -59,6 +59,7 @@ namespace System
         {
             ChangeScore(-scoreChangeAmount);
             DialogueOptionsHide();
+            _dialogueManager.NegativeChoice(currentChoices);
         }
 
         private void ChangeScore(int change)
