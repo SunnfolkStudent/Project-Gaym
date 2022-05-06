@@ -308,6 +308,22 @@ PrefabInstance:
       propertyPath: script.Array.data[31]
       value: 'Teacher: Let''s begin by reviewing Sin, Cos, and Tan...'
       objectReference: {fileID: 0}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: Clip1
+      value: 
+      objectReference: {fileID: 8300000, guid: a7278f6781230504ebdd09a8d78e6612, type: 3}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: Clip2
+      value: 
+      objectReference: {fileID: 8300000, guid: e73c3242fd369a645949ee9b55304e01, type: 3}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: delayBefore2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: delayBeforeLoad
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5490013146321703341, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_margin.x
       value: 14.807343
