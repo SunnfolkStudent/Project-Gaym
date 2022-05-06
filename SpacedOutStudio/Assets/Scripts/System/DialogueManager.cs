@@ -101,7 +101,7 @@ namespace System
                 //TODO ask eren how to do the skip
                 if (_movements.moving)
                 {
-                    _movements.stopmoving = true;
+                    _movements.stopMoving = true;
                 }
 
                 if (!_generatingDialogue)

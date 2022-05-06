@@ -6,8 +6,8 @@ namespace System
     public class Movements : MonoBehaviour
     {
         public float bobAmount;
-        public bool stopmoving;
-        public bool moving;
+        [HideInInspector]public bool stopMoving;
+        [HideInInspector]public bool moving;
         private Vector3 _startPoint;
         public IEnumerator Move(GameObject whatToMove, float amount, float speed)
         {
@@ -15,7 +15,7 @@ namespace System
             _startPoint = whatToMove.transform.position;
             for (var i = 0; i < MathF.Abs(amount) / speed; i++)
             {
-                if (stopmoving) break;
+                if (stopMoving) break;
                 if (amount > 0)
                 {
                     whatToMove.transform.Translate(speed, 0, 0);
@@ -28,11 +28,11 @@ namespace System
                 yield return new WaitForFixedUpdate();
             }
 
-            if (stopmoving)
+            if (stopMoving)
             {
                 whatToMove.transform.position = _startPoint;
                 whatToMove.transform.Translate(amount,0,0);
-                stopmoving = false;
+                stopMoving = false;
             }
             
             moving = false;
