@@ -325,9 +325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[19]
-      value: '/c2 Rageheart: I believed that these subjects would be to your liking.
-        but I suppose I never considered the fact that you may never have received
-        an education like this before. '
+      value: '/c2 Rageheart: I believed that these subjects would be to your liking.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[20]
@@ -375,6 +373,26 @@ PrefabInstance:
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[30]
       value: 'PC: Where do I sleep?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: Clip1
+      value: 
+      objectReference: {fileID: 8300000, guid: a79502a4cbe7cb043a5a1d2e588a5a16, type: 3}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: Clip2
+      value: 
+      objectReference: {fileID: 8300000, guid: 70ef03b981bd477439eb5933a65a6063, type: 3}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: delayBefore2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: delayBefore3
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: delayBeforeLoad
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6322277662619229674, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: bobAmount
@@ -505,9 +523,25 @@ PrefabInstance:
       value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1b5d4d69ed26bee4eaf411ba5f265824, type: 3}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: howMuchToMove.Array.size
       value: 31
       objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.data[15]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0d3392cff6984e74a8e3d5f6e5da0c8e, type: 3}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.data[20]
+      value: 
+      objectReference: {fileID: 8300000, guid: 410faca27aa4b6a4fa26ebd3998b3d97, type: 3}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.data[26]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5ba8d3a950c0dc8479c9ac66756eae57, type: 3}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: spriteToMove.Array.data[2]
       value: 

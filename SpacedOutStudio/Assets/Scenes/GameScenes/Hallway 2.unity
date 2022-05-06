@@ -262,6 +262,22 @@ PrefabInstance:
       propertyPath: script.Array.data[23]
       value: 'PC: Wait hold up-'
       objectReference: {fileID: 0}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: Clip1
+      value: 
+      objectReference: {fileID: 8300000, guid: 17ee101bbdd0fd84bb367be80abf366c, type: 3}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: Clip2
+      value: 
+      objectReference: {fileID: 8300000, guid: f48351c2cac527f47922f38e921dbabd, type: 3}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: Clip3
+      value: 
+      objectReference: {fileID: 8300000, guid: f502dfa3a72f8da458d25de43d809169, type: 3}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: delayBeforeLoad
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6322277662619229674, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: bobAmount
       value: 20
@@ -391,9 +407,33 @@ PrefabInstance:
       value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: ef7f81c7c38e99c469ea56eee19723ab, type: 3}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: a70bf1345058e2d499f43b4583e35142, type: 3}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: howMuchToMove.Array.size
       value: 24
       objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.data[13]
+      value: 
+      objectReference: {fileID: 8300000, guid: 04c388e2aa7213140aa75b6c5b2a29bf, type: 3}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.data[19]
+      value: 
+      objectReference: {fileID: 8300000, guid: dfbbe79a1490cee46bddf560eee9e1e0, type: 3}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.data[20]
+      value: 
+      objectReference: {fileID: 8300000, guid: cda70941aa6c69e47897aad157c7340a, type: 3}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.data[22]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0d3392cff6984e74a8e3d5f6e5da0c8e, type: 3}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: spriteToMove.Array.data[3]
       value: 

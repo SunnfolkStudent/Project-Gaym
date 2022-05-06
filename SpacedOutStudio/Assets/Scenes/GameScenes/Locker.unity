@@ -655,15 +655,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 799659741, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2134842863, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2443277046455747751, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5002994486055288483, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: dialogueOptions.Array.data[0]
@@ -789,6 +789,22 @@ PrefabInstance:
       value: '/c1 PC: (I should not test their limits right now. They are dangerous,
         and I must not forget that.)'
       objectReference: {fileID: 0}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: Clip1
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: Clip2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: delayBefore2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: delayBeforeLoad
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6959148612667538382, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -878,9 +894,29 @@ PrefabInstance:
       value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 17ee101bbdd0fd84bb367be80abf366c, type: 3}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: howMuchToMove.Array.size
       value: 26
       objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: ef7f81c7c38e99c469ea56eee19723ab, type: 3}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.data[13]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6e8a60e8ae37be64582f6dac13eb5a33, type: 3}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.data[18]
+      value: 
+      objectReference: {fileID: 8300000, guid: cbfbe7f83dd629149a277b90add9f720, type: 3}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.data[24]
+      value: 
+      objectReference: {fileID: 8300000, guid: e73c3242fd369a645949ee9b55304e01, type: 3}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: spriteToMove.Array.data[1]
       value: 
@@ -939,7 +975,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7715627315492695583, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7715627315812711199, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_Name
@@ -1049,6 +1085,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 3e9dc70e8f5ac0243a70ced5a56adf81, type: 3}
+    - target: {fileID: 9008743169504218419, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
 --- !u!1 &1665762195
