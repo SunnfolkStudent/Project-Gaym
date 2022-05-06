@@ -324,18 +324,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 7122026455836689295, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7122026455836689295, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7122026455836689295, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: test
       value: 
@@ -422,7 +410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: speed.Array.data[27]
-      value: 50
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: audioClips.Array.size
@@ -473,9 +461,37 @@ PrefabInstance:
       value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0d3392cff6984e74a8e3d5f6e5da0c8e, type: 3}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: howMuchToMove.Array.size
       value: 31
       objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: d981253f5b723d74db97e82d09925441, type: 3}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.data[15]
+      value: 
+      objectReference: {fileID: 8300000, guid: bd2aa29f84fcb1f4f8f7084cfb6496ab, type: 3}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.data[18]
+      value: 
+      objectReference: {fileID: 8300000, guid: a70bf1345058e2d499f43b4583e35142, type: 3}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.data[20]
+      value: 
+      objectReference: {fileID: 8300000, guid: bd2aa29f84fcb1f4f8f7084cfb6496ab, type: 3}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.data[26]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: audioClips.Array.data[27]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6c7e58ac9da950b4284f0552d8e9f48b, type: 3}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: spriteToMove.Array.data[15]
       value: 
@@ -743,21 +759,17 @@ PrefabInstance:
     - target: {fileID: 8081657713207587606, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 98a1d01674b51fa4b9a5d6e35a797514, type: 3}
+      objectReference: {fileID: 21300000, guid: d579d04709a483844990b5854d922179, type: 3}
     - target: {fileID: 8081657713207587606, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_Color.b
-      value: 0.79856634
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8081657713207587606, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_Color.g
-      value: 0.69411767
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8081657713207587606, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8585666249390342454, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
-      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8659091702984571081, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
