@@ -274,6 +274,10 @@ PrefabInstance:
       propertyPath: Clip3
       value: 
       objectReference: {fileID: 8300000, guid: f502dfa3a72f8da458d25de43d809169, type: 3}
+    - target: {fileID: 5406368679890803464, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: delayBeforeLoad
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6322277662619229674, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: bobAmount
       value: 20
