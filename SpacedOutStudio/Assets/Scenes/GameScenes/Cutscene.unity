@@ -302,7 +302,7 @@ Animator:
   m_GameObject: {fileID: 366697791}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 799584615e93105468fffdd4949127d3, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8cd2dd1968d9dbb41b8b1cf2f2012e08, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -328,7 +328,7 @@ MonoBehaviour:
   cameraEndPosition: {fileID: 576120386}
   heroWalk: {fileID: 0}
   heroDrawSword: {fileID: 0}
-  speed: 2
+  speed: 5
 --- !u!61 &366697794
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -490,6 +490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 737660178}
   - component: {fileID: 737660179}
+  - component: {fileID: 737660180}
   m_Layer: 0
   m_Name: HeroEndPosition
   m_TagString: Untagged
@@ -538,6 +539,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &737660180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737660177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 827ca1adc20fde24ca18f0a15add2b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playAnimation: 0
 --- !u!1 &1579207928
 GameObject:
   m_ObjectHideFlags: 0

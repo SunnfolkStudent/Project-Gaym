@@ -8,12 +8,11 @@ public class Mover : MonoBehaviour
     public GameObject heroEndPosition;
     public GameObject cameraEndPosition;
 
-    public Animator heroWalk;
-    public Animator heroDrawSword;
-    //public Animator bossLaugh;
-    //public Animator key;
+    public Animation heroWalk;
+    public Animation heroDrawSword;
+    
     private bool _stop;
-    public float speed = 2f;
+    public float speed = 4f;
 
 
     private void Update()
