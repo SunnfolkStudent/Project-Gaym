@@ -252,6 +252,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -1500
       objectReference: {fileID: 0}
+    - target: {fileID: 2136486445801522527, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2264851786051649554, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_Name
       value: Choice1
@@ -402,6 +406,22 @@ PrefabInstance:
     - target: {fileID: 6959148612667538382, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122026455836689295, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122026455836689295, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122026455836689295, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: test
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7658297711867914280, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: bob.Array.size

@@ -1,6 +1,5 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
+using Cutscene;
 using UnityEngine;
 
 public class BossAnimation : MonoBehaviour
