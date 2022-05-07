@@ -17,6 +17,7 @@ namespace System
         public float delayBefore3 = 1;
         public AudioClip Clip3;
         public float delayBeforeLoad = 1;
+        public bool started;
         
 
         public void LoadLevel()
@@ -41,10 +42,9 @@ namespace System
 
         public void StartText()
         {
-            if (dialogueManager != null)
-            {
-                StartCoroutine(dialogueManager.GradualText());
-            }
+            if (dialogueManager == null) return;
+            StartCoroutine(dialogueManager.GradualText());
+            started = true;
         }
 
         private IEnumerator LoadWithSound()

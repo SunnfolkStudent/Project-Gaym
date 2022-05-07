@@ -9,6 +9,16 @@ namespace System
             PlayerPrefs.SetInt("relScore", relScore);
             PlayerPrefs.SetString("pName", pName);
         }
+        public static void SaveScore(int relScore)
+        {
+            PlayerPrefs.SetInt("relScore", relScore);
+        }
+
+        public static void SaveName(string pName)
+        {
+            PlayerPrefs.SetString("pName", pName);
+        }
+        
 
         public static void DeleteSave()
         {

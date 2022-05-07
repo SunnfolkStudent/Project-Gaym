@@ -55,8 +55,8 @@ namespace System
         private bool[] _choiceDialogues3;
         private bool[] _returnDialogues;
         private bool[] _goodorbadCheck;
-        private bool[] _goodRlvlDialogues;
-        private bool[] _badRlvlDialogues;
+        public bool[] _goodRlvlDialogues;
+        public bool[] _badRlvlDialogues;
 
         [HideInInspector] public string[] dialoguesChosen;
 
@@ -125,7 +125,7 @@ namespace System
         {
             if (logGameObject.activeSelf || _choiceManager.showingDialogue || _hovering) return;
             nextDialogue = true;
-            SaveManager.Save(_choiceManager.relationScore, playerName);
+            SaveManager.SaveName(playerName);
 
             if (currentDialogue < script.Length - 1)
             {

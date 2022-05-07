@@ -266,11 +266,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 799659741, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2134842863, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1157870191266242019, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -329,6 +329,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: bc4f1c77bb731354c8bf1136b8a5debc, type: 3}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: debug
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: textSpeed
       value: 3
       objectReference: {fileID: 0}
@@ -337,8 +341,16 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: debugChoice
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: sceneToLoad
-      value: MainMenu
+      value: Love Endings
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: debugDialogue
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: loadFinalScene
@@ -1550,7 +1562,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 05863838fd5c2cf42ab4c3625383de2a, type: 3}
     - target: {fileID: 7715627315492695583, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7715627315812711199, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_Name
@@ -1692,6 +1704,11 @@ GameObject:
 --- !u!224 &230394171 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1157870191266242019, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+  m_PrefabInstance: {fileID: 230394167}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &230394172 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7715627315812711199, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
   m_PrefabInstance: {fileID: 230394167}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &247707171
@@ -1854,9 +1871,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 394495055}
-        m_TargetAssemblyTypeName: System.ChoiceManager, Assembly-CSharp
-        m_MethodName: DecreaseScore
+      - m_Target: {fileID: 394495064}
+        m_TargetAssemblyTypeName: System.ExtraScene, Assembly-CSharp
+        m_MethodName: LoadExtraScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1909,7 +1926,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5002994486055288483, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
   m_PrefabInstance: {fileID: 230394167}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 230394172}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f84ac7fd2ef0c194198016a7343b17ad, type: 3}
@@ -1920,6 +1937,19 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7715627315812711395, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
   m_PrefabInstance: {fileID: 230394167}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &394495064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230394172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8756e2ade814107408e992c70f39886e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Silent Endings
 --- !u!1 &684557146 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1666722117330102017, guid: 362aa589869398745a2028fc1cc364d7, type: 3}

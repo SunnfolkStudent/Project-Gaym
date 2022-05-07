@@ -40,6 +40,7 @@ namespace System
                 currentNChoice++;
             }
             currentChoices++;
+            SaveManager.SaveScore(relationScore);
         }
 
         public void IncreaseScore()
