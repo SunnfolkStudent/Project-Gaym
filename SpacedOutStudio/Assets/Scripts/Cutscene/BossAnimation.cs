@@ -1,46 +1,19 @@
-using System.Collections;
-using Cutscene;
 using UnityEngine;
 
-public class BossAnimation : MonoBehaviour
+namespace Cutscene
 {
-    //public GameObject _camera;
-
-    private Animator _animator;
-    private Mover _mover;
-    public float delay = 1f;
-
-    private void Start()
+    public class BossAnimation : MonoBehaviour
     {
-        _mover = GetComponent<Mover>();
-        //_animator.GetComponent<Animator>().enabled = false;
-    }
+        public Animations animations;
 
-    private void Awake()
-    {
-        _animator = GetComponent<Animator>();
-    }
-
-    private void Update()
-    {
-        /*if (_camera.transform.position.y < 23)
+        public void PullOutKey()
         {
-            if (_camera.transform.position.y > 23)
-            {
-                _animator.Play("Hero Draw Sword");
-            }
-        }*/
-
-        if (_mover.drawnSword)
-        {
-            _animator.GetComponent<Animator>().enabled = true;
-            StartCoroutine(Laugh());
+            animations.KeyOn();
         }
-    }
 
-    private IEnumerator Laugh()
-    {
-        yield return new WaitForSeconds(delay);
-        _animator.Play("Boss Laugh");
+        public void RotateKey()
+        { 
+            animations.RotateKey();  
+        }
     }
 }

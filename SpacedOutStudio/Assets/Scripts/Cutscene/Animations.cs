@@ -8,29 +8,36 @@ namespace Cutscene
         public Animator bossAnimator;
         public Animator keyAnimator;
 
-        public GameObject key;
-        public GameObject boss;
-        public GameObject hero;
-    
 
         public void HeroWalk()
         {
-            heroAnimator.Play("Hero Walk");
+            heroAnimator.enabled = true;
+        }
+
+        public void HeroStop()
+        {
+            heroAnimator.enabled = false;
         }
 
         public void HeroDrawSword()
         {
+            heroAnimator.enabled = true;
             heroAnimator.Play("Hero Draw Sword");
         }
 
         public void BossLaugh()
         {
+            bossAnimator.enabled = true;
             bossAnimator.Play("Boss Laugh");
         }
 
-        public void Key()
+        public void KeyOn()
         {
-            key.SetActive(true);
+            keyAnimator.gameObject.SetActive(true);
+        }
+
+        public void RotateKey()
+        {
             keyAnimator.Play("Key Rotate");
         }
     }

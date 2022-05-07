@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -6,39 +5,69 @@ namespace Cutscene
 {
     public class Mover : MonoBehaviour
     {
-        private Animator _animator;
-
         private bool _stop;
-        public float speed = 4f;
-        public float delay = 1f;
-        [HideInInspector]public bool drawnSword;
-        public GameObject gameCamera;
+        public float heroSpeed = 5f;
+        public float cameraSpeed = 4f;
+        public float laughDelay = 0.5f;
+        public float dialogueDelay = 1f;
+        public GameObject hero;
+        public GameObject cameraObject;
+        private Animations _animations;
+        private bool _drawSwordOnce;
+        private bool _stopOnce;
+        private bool _walkOnce;
+        private SpriteRenderer _heroSpriteRenderer;
+        public Sprite heroStandingSprite;
+        public bool startCutscene;
+        public GameObject[] TextBubbles;
 
 
         private void Start()
         {
-            _animator = GetComponent<Animator>();
+            _animations = GetComponent<Animations>();
+            _heroSpriteRenderer = hero.GetComponent<SpriteRenderer>();
         }
 
         private void FixedUpdate()
         {
-            if (transform.position.y < 20)
+            if (!startCutscene) return;
+            if (!_walkOnce)
             {
-                transform.Translate(Vector3.up * (speed * Time.deltaTime));
+                _walkOnce = true;
+                _animations.HeroWalk();
             }
-            else
+            if (hero.transform.position.y < 20)
             {
-                _animator.Play("Hero Draw Sword");
+                hero.transform.Translate(Vector3.up * (heroSpeed * Time.deltaTime));
+            }
+            else if(!_stopOnce)
+            {
+                _stopOnce = true;
+                _animations.HeroStop();
+                _heroSpriteRenderer.sprite = heroStandingSprite;
+            }
+
+            if (cameraObject.transform.position.y < 22)
+            {
+                cameraObject.transform.Translate(Vector3.up * (cameraSpeed * Time.deltaTime));
+            }
+            else if (!_drawSwordOnce)
+            {
+                _drawSwordOnce = true;
+                _animations.HeroDrawSword();
+                StartCoroutine(RestOfScene());
             }
         }
 
-        private void DrawSword()
+        private IEnumerator RestOfScene()
         {
-            if (transform.position.y < 21)
+            foreach (var textBubble in TextBubbles)
             {
-                _animator.Play("Hero Draw Sword");
-                drawnSword = true;
+                yield return new WaitForSeconds(dialogueDelay);
+                textBubble.SetActive(true);
             }
+            yield return new WaitForSeconds(laughDelay);
+            _animations.BossLaugh();
         }
     }
 }

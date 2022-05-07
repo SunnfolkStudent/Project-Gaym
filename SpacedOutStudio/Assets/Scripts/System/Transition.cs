@@ -1,4 +1,5 @@
 using System.Collections;
+using Cutscene;
 using UnityEngine;
 
 namespace System
@@ -17,8 +18,9 @@ namespace System
         public float delayBefore3 = 1;
         public AudioClip Clip3;
         public float delayBeforeLoad = 1;
-        public bool started;
-        
+        public Mover mover;
+        public string sceneToLoad;
+
 
         public void LoadLevel()
         {
@@ -42,15 +44,21 @@ namespace System
 
         public void StartText()
         {
-            if (dialogueManager == null) return;
+            if (mover)
+            {
+                mover.startCutscene = true;
+            }
+            if (!dialogueManager) return;
             StartCoroutine(dialogueManager.GradualText());
-            started = true;
         }
 
         private IEnumerator LoadWithSound()
         {
-            music.stop = true;
-            audioSource.Stop();
+            if (music)
+            {
+                music.stop = true;
+                audioSource.Stop();
+            }
             if (Clip1)
             {
                 yield return new WaitForSeconds(delayBefore1);
@@ -69,7 +77,7 @@ namespace System
                 audioSource.PlayOneShot(Clip3);
             }
             yield return new WaitForSeconds(delayBeforeLoad);
-            sceneController.LoadScene(dialogueManager.sceneToLoad);
+            sceneController.LoadScene(dialogueManager ? dialogueManager.sceneToLoad : sceneToLoad);
         }
     }
 }
