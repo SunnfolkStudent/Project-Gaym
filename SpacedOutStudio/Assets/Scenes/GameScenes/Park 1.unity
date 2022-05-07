@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &65659392 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7874068013338240182, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+  m_PrefabInstance: {fileID: 1947354510}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &622900606
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,6 +240,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 799659741, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 793478786174971159, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_Name
       value: Choice3
@@ -577,7 +586,7 @@ PrefabInstance:
     - target: {fileID: 7715627315812711397, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: quitCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 65659392}
     - target: {fileID: 7715627315812711397, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: pauseCanvas
       value: 
