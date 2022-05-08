@@ -3406,7 +3406,7 @@ RectTransform:
   m_Father: {fileID: 2472382115288622953}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.89245}
+  m_AnchorMin: {x: 0, y: 0.8440525}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -4407,8 +4407,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -388, y: -2588.105}
-  m_SizeDelta: {x: 900, y: 6400}
+  m_AnchoredPosition: {x: -388, y: -1118.105}
+  m_SizeDelta: {x: 900, y: 4000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2852854680532522865
 CanvasRenderer:
@@ -4447,7 +4447,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4294967295
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -4465,8 +4465,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55
-  m_fontSizeBase: 55
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4501,7 +4501,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -3.6600342, y: 29.695557, z: -667.7905, w: -34.77832}
+  m_margin: {x: -3.6600342, y: 0.50878906, z: -667.7905, w: -13.393494}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5513,7 +5513,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 7122026455836689295}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.107549995
+  m_Size: 0.15594749
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6409,7 +6409,7 @@ MonoBehaviour:
   gameIsPaused: 0
   pauseCanvas: {fileID: 7715627315492695580}
   mainUI: {fileID: 8585666249390342454}
-  settings: {fileID: 3577645025881393621}
+  settings: {fileID: 0}
 --- !u!114 &8179971974687019976
 MonoBehaviour:
   m_ObjectHideFlags: 0
