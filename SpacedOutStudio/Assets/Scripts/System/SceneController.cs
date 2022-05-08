@@ -14,6 +14,8 @@ namespace System
         public GameObject settingsCanvas;
         public GameObject buttons;
         public GameObject title;
+        public GameObject credits;
+        public GameObject particles;
 
         private void Start()
         {
@@ -77,6 +79,21 @@ namespace System
             title.SetActive(true);
             settingsCanvas.SetActive(false);
         }
+
+        public void OpenCredits()
+        {
+            credits.SetActive(true);
+            buttons.SetActive(false);
+            particles.SetActive(false);
+        }
+
+        public void CloseCredits()
+        {
+            credits.SetActive(false);
+            buttons.SetActive(true);
+            particles.SetActive(true);
+        }
+        
         //Continues your last played save file.
         void Continue()
         {
