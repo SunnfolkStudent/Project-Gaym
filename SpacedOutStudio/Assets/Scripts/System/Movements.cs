@@ -9,6 +9,7 @@ namespace System
         [HideInInspector]public bool stopMoving;
         [HideInInspector]public bool moving;
         private Vector3 _startPoint;
+        
         public IEnumerator Move(GameObject whatToMove, float amount, float speed)
         {
             moving = true;
@@ -18,11 +19,11 @@ namespace System
                 if (stopMoving) break;
                 if (amount > 0)
                 {
-                    whatToMove.transform.Translate(speed, 0, 0);
+                    whatToMove.transform.localPosition += Vector3.right * speed;
                 }
                 else
                 {
-                    whatToMove.transform.Translate(-speed, 0, 0);
+                    whatToMove.transform.localPosition += Vector3.left * speed;
                 }
 
                 yield return new WaitForFixedUpdate();
@@ -42,12 +43,12 @@ namespace System
         {
             for (var i = 0; i < bobAmount / speed; i++)
             {
-                whatToMove.transform.Translate(0,speed,0);
+                whatToMove.transform.localPosition += Vector3.up * speed;
                 yield return new WaitForFixedUpdate();
             }
             for (var i = 0; i < bobAmount / speed; i++)
             {
-                whatToMove.transform.Translate(0,-speed,0);
+                whatToMove.transform.localPosition += Vector3.down * speed;
                 yield return new WaitForFixedUpdate();
             }
 

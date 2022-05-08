@@ -41,7 +41,7 @@ namespace System
 		public int changeBackFromBgTwo;
 		public bool isInBackground;
 		private Sprite _currentBackground;
-		
+
 		private int _lastDialogue;
 
 		private void Start()

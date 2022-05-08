@@ -147,6 +147,10 @@ PrefabInstance:
       propertyPath: m_text
       value: I demand answers!
       objectReference: {fileID: 0}
+    - target: {fileID: 3218660310350697622, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5002994486055288483, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: dialogueOptions.Array.size
       value: 2

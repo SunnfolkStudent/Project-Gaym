@@ -1,54 +1,80 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class Animations : MonoBehaviour
+namespace Cutscene
 {
-    public Animator heroAnimator;
-    public Animator bossAnimator;
-    public Animator keyAnimator;
-
-    public GameObject key;
-    public GameObject boss;
-    public GameObject hero;
-    
-    /*private void Update()
+    public class Animations : MonoBehaviour
     {
-        StartCoroutine(Cutscene());
-    }*/
+        public Animator heroAnimator;
+        public Animator bossAnimator;
+        public Animator keyAnimator;
+        public GameObject background;
+        public float keyFloatSpeed = 1;
+        private bool _moveKey;
+        private bool _shaking;
+        public float shakeDelay = 0.2f;
+        private AudioSource _audioSource;
+        public AudioClip rumbleClip;
+        public AudioSource musicSource;
 
-    public void HeroWalk()
-    {
-        heroAnimator.Play("Hero Walk");
+        private void Start()
+        {
+            _audioSource = GetComponent<AudioSource>();
+        }
+
+        private void FixedUpdate()
+        {
+            if (!_moveKey) return;
+            keyAnimator.transform.Translate(Vector3.up * (keyFloatSpeed * Time.deltaTime));
+            StartCoroutine(Shake());
+        }
+
+        public void HeroWalk()
+        {
+            heroAnimator.enabled = true;
+        }
+
+        public void HeroStop()
+        {
+            heroAnimator.enabled = false;
+        }
+
+        public void HeroDrawSword()
+        {
+            heroAnimator.enabled = true;
+            heroAnimator.Play("Hero Draw Sword");
+        }
+
+        public void BossLaugh()
+        {
+            bossAnimator.enabled = true;
+            bossAnimator.Play("Boss Laugh");
+        }
+
+        public void KeyOn()
+        {
+            keyAnimator.gameObject.SetActive(true);
+        }
+
+        public void RotateKey()
+        {
+            keyAnimator.Play("Key Rotate");
+            background.transform.Translate(Vector3.left * 0.1f);
+            _moveKey = true;
+            _audioSource.PlayOneShot(rumbleClip);
+            musicSource.Stop();
+        }
+
+        private IEnumerator Shake()
+        {
+            if (_shaking) yield break;
+            _shaking = true;
+            background.transform.Translate(Vector3.right * 0.2f);
+            yield return new WaitForSeconds(shakeDelay);
+            background.transform.Translate(Vector3.left * 0.2f);
+            yield return new WaitForSeconds(shakeDelay);
+            _shaking = false;
+        }
     }
-
-    public void HeroDrawSword()
-    {
-        heroAnimator.Play("Hero Draw Sword");
-    }
-
-    public void BossLaugh()
-    {
-        bossAnimator.Play("Boss Laugh");
-        
-    }
-
-    public void Key()
-    {
-        key.SetActive(true);
-        keyAnimator.Play("Key Rotate");
-    }
-
-    /*private IEnumerator Cutscene()
-    {
-        HeroWalk();
-        yield return new WaitForSeconds(5);
-        HeroDrawSword();
-        yield return new WaitForSeconds(1);
-        BossLaugh();
-        yield return new WaitForSeconds(3);
-        Key();
-    }*/
 }
