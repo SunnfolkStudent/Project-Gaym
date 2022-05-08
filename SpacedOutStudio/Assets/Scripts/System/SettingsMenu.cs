@@ -10,7 +10,17 @@ namespace System
         public Slider masterSlider;
         public Slider musicSlider;
         public Slider sfxSlider;
-        
+
+        private void Start()
+        {
+            mixer.GetFloat("masterVol", out var masterVol);
+            masterSlider.value = masterVol;
+            mixer.GetFloat("musicVol", out var musicVol);
+            musicSlider.value = musicVol;
+            mixer.GetFloat("sfxVol", out var sfxVol);
+            sfxSlider.value = sfxVol;
+        }
+
         public void UpdateVolume()
         {
             mixer.SetFloat("masterVol", masterSlider.value);
