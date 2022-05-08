@@ -13,7 +13,7 @@ namespace System
         public IEnumerator Move(GameObject whatToMove, float amount, float speed)
         {
             moving = true;
-            _startPoint = whatToMove.transform.position;
+            _startPoint = whatToMove.transform.localPosition;
             for (var i = 0; i < MathF.Abs(amount) / speed; i++)
             {
                 if (stopMoving) break;
@@ -31,8 +31,8 @@ namespace System
 
             if (stopMoving)
             {
-                whatToMove.transform.position = _startPoint;
-                whatToMove.transform.Translate(amount,0,0);
+                whatToMove.transform.localPosition = _startPoint;
+                whatToMove.transform.localPosition += new Vector3(amount,0);
                 stopMoving = false;
             }
             
