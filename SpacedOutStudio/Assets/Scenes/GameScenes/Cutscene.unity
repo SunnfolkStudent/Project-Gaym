@@ -540,7 +540,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heroSpeed: 5
   cameraSpeed: 4
-  laughDelay: 0.7
   dialogueDelay: 3
   hero: {fileID: 366697791}
   cameraObject: {fileID: 1579207928}
@@ -889,9 +888,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionAnimator: {fileID: 2089020399}
-  isMainMenu: 0
+  isMainMenu: 1
   quitCanvas: {fileID: 0}
   pauseCanvas: {fileID: 0}
+  settingsCanvas: {fileID: 0}
+  buttons: {fileID: 0}
+  title: {fileID: 0}
 --- !u!1 &1255855750
 GameObject:
   m_ObjectHideFlags: 0

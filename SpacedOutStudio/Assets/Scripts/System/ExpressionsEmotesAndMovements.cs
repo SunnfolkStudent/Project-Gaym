@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.UI;
 
 namespace System
@@ -28,7 +27,6 @@ namespace System
 		[Space]
 		public AudioClip[] audioClips;
 		private AudioSource _audio;
-		public AudioMixerGroup sfxMixer;
 		[Space]
 		[Header("Background")]
 		[Space]
@@ -85,7 +83,6 @@ namespace System
 			if (audioClips[currentInt])
 			{
 				_audio.PlayOneShot(audioClips[currentInt]);
-				_audio.outputAudioMixerGroup = sfxMixer;
 			}
 
 			if (!backgroundOne) return;
