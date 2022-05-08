@@ -8,7 +8,6 @@ namespace Cutscene
         private bool _stop;
         public float heroSpeed = 5f;
         public float cameraSpeed = 4f;
-        public float laughDelay = 0.5f;
         public float dialogueDelay = 1f;
         public GameObject hero;
         public GameObject cameraObject;

@@ -1647,9 +1647,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: d951991ee063478489b29917dd24f97b, type: 2}
-  settingsCanvas: {fileID: 0}
-  mainMenuButtons: {fileID: 0}
-  title: {fileID: 0}
+  masterSlider: {fileID: 3757735382225850807}
+  musicSlider: {fileID: 3757735382069225347}
+  sfxSlider: {fileID: 3757735382077467974}
 --- !u!1 &3757735382069225345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1742,9 +1742,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3757735381999036193}
-        m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
-        m_MethodName: SetMusicVolume
-        m_Mode: 4
+        m_TargetAssemblyTypeName: System.SettingsMenu, Assembly-CSharp
+        m_MethodName: UpdateVolume
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1845,9 +1845,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3757735381999036193}
-        m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
-        m_MethodName: SetSfxVolume
-        m_Mode: 4
+        m_TargetAssemblyTypeName: System.SettingsMenu, Assembly-CSharp
+        m_MethodName: UpdateVolume
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1985,9 +1985,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3757735381999036193}
-        m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
-        m_MethodName: SetMasterVolume
-        m_Mode: 4
+        m_TargetAssemblyTypeName: System.SettingsMenu, Assembly-CSharp
+        m_MethodName: UpdateVolume
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

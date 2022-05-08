@@ -139,6 +139,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: rScoreMinP
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: sceneToLoad
       value: MainMenu
       objectReference: {fileID: 0}
@@ -314,10 +318,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 1051984533}
-  minScoreForEnding: 10
+  minScoreForEnding: 12
   endingImage: {fileID: 679210773}
-  goodEndingBg: {fileID: 21300000, guid: d1f747d277ed92c45af3674c7e4e81f7, type: 3}
-  badEndingBg: {fileID: 21300000, guid: dc1271f1cd4716a4ea086409705b7550, type: 3}
+  goodEndingBg: {fileID: 21300000, guid: f71d18a11ece44548aa1ed30f926a28d, type: 3}
+  badEndingBg: {fileID: 21300000, guid: 2ce1f6ebd1b8b7545b6999cc0d7e0263, type: 3}
 --- !u!114 &679210773 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8081657713207587606, guid: 362aa589869398745a2028fc1cc364d7, type: 3}

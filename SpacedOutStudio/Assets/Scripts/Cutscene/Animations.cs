@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -9,7 +8,7 @@ namespace Cutscene
         public Animator heroAnimator;
         public Animator bossAnimator;
         public Animator keyAnimator;
-        public GameObject background;
+        public GameObject shakeObjects;
         public float keyFloatSpeed = 1;
         private bool _moveKey;
         private bool _shaking;
@@ -60,19 +59,19 @@ namespace Cutscene
         public void RotateKey()
         {
             keyAnimator.Play("Key Rotate");
-            background.transform.Translate(Vector3.left * 0.1f);
+            shakeObjects.transform.Translate(Vector3.left * 0.1f);
             _moveKey = true;
-            _audioSource.PlayOneShot(rumbleClip);
             musicSource.Stop();
+            _audioSource.PlayOneShot(rumbleClip);
         }
 
         private IEnumerator Shake()
         {
             if (_shaking) yield break;
             _shaking = true;
-            background.transform.Translate(Vector3.right * 0.2f);
+            shakeObjects.transform.Translate(Vector3.right * 0.2f);
             yield return new WaitForSeconds(shakeDelay);
-            background.transform.Translate(Vector3.left * 0.2f);
+            shakeObjects.transform.Translate(Vector3.left * 0.2f);
             yield return new WaitForSeconds(shakeDelay);
             _shaking = false;
         }
