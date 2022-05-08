@@ -4000,9 +4000,9 @@ MonoBehaviour:
   isMainMenu: 0
   quitCanvas: {fileID: 7874068013338240182}
   pauseCanvas: {fileID: 7715627315492695580}
-  settingsCanvas: {fileID: 0}
-  buttons: {fileID: 0}
-  title: {fileID: 0}
+  settingsCanvas: {fileID: 3540492091985694209}
+  buttons: {fileID: 468634391393693355}
+  title: {fileID: 7297885942156796287}
 --- !u!114 &7715627315812711394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5711,6 +5711,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 583156858, guid: 6d5fdb815de5e4a47a77a12bdff1e887, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6d5fdb815de5e4a47a77a12bdff1e887, type: 3}
+--- !u!1 &3540492091985694209 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3757735381423544506, guid: 6d5fdb815de5e4a47a77a12bdff1e887, type: 3}
+  m_PrefabInstance: {fileID: 361539932374292155}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &3540492091985694213 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3757735381423544510, guid: 6d5fdb815de5e4a47a77a12bdff1e887, type: 3}
