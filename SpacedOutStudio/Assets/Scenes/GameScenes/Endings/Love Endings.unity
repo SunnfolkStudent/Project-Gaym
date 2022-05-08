@@ -164,13 +164,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[2]
-      value: '/gr Rageheart: This is the best moment of my life, Love. I will never
-        forget this.'
+      value: '/gr Name: Good'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[3]
-      value: '/br Rageheart: There''s no use in running. You will never get away
-        from me.'
+      value: '/br Name: bad'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[4]
