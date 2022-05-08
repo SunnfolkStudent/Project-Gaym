@@ -219,6 +219,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 761764490404323916, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: loopClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 41f4e6c8fcc15514696db33159cc32f2, type: 3}
+    - target: {fileID: 761764490404323916, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: startClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1a32d123573a2564585988eab78cf124, type: 3}
     - target: {fileID: 1157870191266242019, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 1600

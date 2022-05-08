@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 761764490404323916, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
+      propertyPath: loopClip
+      value: 
+      objectReference: {fileID: 8300000, guid: bf1a118ad8d263842b89e5efce178c50, type: 3}
     - target: {fileID: 1005453506315444288, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -156,11 +160,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[2]
-      value: '/gr Name: Good'
+      value: '/gr Rageheart: I''ll make sure you NEVER leave my side!'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[3]
-      value: '/br Name: bad'
+      value: '/br Rageheart: Sleep now, my love. When you wake, you''ll be all mine.'
       objectReference: {fileID: 0}
     - target: {fileID: 5402145849172493264, guid: 362aa589869398745a2028fc1cc364d7, type: 3}
       propertyPath: script.Array.data[4]
