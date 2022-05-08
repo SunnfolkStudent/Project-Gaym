@@ -23,7 +23,11 @@ namespace System
             {
                 _pause = GetComponent<PauseScript>();
             }
-            transitionAnimator.Play("fadeTransition_in");
+
+            if (transitionAnimator)
+            {
+                transitionAnimator.Play("fadeTransition_in");
+            }
         }
 
         public void StartScene(string sceneName)
