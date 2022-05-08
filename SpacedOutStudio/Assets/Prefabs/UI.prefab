@@ -559,6 +559,7 @@ MonoBehaviour:
   delayBefore3: 1
   Clip3: {fileID: 0}
   delayBeforeLoad: 1
+  started: 0
 --- !u!1 &220696391262713957
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,7 +1289,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 3840, y: 2160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6797590820179117949
 CanvasRenderer:
@@ -1311,7 +1312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.27450982}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.6666667}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2910,7 +2911,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -334, y: -1688.105}
+  m_AnchoredPosition: {x: -388, y: -1118.105}
   m_SizeDelta: {x: 900, y: 4000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2852854680532522865
@@ -4012,6 +4013,8 @@ MonoBehaviour:
   names: []
   textSpeed: 3
   rScoreMinP: 0
+  _goodRlvlDialogues: 
+  _badRlvlDialogues: 
   dialoguesChosen: []
   nextDialogue: 0
   loadFinalScene: 0
