@@ -12,7 +12,7 @@ namespace System
         public GameObject quitCanvas;
         public GameObject pauseCanvas;
         public GameObject settingsCanvas;
-        public GameObject mainMenuButtons;
+        public GameObject buttons;
         public GameObject title;
 
         private void Start()
@@ -68,14 +68,14 @@ namespace System
 
         public void OpenSettings()
         {
-            mainMenuButtons.SetActive(false);
+            buttons.SetActive(false);
             title.SetActive(false);
             settingsCanvas.SetActive(true);
         }
 
         public void CloseSettings()
         {
-            mainMenuButtons.SetActive(true);
+            buttons.SetActive(true);
             title.SetActive(true);
             settingsCanvas.SetActive(false);
         }
