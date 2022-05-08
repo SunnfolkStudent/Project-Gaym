@@ -36,11 +36,9 @@ namespace System
         public void LoadScene(string sceneName)
         {
             SceneManager.LoadScene(sceneName);
-            if (!isMainMenu)
-            {
-                quitCanvas.SetActive(false);
-                _pause.ResumeGame();
-            }
+            if (isMainMenu) return;
+            quitCanvas.SetActive(false);
+            _pause.ResumeGame();
         }
 
         public void LoadWithTransition()

@@ -317,7 +317,7 @@ MonoBehaviour:
   minScoreForEnding: 10
   endingImage: {fileID: 679210773}
   goodEndingBg: {fileID: 21300000, guid: 2ce1f6ebd1b8b7545b6999cc0d7e0263, type: 3}
-  badEndingBg: {fileID: 21300000, guid: dc1271f1cd4716a4ea086409705b7550, type: 3}
+  badEndingBg: {fileID: 21300000, guid: 3a9c84fd71835a74fba3774f04cf0786, type: 3}
 --- !u!114 &679210773 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8081657713207587606, guid: 362aa589869398745a2028fc1cc364d7, type: 3}

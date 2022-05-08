@@ -10,6 +10,7 @@ namespace System
       public GameObject pauseCanvas;
       public GameObject mainUI;
       private InputManager _input;
+      public GameObject settings;
 
       private void Start()
       {
@@ -41,6 +42,7 @@ namespace System
 
       public void ResumeGame()
       {
+         if (settings.activeSelf) return;
          pauseCanvas.SetActive(false);
          mainUI.SetActive(true);
          gameIsPaused = false;

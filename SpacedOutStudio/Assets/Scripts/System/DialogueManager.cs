@@ -55,8 +55,8 @@ namespace System
         private bool[] _choiceDialogues3;
         private bool[] _returnDialogues;
         private bool[] _goodorbadCheck;
-        public bool[] _goodRlvlDialogues;
-        public bool[] _badRlvlDialogues;
+        private bool[] _goodRlvlDialogues;
+        private bool[] _badRlvlDialogues;
 
         [HideInInspector] public string[] dialoguesChosen;
 

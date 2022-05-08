@@ -848,7 +848,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 583156858}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: System.SceneController, Assembly-CSharp
         m_MethodName: CloseSettings
         m_Mode: 1
@@ -1177,7 +1177,6 @@ GameObject:
   - component: {fileID: 3757735381423544511}
   - component: {fileID: 3757735381423544508}
   - component: {fileID: 3757735381423544509}
-  - component: {fileID: 583156858}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -1228,7 +1227,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &3757735381423544508
 MonoBehaviour:
@@ -1270,25 +1269,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &583156858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3757735381423544506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d71e3b01f30f0745af3e47f91e13b6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transitionAnimator: {fileID: 0}
-  isMainMenu: 0
-  quitCanvas: {fileID: 0}
-  pauseCanvas: {fileID: 0}
-  settingsCanvas: {fileID: 3757735381423544506}
-  mainMenuButtons: {fileID: 0}
-  title: {fileID: 0}
 --- !u!1 &3757735381565244504
 GameObject:
   m_ObjectHideFlags: 0
