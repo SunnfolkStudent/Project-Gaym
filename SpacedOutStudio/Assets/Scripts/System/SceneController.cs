@@ -15,7 +15,6 @@ namespace System
         public GameObject buttons;
         public GameObject title;
         public GameObject credits;
-        public GameObject mainMenu;
         public GameObject particles;
 
         private void Start()
@@ -84,14 +83,14 @@ namespace System
         public void OpenCredits()
         {
             credits.SetActive(true);
-            mainMenu.SetActive(false);
+            buttons.SetActive(false);
             particles.SetActive(false);
         }
 
         public void CloseCredits()
         {
             credits.SetActive(false);
-            mainMenu.SetActive(true);
+            buttons.SetActive(true);
             particles.SetActive(true);
         }
         

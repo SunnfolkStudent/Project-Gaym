@@ -101,7 +101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5908201860612173778
 Transform:
   m_ObjectHideFlags: 0
@@ -400,7 +400,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneController: {fileID: 0}
   dialogueManager: {fileID: 0}
-  choiceManager: {fileID: 0}
+  audioSource: {fileID: 0}
+  music: {fileID: 0}
+  delayBefore1: 1
+  Clip1: {fileID: 0}
+  delayBefore2: 1
+  Clip2: {fileID: 0}
+  delayBefore3: 1
+  Clip3: {fileID: 0}
+  delayBeforeLoad: 1
+  mover: {fileID: 0}
+  sceneToLoad: 
 --- !u!1 &8252966099517058821
 GameObject:
   m_ObjectHideFlags: 0
@@ -998,6 +1008,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitionAnimator: {fileID: 4986500590316547295}
   isMainMenu: 1
+  quitCanvas: {fileID: 0}
+  pauseCanvas: {fileID: 0}
+  settingsCanvas: {fileID: 0}
+  buttons: {fileID: 0}
+  title: {fileID: 0}
+  credits: {fileID: 0}
+  mainMenu: {fileID: 0}
+  particles: {fileID: 0}
 --- !u!114 &4387623095845128924
 MonoBehaviour:
   m_ObjectHideFlags: 0
