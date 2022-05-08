@@ -1,28 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
-public class SettingsMenu : MonoBehaviour
+namespace System
 {
-    public AudioMixer mixer;
-    public GameObject settingsCanvas;
-    public GameObject mainMenuButtons;
-    public GameObject title;
-    
-    public void SetMasterVolume(float sliderValue)
+    public class SettingsMenu : MonoBehaviour
     {
-        mixer.SetFloat("masterVol", Mathf.Log10(sliderValue) *20);
-    }   
-    
-        public void SetMusicVolume(float sliderValue)
-    {
-        mixer.SetFloat("musicVol", Mathf.Log10(sliderValue) *20);
-    }    
+        public AudioMixer mixer;
+        public Slider masterSlider;
+        public Slider musicSlider;
+        public Slider sfxSlider;
         
-        public void SetSfxVolume(float sliderValue)
-    {
-        mixer.SetFloat("sfxVol", Mathf.Log10(sliderValue) *20);
+        public void UpdateVolume()
+        {
+            mixer.SetFloat("masterVol", masterSlider.value);
+            mixer.SetFloat("musicVol", musicSlider.value);
+            mixer.SetFloat("sfxVol", sfxSlider.value);
+        }
     }
-
 }
