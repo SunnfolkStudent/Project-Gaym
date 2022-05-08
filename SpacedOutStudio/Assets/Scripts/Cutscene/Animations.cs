@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 
 namespace Cutscene
@@ -7,7 +9,26 @@ namespace Cutscene
         public Animator heroAnimator;
         public Animator bossAnimator;
         public Animator keyAnimator;
+        public GameObject background;
+        public float keyFloatSpeed = 1;
+        private bool _moveKey;
+        private bool _shaking;
+        public float shakeDelay = 0.2f;
+        private AudioSource _audioSource;
+        public AudioClip rumbleClip;
+        public AudioSource musicSource;
 
+        private void Start()
+        {
+            _audioSource = GetComponent<AudioSource>();
+        }
+
+        private void FixedUpdate()
+        {
+            if (!_moveKey) return;
+            keyAnimator.transform.Translate(Vector3.up * (keyFloatSpeed * Time.deltaTime));
+            StartCoroutine(Shake());
+        }
 
         public void HeroWalk()
         {
@@ -39,6 +60,21 @@ namespace Cutscene
         public void RotateKey()
         {
             keyAnimator.Play("Key Rotate");
+            background.transform.Translate(Vector3.left * 0.1f);
+            _moveKey = true;
+            _audioSource.PlayOneShot(rumbleClip);
+            musicSource.Stop();
+        }
+
+        private IEnumerator Shake()
+        {
+            if (_shaking) yield break;
+            _shaking = true;
+            background.transform.Translate(Vector3.right * 0.2f);
+            yield return new WaitForSeconds(shakeDelay);
+            background.transform.Translate(Vector3.left * 0.2f);
+            yield return new WaitForSeconds(shakeDelay);
+            _shaking = false;
         }
     }
 }

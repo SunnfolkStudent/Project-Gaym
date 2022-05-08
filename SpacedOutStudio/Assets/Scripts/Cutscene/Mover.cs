@@ -19,11 +19,17 @@ namespace Cutscene
         private SpriteRenderer _heroSpriteRenderer;
         public Sprite heroStandingSprite;
         public bool startCutscene;
-        public GameObject[] TextBubbles;
+        public GameObject[] textBubbles;
+        private AudioSource _audioSource;
+        public AudioClip swordClip;
+        public float swordClipDelay = 0.25f;
+        public AudioClip laughClip;
+        
 
 
         private void Start()
         {
+            _audioSource = GetComponent<AudioSource>();
             _animations = GetComponent<Animations>();
             _heroSpriteRenderer = hero.GetComponent<SpriteRenderer>();
         }
@@ -61,12 +67,18 @@ namespace Cutscene
 
         private IEnumerator RestOfScene()
         {
-            foreach (var textBubble in TextBubbles)
+            yield return new WaitForSeconds(swordClipDelay);
+            _audioSource.PlayOneShot(swordClip);
+            foreach (var textBubble in textBubbles)
             {
                 yield return new WaitForSeconds(dialogueDelay);
                 textBubble.SetActive(true);
+                if (textBubble.transform.GetSiblingIndex() == 5)
+                {
+                    _animations.KeyOn();
+                }
             }
-            yield return new WaitForSeconds(laughDelay);
+            _audioSource.PlayOneShot(laughClip);
             _animations.BossLaugh();
         }
     }
