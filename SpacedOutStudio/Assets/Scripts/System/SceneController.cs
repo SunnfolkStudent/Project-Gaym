@@ -11,6 +11,9 @@ namespace System
         public bool isMainMenu;
         public GameObject quitCanvas;
         public GameObject pauseCanvas;
+        public GameObject settingsCanvas;
+        public GameObject mainMenuButtons;
+        public GameObject title;
 
         private void Start()
         {
@@ -61,6 +64,11 @@ namespace System
         {
             quitCanvas.SetActive(false);
             pauseCanvas.SetActive(true);
+        }
+
+        public void OpenSettings()
+        {
+            
         }
         
         //Continues your last played save file.
