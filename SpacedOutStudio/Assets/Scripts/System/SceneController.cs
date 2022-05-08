@@ -68,9 +68,17 @@ namespace System
 
         public void OpenSettings()
         {
-            
+            mainMenuButtons.SetActive(false);
+            title.SetActive(false);
+            settingsCanvas.SetActive(true);
         }
-        
+
+        public void CloseSettings()
+        {
+            mainMenuButtons.SetActive(true);
+            title.SetActive(true);
+            settingsCanvas.SetActive(false);
+        }
         //Continues your last played save file.
         void Continue()
         {

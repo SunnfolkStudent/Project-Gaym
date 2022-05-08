@@ -6,6 +6,9 @@ using UnityEngine.Audio;
 public class SettingsMenu : MonoBehaviour
 {
     public AudioMixer mixer;
+    public GameObject settingsCanvas;
+    public GameObject mainMenuButtons;
+    public GameObject title;
     
     public void SetMasterVolume(float sliderValue)
     {
@@ -20,6 +23,6 @@ public class SettingsMenu : MonoBehaviour
         public void SetSfxVolume(float sliderValue)
     {
         mixer.SetFloat("sfxVol", Mathf.Log10(sliderValue) *20);
-    }    
-    
+    }
+
 }
