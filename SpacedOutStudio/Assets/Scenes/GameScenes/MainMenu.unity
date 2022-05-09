@@ -758,6 +758,10 @@ PrefabInstance:
       propertyPath: m_Navigation.m_Mode
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8252966101303310569, guid: bebde9caae2eb914f9cf7e29ad16dc3c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Cutscene
+      objectReference: {fileID: 0}
     - target: {fileID: 8252966101578954454, guid: bebde9caae2eb914f9cf7e29ad16dc3c, type: 3}
       propertyPath: m_SizeDelta.x
       value: 358.33334
@@ -797,6 +801,10 @@ PrefabInstance:
     - target: {fileID: 8252966101632975750, guid: bebde9caae2eb914f9cf7e29ad16dc3c, type: 3}
       propertyPath: m_Navigation.m_Mode
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252966101632975750, guid: bebde9caae2eb914f9cf7e29ad16dc3c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Cutscene
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bebde9caae2eb914f9cf7e29ad16dc3c, type: 3}
