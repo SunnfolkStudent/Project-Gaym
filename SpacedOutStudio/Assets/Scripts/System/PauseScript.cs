@@ -6,7 +6,7 @@ namespace System
    [RequireComponent(typeof(InputManager))]
    public class PauseScript : MonoBehaviour
    {
-      public bool gameIsPaused;
+      public static bool GameIsPaused;
       public GameObject pauseCanvas;
       public GameObject mainUI;
       private InputManager _input;
@@ -15,14 +15,14 @@ namespace System
       private void Start()
       {
          _input = GetComponent<InputManager>();
-         gameIsPaused = false;
+         GameIsPaused = false;
          pauseCanvas.SetActive(false); 
       }
 
       private void Update()
       {
          if (!_input.pause) return;
-         if (gameIsPaused)
+         if (GameIsPaused)
          {
             ResumeGame();
          }
@@ -37,7 +37,7 @@ namespace System
          Time.timeScale = 0f;
          mainUI.SetActive(false);
          pauseCanvas.SetActive(true);
-         gameIsPaused = true;
+         GameIsPaused = true;
       }
 
       public void ResumeGame()
@@ -45,7 +45,7 @@ namespace System
          if (settings.activeSelf) return;
          pauseCanvas.SetActive(false);
          mainUI.SetActive(true);
-         gameIsPaused = false;
+         GameIsPaused = false;
          Time.timeScale = 1f;
       }
    }

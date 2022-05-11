@@ -123,7 +123,7 @@ namespace System
 
         public void NextDialogue()
         {
-            if (logGameObject.activeSelf || _choiceManager.showingDialogue || _hovering) return;
+            if (logGameObject.activeSelf || _choiceManager.showingDialogue || _hovering || PauseScript.GameIsPaused) return;
             nextDialogue = true;
             SaveManager.SaveName(playerName);
 

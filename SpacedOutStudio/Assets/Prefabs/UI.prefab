@@ -6394,6 +6394,8 @@ MonoBehaviour:
   settingsCanvas: {fileID: 3577645025881393621}
   buttons: {fileID: 468634391393693355}
   title: {fileID: 7297885942156796287}
+  credits: {fileID: 0}
+  particles: {fileID: 0}
 --- !u!114 &7715627315812711394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6406,10 +6408,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7940dee6b0278014ba0ab81050282045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameIsPaused: 0
   pauseCanvas: {fileID: 7715627315492695580}
   mainUI: {fileID: 8585666249390342454}
-  settings: {fileID: 0}
+  settings: {fileID: 3577645025881393621}
 --- !u!114 &8179971974687019976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6520,7 +6521,7 @@ AudioSource:
   m_GameObject: {fileID: 7715627315812711199}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2261748254809415174, guid: d951991ee063478489b29917dd24f97b, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
