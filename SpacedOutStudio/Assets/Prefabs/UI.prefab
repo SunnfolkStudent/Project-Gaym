@@ -6593,7 +6593,10 @@ MonoBehaviour:
   bob: 
   howMuchToMove: []
   speed: []
+  critDelay: 0.1
+  critMoveAmount: 10
   audioClips: []
+  critSfx: {fileID: 8300000, guid: 49b39dda565b91f49a9d29575be33154, type: 3}
   background: {fileID: 8081657713207587606}
   changeToBackgroundOne: 0
   backgroundOne: {fileID: 0}

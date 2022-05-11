@@ -82,7 +82,9 @@ namespace System
             _sceneController = GetComponent<SceneController>();
             _logText = logGameObject.GetComponentInChildren<TMP_Text>();
             _inputManager = GetComponent<InputManager>();
-            
+            _choiceManager.relationScore = PlayerPrefs.GetInt("relScore");
+            playerName = PlayerPrefs.GetString("pName");
+            Save();
             ExtractAndReplaceNames();
             dialogueText.text = "";
             namePlate.text = names[currentDialogue];

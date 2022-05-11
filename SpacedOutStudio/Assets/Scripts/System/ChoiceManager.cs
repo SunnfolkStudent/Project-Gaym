@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 
 namespace System
@@ -15,14 +14,13 @@ namespace System
         [HideInInspector] public int currentNChoice;
         [HideInInspector] public bool showingDialogue;
         private DialogueManager _dialogueManager;
+        private ExpressionsEmotesAndMovements _movements;
 
 
         private void Start()
         {
+            _movements = GetComponent<ExpressionsEmotesAndMovements>();
             _dialogueManager = GetComponent<DialogueManager>();
-            relationScore = PlayerPrefs.GetInt("relScore");
-            _dialogueManager.playerName = PlayerPrefs.GetString("pName");
-            _dialogueManager.Save();
         }
 
         public void DialogueOptionsShow()
@@ -72,6 +70,7 @@ namespace System
             {
                 relationScore += change * 2;
                 print("crit");
+                StartCoroutine(_movements.CritAnim());
             }
             else
             {
