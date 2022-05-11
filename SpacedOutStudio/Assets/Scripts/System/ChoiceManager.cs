@@ -21,6 +21,8 @@ namespace System
         {
             _dialogueManager = GetComponent<DialogueManager>();
             relationScore = PlayerPrefs.GetInt("relScore");
+            _dialogueManager.playerName = PlayerPrefs.GetString("pName");
+            _dialogueManager.Save();
         }
 
         public void DialogueOptionsShow()

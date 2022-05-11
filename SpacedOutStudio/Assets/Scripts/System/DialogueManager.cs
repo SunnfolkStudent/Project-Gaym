@@ -2,6 +2,7 @@ using System.Collections;
 using Inputs;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace System
 {
@@ -44,8 +45,7 @@ namespace System
         private SceneController _sceneController;
 
         public float textSpeed = 1;
-
-        //public bool loop;
+        
         public int rScoreMinP;
         private bool _generatingDialogue;
         private bool _stopGeneratingDialogue;
@@ -57,24 +57,17 @@ namespace System
         private bool[] _goodorbadCheck;
         private bool[] _goodRlvlDialogues;
         private bool[] _badRlvlDialogues;
-
-        [HideInInspector] public string[] dialoguesChosen;
-
-        //private bool[] _returnLvlDialogues;
+        
+        
         private ChoiceManager _choiceManager;
         private bool _inChoices1;
         private bool _inChoices2;
         private bool _inChoices3;
-        private int _currentOptions;
-        [HideInInspector] public bool nextDialogue;
         private bool _inGoodR;
         private bool _inBadR;
 
         public bool loadFinalScene;
-
-        /*public string finalSceneToLoadP;
-        public string finalSceneToLoadN;
-        public int scoreForFinalScene = 5;*/
+        
         private int _currentScoreCheck;
         private ExpressionsEmotesAndMovements _expressionsEmotesAndMovements;
         private bool _skipOne;
@@ -89,7 +82,7 @@ namespace System
             _sceneController = GetComponent<SceneController>();
             _logText = logGameObject.GetComponentInChildren<TMP_Text>();
             _inputManager = GetComponent<InputManager>();
-            playerName = PlayerPrefs.GetString("pName");
+            
             ExtractAndReplaceNames();
             dialogueText.text = "";
             namePlate.text = names[currentDialogue];
@@ -124,7 +117,6 @@ namespace System
         public void NextDialogue()
         {
             if (logGameObject.activeSelf || _choiceManager.showingDialogue || _hovering || PauseScript.GameIsPaused) return;
-            nextDialogue = true;
             SaveManager.SaveName(playerName);
 
             if (currentDialogue < script.Length - 1)
@@ -274,7 +266,6 @@ namespace System
             _goodorbadCheck = new bool[script.Length];
             _goodRlvlDialogues = new bool[script.Length];
             _badRlvlDialogues = new bool[script.Length];
-            dialoguesChosen = new string[script.Length];
             for (var i = 0; i < script.Length; i++)
             {
                 if (script[i].Contains(goodOrBadCheckChar))
@@ -399,6 +390,12 @@ namespace System
                 _inBadR = true;
                 GotoCorrectDialogue(_currentScoreCheck, _badRlvlDialogues);
             }
+        }
+        
+        
+        public void Save()
+        {
+            SaveManager.Save(_choiceManager.relationScore,playerName,SceneManager.GetActiveScene().buildIndex);
         }
 
         public void OnHover()

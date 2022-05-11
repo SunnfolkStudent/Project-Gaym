@@ -4,11 +4,20 @@ namespace System
 {
     public class SaveManager : MonoBehaviour
     {
-        public static void Save(int relScore, string pName)
+        public static void Save(int relScore, string pName, int currentScene)
         {
             PlayerPrefs.SetInt("relScore", relScore);
             PlayerPrefs.SetString("pName", pName);
+            PlayerPrefs.SetInt("currentScene", currentScene);
         }
+
+        /*public static void Load(out int relScore, out string pName, out int currentScene)
+        {
+            relScore = PlayerPrefs.GetInt("relScore");
+            pName = PlayerPrefs.GetString("pName");
+            currentScene = PlayerPrefs.GetInt("currentScene");
+        }*/
+
         public static void SaveScore(int relScore)
         {
             PlayerPrefs.SetInt("relScore", relScore);
@@ -18,11 +27,11 @@ namespace System
         {
             PlayerPrefs.SetString("pName", pName);
         }
-        
+
 
         public static void DeleteSave()
         {
-            PlayerPrefs.DeleteKey("relScore");
+            PlayerPrefs.DeleteAll();
             PlayerPrefs.SetString("pName", "You");
         }
     }

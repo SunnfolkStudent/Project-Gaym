@@ -43,15 +43,22 @@ namespace System
             quitCanvas.SetActive(false);
             _pause.ResumeGame();
         }
+        public void LoadScene(int sceneIndex)
+        {
+            SceneManager.LoadScene(sceneIndex);
+            if (isMainMenu) return;
+            quitCanvas.SetActive(false);
+            _pause.ResumeGame();
+        }
 
         public void LoadWithTransition()
         {
             transitionAnimator.Play("fadeTransition_out");
         }
-        
+
         public void QuitGame()
         {
-#if  UNITY_EDITOR
+#if UNITY_EDITOR
             EditorApplication.isPlaying = false;
 #else
         Application.Quit();
@@ -63,7 +70,7 @@ namespace System
             pauseCanvas.SetActive(false);
             quitCanvas.SetActive(true);
         }
-        
+
         public void NoQuit()
         {
             quitCanvas.SetActive(false);
@@ -97,23 +104,20 @@ namespace System
             buttons.SetActive(true);
             particles.SetActive(true);
         }
-        
-        //Continues your last played save file.
-        void Continue()
-        {
-        
-        }
 
-        //Starts a new game, without deleting existing save files. 
-        void NewGame()
-        {
         
-        }
 
-        //Deletes all existing save files.
-        void ResetGame()
+        public void Continue(string firstScene)
         {
-        
+            var currentScene = PlayerPrefs.GetInt("currentScene");
+            if (currentScene > 1)
+            {
+                LoadScene(currentScene);
+            }
+            else
+            {
+                StartScene(firstScene);
+            }
         }
     }
 }
