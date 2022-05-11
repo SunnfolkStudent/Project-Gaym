@@ -128,13 +128,14 @@ namespace System
         public IEnumerator CritAnim()
         {
             yield return new WaitForSeconds(critDelay);
-            rageheart.color = new Color(1,0.3f,0.3f);
+            rageheart.color = new Color(1,0.2f,0.2f);
             _audio.PlayOneShot(critSfx);
-            rageheart.transform.localPosition += Vector3.left * critMoveAmount;
+            var rageTransform = rageheart.transform;
+            rageTransform.localPosition += Vector3.left * critMoveAmount;
             yield return new WaitForSeconds(critDelay);
-            rageheart.transform.localPosition += Vector3.right * (critMoveAmount * 2);
+            rageTransform.localPosition += Vector3.right * (critMoveAmount * 2);
             yield return new WaitForSeconds(critDelay);
-            rageheart.transform.localPosition += Vector3.left * critMoveAmount;
+            rageTransform.localPosition += Vector3.left * critMoveAmount;
             rageheart.color = Color.white;
 
         }
