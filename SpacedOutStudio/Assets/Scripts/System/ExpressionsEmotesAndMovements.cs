@@ -34,7 +34,7 @@ namespace System
         public int changeBackFromBgTwo;
         public bool isInBackground;
         private Sprite _currentBackground;
-        
+
         private int _lastDialogue;
 
         private void Start()
@@ -130,6 +130,7 @@ namespace System
             yield return new WaitForSeconds(critDelay);
             rageheart.color = new Color(1,0.2f,0.2f);
             _audio.PlayOneShot(critSfx);
+            
             var rageTransform = rageheart.transform;
             rageTransform.localPosition += Vector3.left * critMoveAmount;
             yield return new WaitForSeconds(critDelay);
