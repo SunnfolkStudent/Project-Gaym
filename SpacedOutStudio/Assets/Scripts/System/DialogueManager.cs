@@ -22,8 +22,7 @@ namespace System
         public string badRlvlChar = "/br";
 
         public string goodOrBadCheckChar = "/lvl";
-
-        //public string goodOrBadCheckReturn = "/rr";
+        
         public bool debug;
         public int debugDialogue;
         public int debugChoice;
@@ -31,8 +30,7 @@ namespace System
         public string[] script;
 
         public string sceneToLoad;
-
-        //public GameObject dialogueGameObject;
+        
         public GameObject logGameObject;
         public TMP_Text dialogueText;
         public TMP_Text namePlate;
@@ -94,7 +92,6 @@ namespace System
         {
             if (_inputManager.interact)
             {
-                //TODO ask eren how to do the skip
                 if (_movements.moving)
                 {
                     _movements.stopMoving = true;
@@ -313,11 +310,7 @@ namespace System
                     script[i] = script[i].Remove(0, returnChar.Length);
                     _returnDialogues[i] = true;
                 }
-
-                /*if (script[i].StartsWith(" "))
-                {
-                    script[i] = script[i].Remove(0, 1);
-                }*/
+                
                 script[i] = script[i].Replace(replaceString, playerName);
                 names[i] = script[i].Split(":")[0];
                 script[i] = script[i].Remove(0, script[i].IndexOf(":", StringComparison.Ordinal) + 2);
@@ -355,7 +348,6 @@ namespace System
 
         public void GotoCorrectDialogue(int currentChoice, bool[] boolArray)
         {
-            //TODO if skips all go to next scene
             var inStreak = false;
             var skipNumber = currentChoice;
             for (var i = 0; i < boolArray.Length; i++)
