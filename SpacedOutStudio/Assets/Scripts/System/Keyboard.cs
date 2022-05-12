@@ -26,13 +26,11 @@ namespace System
             if (inputField.text.Length > charachterLimit)
             {
                 inputField.text = inputField.text.Remove(charachterLimit-1, 1);
-                //characterLimitText.SetActive(true);
             }
             else
             {
                 _charactersLeft = charachterLimit - inputField.text.Length;
                 characterlimitCountDown.text = "("+_charactersLeft+")";
-                //characterLimitText.SetActive(false);
             }
         }
 
@@ -66,6 +64,7 @@ namespace System
 
         public void Enter()
         {
+            if (inputField.text == "") inputField.text = "Fredrick";
             PlayerPrefs.SetString("pName", inputField.text);
             gameObject.SetActive(false);
             dialogueManager.script[24] = dialogueManager.script[24].Replace(dialogueManager.playerName, inputField.text);
@@ -75,7 +74,6 @@ namespace System
             choiceManager.dialogueAndNameplate.SetActive(true);
             dialogueManager.script[23] = dialogueManager.playerName;
             dialogueManager.NextDialogue();
-            //TODO Log Compatibility
         }
     }
 }
