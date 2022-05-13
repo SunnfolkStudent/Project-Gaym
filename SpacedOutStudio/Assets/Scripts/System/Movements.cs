@@ -16,7 +16,13 @@ namespace System
             _startPoint = whatToMove.transform.localPosition;
             for (var i = 0; i < MathF.Abs(amount) / speed; i++)
             {
-                if (stopMoving) break;
+                if (stopMoving)
+                {
+                    whatToMove.transform.localPosition = _startPoint;
+                    whatToMove.transform.localPosition += new Vector3(amount,0);
+                    stopMoving = false;
+                    break;
+                }
                 if (amount > 0)
                 {
                     whatToMove.transform.localPosition += Vector3.right * speed;
@@ -28,14 +34,6 @@ namespace System
 
                 yield return new WaitForFixedUpdate();
             }
-
-            if (stopMoving)
-            {
-                whatToMove.transform.localPosition = _startPoint;
-                whatToMove.transform.localPosition += new Vector3(amount,0);
-                stopMoving = false;
-            }
-            
             moving = false;
         }
 

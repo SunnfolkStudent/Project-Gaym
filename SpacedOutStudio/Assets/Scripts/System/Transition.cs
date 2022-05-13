@@ -8,7 +8,6 @@ namespace System
     {
         public SceneController sceneController;
         public DialogueManager dialogueManager;
-        //public ChoiceManager choiceManager;
         public AudioSource audioSource;
         public Music music;
         public float delayBefore1 = 1;
@@ -20,26 +19,12 @@ namespace System
         public float delayBeforeLoad = 1;
         public Mover mover;
         public string sceneToLoad;
+        public static bool started;
 
 
         public void LoadLevel()
         {
             StartCoroutine(LoadWithSound());
-            /*if (!dialogueManager.loadFinalScene)
-            {
-                sceneController.LoadScene(dialogueManager.sceneToLoad);
-            }
-            else
-            {
-                if (choiceManager.relationScore > dialogueManager.scoreForFinalScene)
-                {
-                    sceneController.LoadScene(dialogueManager.finalSceneToLoadP);
-                }
-                else
-                {
-                    sceneController.LoadScene(dialogueManager.finalSceneToLoadN);
-                }
-            }*/
         }
 
         public void StartText()
@@ -50,6 +35,7 @@ namespace System
             }
             if (!dialogueManager) return;
             StartCoroutine(dialogueManager.GradualText());
+            started = true;
         }
 
         private IEnumerator LoadWithSound()

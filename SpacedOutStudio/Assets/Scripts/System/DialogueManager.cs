@@ -90,6 +90,7 @@ namespace System
 
         private void Update()
         {
+            if (!Transition.started) return;
             if (_inputManager.interact)
             {
                 if (_movements.moving)
@@ -225,6 +226,7 @@ namespace System
 
         public IEnumerator GradualText()
         {
+            if (_generatingDialogue) yield break;
             _generatingDialogue = true;
             _logText.text += names[currentDialogue] + ": " + script[currentDialogue] + "\n";
             namePlate.text = names[currentDialogue];
